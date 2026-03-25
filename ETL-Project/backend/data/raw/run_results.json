@@ -1,0 +1,24 @@
+{
+  "results": [
+    {
+      "status": "success",
+      "execution_time": 12.4,
+      "message": "Model completed successfully"
+    },
+    {
+      "status": "error",
+      "execution_time": 45.8,
+      "message": "Schema mismatch detected in transformed table"
+    },
+    {
+      "status": "success",
+      "execution_time": 10.1,
+      "message": "Run completed"
+    },
+    {
+      "status": "error",
+      "execution_time": 30.2,
+      "message": "Timeout while loading data into warehouse"
+    }
+  ]
+}

@@ -1,0 +1,6 @@
+Task completed successfully in 15 seconds after 0 retries
+Task failed due to schema mismatch in 40 seconds after 2 retries
+Task error: file not found in 25 seconds after 1 retries
+Task completed successfully in 12 seconds after 0 retries
+Task failed because permission denied in 18 seconds after 1 retries
+Task failed due to timeout in 50 seconds after 3 retries
