@@ -1,10 +1,16 @@
+#Date: 3/25/25
+#Author: Miloni Mehta
+#Description: Script to read raw ETL logs (dbt and Airflow), clean and extract useful features,
+#and convert them into a structured CSV dataset for model training.
+
+
 import json
 import pandas as pd
 import re
 import os
 
-# STEP 1: Parse DBT logs
 
+# STEP 1: Parse DBT logs
 def parse_dbt(path):
     with open(path, "r") as f:g
         data = json.load(f)
