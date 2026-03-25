@@ -1,0 +1,5 @@
+{
+  "name": "ETL Failure Prediction & Root-Cause Assistant",
+  "description": "Frontend for ETL failure prediction and root-cause analysis.",
+  "requestFramePermissions": []
+}

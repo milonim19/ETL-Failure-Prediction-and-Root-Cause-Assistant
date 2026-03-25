@@ -1,0 +1,29 @@
+@import "tailwindcss";
+
+@theme {
+  --font-sans: "Inter", ui-sans-serif, system-ui, sans-serif;
+  --radius-xl: 1rem;
+  --radius-2xl: 1.5rem;
+}
+
+@layer base {
+  body {
+    @apply bg-zinc-50 text-zinc-900 antialiased;
+  }
+}
+
+.glass-nav {
+  @apply sticky top-0 z-50 bg-white/80 backdrop-blur-md border-b border-zinc-200/50;
+}
+
+.card-base {
+  @apply bg-white border border-zinc-200 shadow-sm rounded-2xl p-6 transition-all duration-200 hover:shadow-md hover:border-zinc-300;
+}
+
+.btn-primary {
+  @apply px-5 py-2.5 bg-zinc-900 text-white rounded-xl font-medium transition-all hover:bg-zinc-800 active:scale-[0.98] disabled:opacity-50;
+}
+
+.btn-secondary {
+  @apply px-5 py-2.5 bg-white text-zinc-900 border border-zinc-200 rounded-xl font-medium transition-all hover:bg-zinc-50 active:scale-[0.98];
+}
