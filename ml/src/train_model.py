@@ -7,8 +7,8 @@ from sklearn.model_selection import train_test_split
 from sklearn.pipeline import Pipeline
 from sklearn.preprocessing import OneHotEncoder, StandardScaler
 
-ROOT = Path(__file__).resolve().parents[1]
-DATA_PATH = ROOT / "data" / "etl_dataset.csv"
+ROOT = Path(__file__).resolve().parents[2]
+DATA_PATH = ROOT / "ETL-Project" / "backend" / "data" / "processed" / "etl_dataset.csv"
 MODEL_PATH = ROOT / "models" / "etl_failure_model.pkl"
 
 def main():
