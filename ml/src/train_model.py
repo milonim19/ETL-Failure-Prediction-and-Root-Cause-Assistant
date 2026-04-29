@@ -15,9 +15,10 @@ def main():
     df = pd.read_csv(DATA_PATH)
     X = df.drop("label", axis=1)
     y = df["label"]
-
+    X = X.drop(columns=["status"], errors="ignore")
+    X = X.drop(columns=["error_type"], errors="ignore")
     numeric_features = ["duration", "retry_count"]
-    categorical_features = ["status", "error_type"]
+    categorical_features = []
     X_structured = X.drop(columns=["message"])
 
     preprocessor = ColumnTransformer(
