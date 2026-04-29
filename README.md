@@ -4,7 +4,7 @@ A course project for Applied Machine Learning at Stevens Institute of Technology
 **By:** Miloni Mehta · Atharv Prashant Andhare · Salvatore Scotto Di Vetta
 
 This project builds an ML-powered assistant that analyzes ETL run telemetry + logs to:
-1) **Predict failure risk** (Fail vs Success), and  
+1) **Predict failure risk** (Fail vs Success)
 2) **Suggest the most likely root-cause category** when risk is elevated (schema mismatch, missing file, timeout/resource, permission/auth, data quality).
 For Model 1, we use SHAP to break the failure risk score into feature-level contributions. This helps us see what drove a high-risk prediction (e.g., unusually long runtime, high retry count, or specific log signals) so we can start debugging in the right place.
 
