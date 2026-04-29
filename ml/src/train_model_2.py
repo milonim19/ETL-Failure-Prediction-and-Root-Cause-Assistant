@@ -1,50 +1,70 @@
-import joblib
 import pandas as pd
+import joblib
 from pathlib import Path
 
+from sklearn.model_selection import train_test_split
+from sklearn.compose import ColumnTransformer
+from sklearn.pipeline import Pipeline
+from sklearn.preprocessing import StandardScaler
+from sklearn.feature_extraction.text import TfidfVectorizer
+from sklearn.linear_model import LogisticRegression
+from sklearn.metrics import classification_report, confusion_matrix
+
 ROOT = Path(__file__).resolve().parents[1]
-
-MODEL_1_PATH = ROOT / "models" / "etl_failure_model.pkl"
-MODEL_2_PATH = ROOT / "models" / "etl_failure_type_model.pkl"
-
-model_1 = joblib.load(MODEL_1_PATH)
-model_2 = joblib.load(MODEL_2_PATH)
+DATA_PATH = ROOT / "data" / "etl_dataset.csv"
+MODEL_PATH = ROOT / "models" / "etl_failure_type_model.pkl"
 
 
-def predict_etl_run(input_data):
-    """
-    Runs Model 1 first.
-    If failure is predicted, runs Model 2 to predict root cause.
-    """
+def main():
+    df = pd.read_csv(DATA_PATH)
 
-    df = pd.DataFrame([input_data])
+    # If failure_type does not exist, use error_type only as the LABEL,
+    # not as an input feature.
+    if "failure_type" not in df.columns:
+        df["failure_type"] = df["error_type"]
 
-    # Model 1: fail vs success
-    failure_prediction = model_1.predict(df)[0]
-    failure_probability = model_1.predict_proba(df)[0, 1]
+    # Model 2 only trains on failed runs
+    df = df[df["label"] == 1].copy()
 
-    result = {
-        "failure_prediction": int(failure_prediction),
-        "failure_probability": float(failure_probability),
-        "status": "failure" if failure_prediction == 1 else "success",
-        "predicted_root_cause": None
-    }
+    print("Failure type counts:")
+    print(df["failure_type"].value_counts())
 
-    # Model 2 only runs if Model 1 predicts failure
-    if failure_prediction == 1:
-        root_cause = model_2.predict(df)[0]
-        result["predicted_root_cause"] = root_cause
+    X = df[["duration", "retry_count"]]
+    y = df["failure_type"]
 
-    return result
+    preprocessor = ColumnTransformer(
+        transformers=[
+            ("num", StandardScaler(), ["duration", "retry_count"]),
+        ]
+    )
+
+    model = Pipeline([
+        ("preprocessor", preprocessor),
+        ("classifier", LogisticRegression(max_iter=1000, class_weight="balanced"))
+    ])
+
+    X_train, X_test, y_train, y_test = train_test_split(
+        X,
+        y,
+        test_size=0.2,
+        random_state=42,
+        stratify=y
+    )
+
+    model.fit(X_train, y_train)
+
+    y_pred = model.predict(X_test)
+
+    print("\n=== MODEL 2 PERFORMANCE ===\n")
+    print(classification_report(y_test, y_pred, zero_division=0))
+    print("Confusion Matrix:")
+    print(confusion_matrix(y_test, y_pred))
+
+    MODEL_PATH.parent.mkdir(parents=True, exist_ok=True)
+    joblib.dump(model, MODEL_PATH)
+
+    print(f"Saved Model 2 to: {MODEL_PATH}")
 
 
 if __name__ == "__main__":
-    sample_run = {
-        "duration": 120,
-        "retry_count": 3,
-        "status": "failed",
-        "error_type": "timeout"
-    }
-
-    prediction = predict_etl_run(sample_run)
-    print(prediction)
+    main()
