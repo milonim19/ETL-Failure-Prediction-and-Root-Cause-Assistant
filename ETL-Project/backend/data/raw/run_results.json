@@ -1,24 +1,24 @@
 {
   "results": [
-    {
-      "status": "success",
-      "execution_time": 12.4,
-      "message": "Model completed successfully"
-    },
-    {
-      "status": "error",
-      "execution_time": 45.8,
-      "message": "Schema mismatch detected in transformed table"
-    },
-    {
-      "status": "success",
-      "execution_time": 10.1,
-      "message": "Run completed"
-    },
-    {
-      "status": "error",
-      "execution_time": 30.2,
-      "message": "Timeout while loading data into warehouse"
-    }
+    { "status": "success", "execution_time": 12.4, "message": "Model completed successfully" },
+    { "status": "success", "execution_time": 10.1, "message": "Run completed" },
+    { "status": "success", "execution_time": 14.8, "message": "Transformation step finished" },
+    { "status": "success", "execution_time": 9.6,  "message": "Loaded table successfully" },
+
+    { "status": "error", "execution_time": 45.8, "message": "Schema mismatch detected in transformed table" },
+    { "status": "error", "execution_time": 38.2, "message": "Column type mismatch while casting fields" },
+    { "status": "error", "execution_time": 41.0, "message": "Schema drift: missing expected column" },
+
+    { "status": "error", "execution_time": 30.2, "message": "Timeout while loading data into warehouse" },
+    { "status": "error", "execution_time": 55.1, "message": "Timed out waiting for query execution" },
+
+    { "status": "error", "execution_time": 22.7, "message": "Source file not found in staging path" },
+    { "status": "error", "execution_time": 18.9, "message": "No such file or directory during extract" },
+
+    { "status": "error", "execution_time": 26.4, "message": "Permission denied while writing to warehouse" },
+    { "status": "error", "execution_time": 19.3, "message": "Unauthorized access to dataset" },
+
+    { "status": "error", "execution_time": 34.6, "message": "Data quality check failed: null constraint violated" },
+    { "status": "error", "execution_time": 29.8, "message": "Quality rule failed: duplicate primary key detected" }
   ]
 }

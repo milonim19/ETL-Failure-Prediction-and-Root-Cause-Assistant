@@ -1,11 +1,522 @@
 duration,retry_count,status,error_type,message,label
-45.8,0,error,dbt_error,Schema mismatch detected in transformed table,1
-30.2,0,error,dbt_error,Timeout while loading data into warehouse,1
-40.0,2,failed,schema_mismatch,Task failed due to schema mismatch in 40 seconds after 2 retries,1
-25.0,1,failed,missing_file,Task error: file not found in 25 seconds after 1 retries,1
-18.0,1,failed,permission,Task failed because permission denied in 18 seconds after 1 retries,1
-50.0,3,failed,timeout,Task failed due to timeout in 50 seconds after 3 retries,1
 12.4,0,success,none,Model completed successfully,0
 10.1,0,success,none,Run completed,0
+14.8,0,success,none,Transformation step finished,0
+9.6,0,success,none,Loaded table successfully,0
+45.8,0,error,dbt_error,Schema mismatch detected in transformed table,1
+38.2,0,error,dbt_error,Column type mismatch while casting fields,1
+41.0,0,error,dbt_error,Schema drift: missing expected column,1
+30.2,0,error,dbt_error,Timeout while loading data into warehouse,1
+55.1,0,error,dbt_error,Timed out waiting for query execution,1
+22.7,0,error,dbt_error,Source file not found in staging path,1
+18.9,0,error,dbt_error,No such file or directory during extract,1
+26.4,0,error,dbt_error,Permission denied while writing to warehouse,1
+19.3,0,error,dbt_error,Unauthorized access to dataset,1
+34.6,0,error,dbt_error,Data quality check failed: null constraint violated,1
+29.8,0,error,dbt_error,Quality rule failed: duplicate primary key detected,1
 15.0,0,success,none,Task completed successfully in 15 seconds after 0 retries,0
+40.0,2,failed,schema_mismatch,Task failed due to schema mismatch in 40 seconds after 2 retries,1
+25.0,1,failed,missing_file,Task error: file not found in 25 seconds after 1 retries,1
 12.0,0,success,none,Task completed successfully in 12 seconds after 0 retries,0
+18.0,1,failed,permission,Task failed because permission denied in 18 seconds after 1 retries,1
+50.0,3,failed,timeout,Task failed due to timeout in 50 seconds after 3 retries,1
+29.0,1,failed,data_quality,Task failed due to data quality check: null values found in 29 seconds after 1 retries,1
+50.0,2,failed,data_quality,Task failed due to data quality check: null values found in 50 seconds after 2 retries,1
+32.0,1,failed,schema_mismatch,Task failed due to schema mismatch in 32 seconds after 1 retries,1
+109.0,1,failed,data_quality,Task failed due to data quality check: null values found in 109 seconds after 1 retries,1
+69.0,1,failed,permission,Task failed because permission denied in 69 seconds after 1 retries,1
+10.0,0,success,none,Task completed successfully in 10 seconds after 0 retries,0
+79.0,1,failed,schema_mismatch,Task failed due to schema mismatch in 79 seconds after 1 retries,1
+40.0,4,failed,permission,Task failed because permission denied in 40 seconds after 4 retries,1
+72.0,3,failed,schema_mismatch,Task failed due to schema mismatch in 72 seconds after 3 retries,1
+32.0,0,success,none,Task completed successfully in 32 seconds after 0 retries,0
+69.0,3,failed,data_quality,Task failed due to data quality check: null values found in 69 seconds after 3 retries,1
+34.0,2,failed,missing_file,Task error: file not found in 34 seconds after 2 retries,1
+28.0,1,failed,missing_file,Task error: file not found in 28 seconds after 1 retries,1
+27.0,3,failed,timeout,Task failed due to timeout in 27 seconds after 3 retries,1
+92.0,3,failed,missing_file,Task error: file not found in 92 seconds after 3 retries,1
+31.0,1,success,none,Task completed successfully in 31 seconds after 1 retries,0
+30.0,4,failed,permission,Task failed because permission denied in 30 seconds after 4 retries,1
+25.0,0,success,none,Task completed successfully in 25 seconds after 0 retries,0
+94.0,3,failed,data_quality,Task failed due to data quality check: null values found in 94 seconds after 3 retries,1
+39.0,1,failed,permission,Task failed because permission denied in 39 seconds after 1 retries,1
+29.0,0,success,none,Task completed successfully in 29 seconds after 0 retries,0
+25.0,2,failed,missing_file,Task error: file not found in 25 seconds after 2 retries,1
+20.0,0,success,none,Task completed successfully in 20 seconds after 0 retries,0
+96.0,3,failed,timeout,Task failed due to timeout in 96 seconds after 3 retries,1
+62.0,3,failed,schema_mismatch,Task failed due to schema mismatch in 62 seconds after 3 retries,1
+100.0,3,failed,schema_mismatch,Task failed due to schema mismatch in 100 seconds after 3 retries,1
+102.0,1,failed,data_quality,Task failed due to data quality check: null values found in 102 seconds after 1 retries,1
+96.0,2,failed,permission,Task failed because permission denied in 96 seconds after 2 retries,1
+108.0,2,failed,permission,Task failed because permission denied in 108 seconds after 2 retries,1
+74.0,4,failed,schema_mismatch,Task failed due to schema mismatch in 74 seconds after 4 retries,1
+96.0,2,failed,missing_file,Task error: file not found in 96 seconds after 2 retries,1
+56.0,1,failed,data_quality,Task failed due to data quality check: null values found in 56 seconds after 1 retries,1
+120.0,1,failed,schema_mismatch,Task failed due to schema mismatch in 120 seconds after 1 retries,1
+66.0,3,failed,missing_file,Task error: file not found in 66 seconds after 3 retries,1
+14.0,0,success,none,Task completed successfully in 14 seconds after 0 retries,0
+98.0,4,failed,schema_mismatch,Task failed due to schema mismatch in 98 seconds after 4 retries,1
+97.0,4,failed,timeout,Task failed due to timeout in 97 seconds after 4 retries,1
+48.0,2,failed,schema_mismatch,Task failed due to schema mismatch in 48 seconds after 2 retries,1
+110.0,3,failed,schema_mismatch,Task failed due to schema mismatch in 110 seconds after 3 retries,1
+89.0,4,failed,data_quality,Task failed due to data quality check: null values found in 89 seconds after 4 retries,1
+66.0,3,failed,permission,Task failed because permission denied in 66 seconds after 3 retries,1
+32.0,4,failed,schema_mismatch,Task failed due to schema mismatch in 32 seconds after 4 retries,1
+32.0,0,success,none,Task completed successfully in 32 seconds after 0 retries,0
+12.0,0,success,none,Task completed successfully in 12 seconds after 0 retries,0
+69.0,1,failed,data_quality,Task failed due to data quality check: null values found in 69 seconds after 1 retries,1
+63.0,4,failed,timeout,Task failed due to timeout in 63 seconds after 4 retries,1
+47.0,1,failed,permission,Task failed because permission denied in 47 seconds after 1 retries,1
+107.0,1,failed,data_quality,Task failed due to data quality check: null values found in 107 seconds after 1 retries,1
+83.0,3,failed,data_quality,Task failed due to data quality check: null values found in 83 seconds after 3 retries,1
+58.0,1,failed,data_quality,Task failed due to data quality check: null values found in 58 seconds after 1 retries,1
+70.0,2,failed,missing_file,Task error: file not found in 70 seconds after 2 retries,1
+15.0,3,failed,timeout,Task failed due to timeout in 15 seconds after 3 retries,1
+112.0,2,failed,permission,Task failed because permission denied in 112 seconds after 2 retries,1
+28.0,3,failed,permission,Task failed because permission denied in 28 seconds after 3 retries,1
+79.0,2,failed,data_quality,Task failed due to data quality check: null values found in 79 seconds after 2 retries,1
+62.0,2,failed,schema_mismatch,Task failed due to schema mismatch in 62 seconds after 2 retries,1
+114.0,1,failed,permission,Task failed because permission denied in 114 seconds after 1 retries,1
+56.0,4,failed,permission,Task failed because permission denied in 56 seconds after 4 retries,1
+11.0,0,success,none,Task completed successfully in 11 seconds after 0 retries,0
+45.0,1,failed,missing_file,Task error: file not found in 45 seconds after 1 retries,1
+87.0,1,failed,schema_mismatch,Task failed due to schema mismatch in 87 seconds after 1 retries,1
+31.0,1,success,none,Task completed successfully in 31 seconds after 1 retries,0
+32.0,0,success,none,Task completed successfully in 32 seconds after 0 retries,0
+99.0,4,failed,schema_mismatch,Task failed due to schema mismatch in 99 seconds after 4 retries,1
+36.0,3,failed,permission,Task failed because permission denied in 36 seconds after 3 retries,1
+92.0,4,failed,permission,Task failed because permission denied in 92 seconds after 4 retries,1
+84.0,2,failed,schema_mismatch,Task failed due to schema mismatch in 84 seconds after 2 retries,1
+54.0,4,failed,data_quality,Task failed due to data quality check: null values found in 54 seconds after 4 retries,1
+98.0,3,failed,data_quality,Task failed due to data quality check: null values found in 98 seconds after 3 retries,1
+81.0,4,failed,timeout,Task failed due to timeout in 81 seconds after 4 retries,1
+15.0,0,success,none,Task completed successfully in 15 seconds after 0 retries,0
+18.0,0,success,none,Task completed successfully in 18 seconds after 0 retries,0
+85.0,2,failed,permission,Task failed because permission denied in 85 seconds after 2 retries,1
+43.0,1,failed,permission,Task failed because permission denied in 43 seconds after 1 retries,1
+30.0,0,success,none,Task completed successfully in 30 seconds after 0 retries,0
+23.0,1,failed,schema_mismatch,Task failed due to schema mismatch in 23 seconds after 1 retries,1
+24.0,2,failed,missing_file,Task error: file not found in 24 seconds after 2 retries,1
+100.0,4,failed,missing_file,Task error: file not found in 100 seconds after 4 retries,1
+84.0,2,failed,schema_mismatch,Task failed due to schema mismatch in 84 seconds after 2 retries,1
+88.0,4,failed,data_quality,Task failed due to data quality check: null values found in 88 seconds after 4 retries,1
+115.0,4,failed,schema_mismatch,Task failed due to schema mismatch in 115 seconds after 4 retries,1
+39.0,1,failed,timeout,Task failed due to timeout in 39 seconds after 1 retries,1
+29.0,1,success,none,Task completed successfully in 29 seconds after 1 retries,0
+69.0,4,failed,missing_file,Task error: file not found in 69 seconds after 4 retries,1
+108.0,1,failed,timeout,Task failed due to timeout in 108 seconds after 1 retries,1
+98.0,1,failed,data_quality,Task failed due to data quality check: null values found in 98 seconds after 1 retries,1
+20.0,0,success,none,Task completed successfully in 20 seconds after 0 retries,0
+15.0,0,success,none,Task completed successfully in 15 seconds after 0 retries,0
+83.0,4,failed,schema_mismatch,Task failed due to schema mismatch in 83 seconds after 4 retries,1
+69.0,2,failed,schema_mismatch,Task failed due to schema mismatch in 69 seconds after 2 retries,1
+74.0,2,failed,missing_file,Task error: file not found in 74 seconds after 2 retries,1
+22.0,0,success,none,Task completed successfully in 22 seconds after 0 retries,0
+28.0,0,success,none,Task completed successfully in 28 seconds after 0 retries,0
+32.0,0,success,none,Task completed successfully in 32 seconds after 0 retries,0
+67.0,4,failed,schema_mismatch,Task failed due to schema mismatch in 67 seconds after 4 retries,1
+42.0,4,failed,timeout,Task failed due to timeout in 42 seconds after 4 retries,1
+13.0,1,success,none,Task completed successfully in 13 seconds after 1 retries,0
+20.0,0,success,none,Task completed successfully in 20 seconds after 0 retries,0
+51.0,4,failed,timeout,Task failed due to timeout in 51 seconds after 4 retries,1
+108.0,4,failed,data_quality,Task failed due to data quality check: null values found in 108 seconds after 4 retries,1
+39.0,3,failed,schema_mismatch,Task failed due to schema mismatch in 39 seconds after 3 retries,1
+22.0,1,failed,schema_mismatch,Task failed due to schema mismatch in 22 seconds after 1 retries,1
+55.0,1,failed,data_quality,Task failed due to data quality check: null values found in 55 seconds after 1 retries,1
+26.0,1,success,none,Task completed successfully in 26 seconds after 1 retries,0
+82.0,2,failed,permission,Task failed because permission denied in 82 seconds after 2 retries,1
+24.0,0,success,none,Task completed successfully in 24 seconds after 0 retries,0
+23.0,1,failed,schema_mismatch,Task failed due to schema mismatch in 23 seconds after 1 retries,1
+45.0,4,failed,data_quality,Task failed due to data quality check: null values found in 45 seconds after 4 retries,1
+26.0,0,success,none,Task completed successfully in 26 seconds after 0 retries,0
+91.0,1,failed,permission,Task failed because permission denied in 91 seconds after 1 retries,1
+25.0,4,failed,permission,Task failed because permission denied in 25 seconds after 4 retries,1
+89.0,3,failed,data_quality,Task failed due to data quality check: null values found in 89 seconds after 3 retries,1
+41.0,3,failed,missing_file,Task error: file not found in 41 seconds after 3 retries,1
+48.0,4,failed,schema_mismatch,Task failed due to schema mismatch in 48 seconds after 4 retries,1
+100.0,3,failed,schema_mismatch,Task failed due to schema mismatch in 100 seconds after 3 retries,1
+55.0,1,failed,timeout,Task failed due to timeout in 55 seconds after 1 retries,1
+22.0,0,success,none,Task completed successfully in 22 seconds after 0 retries,0
+25.0,0,success,none,Task completed successfully in 25 seconds after 0 retries,0
+48.0,2,failed,permission,Task failed because permission denied in 48 seconds after 2 retries,1
+23.0,2,failed,missing_file,Task error: file not found in 23 seconds after 2 retries,1
+51.0,2,failed,missing_file,Task error: file not found in 51 seconds after 2 retries,1
+84.0,3,failed,timeout,Task failed due to timeout in 84 seconds after 3 retries,1
+118.0,1,failed,permission,Task failed because permission denied in 118 seconds after 1 retries,1
+119.0,3,failed,data_quality,Task failed due to data quality check: null values found in 119 seconds after 3 retries,1
+28.0,2,failed,data_quality,Task failed due to data quality check: null values found in 28 seconds after 2 retries,1
+29.0,1,failed,missing_file,Task error: file not found in 29 seconds after 1 retries,1
+85.0,2,failed,data_quality,Task failed due to data quality check: null values found in 85 seconds after 2 retries,1
+51.0,2,failed,missing_file,Task error: file not found in 51 seconds after 2 retries,1
+58.0,2,failed,data_quality,Task failed due to data quality check: null values found in 58 seconds after 2 retries,1
+96.0,3,failed,data_quality,Task failed due to data quality check: null values found in 96 seconds after 3 retries,1
+77.0,3,failed,permission,Task failed because permission denied in 77 seconds after 3 retries,1
+10.0,1,success,none,Task completed successfully in 10 seconds after 1 retries,0
+20.0,1,failed,missing_file,Task error: file not found in 20 seconds after 1 retries,1
+113.0,2,failed,missing_file,Task error: file not found in 113 seconds after 2 retries,1
+48.0,2,failed,data_quality,Task failed due to data quality check: null values found in 48 seconds after 2 retries,1
+71.0,4,failed,data_quality,Task failed due to data quality check: null values found in 71 seconds after 4 retries,1
+16.0,1,failed,permission,Task failed because permission denied in 16 seconds after 1 retries,1
+30.0,0,success,none,Task completed successfully in 30 seconds after 0 retries,0
+19.0,3,failed,permission,Task failed because permission denied in 19 seconds after 3 retries,1
+85.0,2,failed,permission,Task failed because permission denied in 85 seconds after 2 retries,1
+31.0,1,failed,timeout,Task failed due to timeout in 31 seconds after 1 retries,1
+61.0,1,failed,missing_file,Task error: file not found in 61 seconds after 1 retries,1
+41.0,2,failed,missing_file,Task error: file not found in 41 seconds after 2 retries,1
+28.0,3,failed,data_quality,Task failed due to data quality check: null values found in 28 seconds after 3 retries,1
+67.0,2,failed,permission,Task failed because permission denied in 67 seconds after 2 retries,1
+35.0,2,failed,schema_mismatch,Task failed due to schema mismatch in 35 seconds after 2 retries,1
+18.0,2,failed,timeout,Task failed due to timeout in 18 seconds after 2 retries,1
+57.0,4,failed,data_quality,Task failed due to data quality check: null values found in 57 seconds after 4 retries,1
+109.0,2,failed,data_quality,Task failed due to data quality check: null values found in 109 seconds after 2 retries,1
+35.0,1,failed,missing_file,Task error: file not found in 35 seconds after 1 retries,1
+19.0,4,failed,timeout,Task failed due to timeout in 19 seconds after 4 retries,1
+40.0,4,failed,schema_mismatch,Task failed due to schema mismatch in 40 seconds after 4 retries,1
+54.0,2,failed,missing_file,Task error: file not found in 54 seconds after 2 retries,1
+18.0,2,failed,schema_mismatch,Task failed due to schema mismatch in 18 seconds after 2 retries,1
+57.0,3,failed,timeout,Task failed due to timeout in 57 seconds after 3 retries,1
+32.0,0,success,none,Task completed successfully in 32 seconds after 0 retries,0
+97.0,4,failed,missing_file,Task error: file not found in 97 seconds after 4 retries,1
+83.0,3,failed,data_quality,Task failed due to data quality check: null values found in 83 seconds after 3 retries,1
+11.0,0,success,none,Task completed successfully in 11 seconds after 0 retries,0
+89.0,3,failed,schema_mismatch,Task failed due to schema mismatch in 89 seconds after 3 retries,1
+11.0,1,success,none,Task completed successfully in 11 seconds after 1 retries,0
+108.0,3,failed,missing_file,Task error: file not found in 108 seconds after 3 retries,1
+92.0,1,failed,timeout,Task failed due to timeout in 92 seconds after 1 retries,1
+88.0,2,failed,timeout,Task failed due to timeout in 88 seconds after 2 retries,1
+20.0,4,failed,missing_file,Task error: file not found in 20 seconds after 4 retries,1
+24.0,0,success,none,Task completed successfully in 24 seconds after 0 retries,0
+70.0,1,failed,missing_file,Task error: file not found in 70 seconds after 1 retries,1
+57.0,3,failed,data_quality,Task failed due to data quality check: null values found in 57 seconds after 3 retries,1
+30.0,3,failed,data_quality,Task failed due to data quality check: null values found in 30 seconds after 3 retries,1
+54.0,4,failed,permission,Task failed because permission denied in 54 seconds after 4 retries,1
+66.0,3,failed,missing_file,Task error: file not found in 66 seconds after 3 retries,1
+31.0,2,failed,permission,Task failed because permission denied in 31 seconds after 2 retries,1
+100.0,4,failed,timeout,Task failed due to timeout in 100 seconds after 4 retries,1
+110.0,2,failed,data_quality,Task failed due to data quality check: null values found in 110 seconds after 2 retries,1
+87.0,3,failed,permission,Task failed because permission denied in 87 seconds after 3 retries,1
+85.0,1,failed,timeout,Task failed due to timeout in 85 seconds after 1 retries,1
+51.0,2,failed,missing_file,Task error: file not found in 51 seconds after 2 retries,1
+115.0,3,failed,timeout,Task failed due to timeout in 115 seconds after 3 retries,1
+71.0,4,failed,timeout,Task failed due to timeout in 71 seconds after 4 retries,1
+42.0,4,failed,data_quality,Task failed due to data quality check: null values found in 42 seconds after 4 retries,1
+36.0,1,failed,data_quality,Task failed due to data quality check: null values found in 36 seconds after 1 retries,1
+80.0,3,failed,missing_file,Task error: file not found in 80 seconds after 3 retries,1
+34.0,0,success,none,Task completed successfully in 34 seconds after 0 retries,0
+54.0,2,failed,data_quality,Task failed due to data quality check: null values found in 54 seconds after 2 retries,1
+33.0,1,failed,schema_mismatch,Task failed due to schema mismatch in 33 seconds after 1 retries,1
+15.0,1,success,none,Task completed successfully in 15 seconds after 1 retries,0
+113.0,1,failed,permission,Task failed because permission denied in 113 seconds after 1 retries,1
+68.0,2,failed,timeout,Task failed due to timeout in 68 seconds after 2 retries,1
+104.0,4,failed,data_quality,Task failed due to data quality check: null values found in 104 seconds after 4 retries,1
+66.0,2,failed,timeout,Task failed due to timeout in 66 seconds after 2 retries,1
+98.0,1,failed,schema_mismatch,Task failed due to schema mismatch in 98 seconds after 1 retries,1
+32.0,1,success,none,Task completed successfully in 32 seconds after 1 retries,0
+37.0,4,failed,schema_mismatch,Task failed due to schema mismatch in 37 seconds after 4 retries,1
+25.0,0,success,none,Task completed successfully in 25 seconds after 0 retries,0
+22.0,0,success,none,Task completed successfully in 22 seconds after 0 retries,0
+100.0,3,failed,timeout,Task failed due to timeout in 100 seconds after 3 retries,1
+93.0,4,failed,timeout,Task failed due to timeout in 93 seconds after 4 retries,1
+72.0,2,failed,permission,Task failed because permission denied in 72 seconds after 2 retries,1
+75.0,4,failed,data_quality,Task failed due to data quality check: null values found in 75 seconds after 4 retries,1
+111.0,2,failed,missing_file,Task error: file not found in 111 seconds after 2 retries,1
+50.0,4,failed,data_quality,Task failed due to data quality check: null values found in 50 seconds after 4 retries,1
+45.0,3,failed,data_quality,Task failed due to data quality check: null values found in 45 seconds after 3 retries,1
+24.0,3,failed,timeout,Task failed due to timeout in 24 seconds after 3 retries,1
+49.0,3,failed,schema_mismatch,Task failed due to schema mismatch in 49 seconds after 3 retries,1
+84.0,1,failed,missing_file,Task error: file not found in 84 seconds after 1 retries,1
+34.0,2,failed,schema_mismatch,Task failed due to schema mismatch in 34 seconds after 2 retries,1
+103.0,2,failed,timeout,Task failed due to timeout in 103 seconds after 2 retries,1
+42.0,1,failed,data_quality,Task failed due to data quality check: null values found in 42 seconds after 1 retries,1
+67.0,3,failed,timeout,Task failed due to timeout in 67 seconds after 3 retries,1
+74.0,4,failed,permission,Task failed because permission denied in 74 seconds after 4 retries,1
+14.0,1,success,none,Task completed successfully in 14 seconds after 1 retries,0
+113.0,1,failed,timeout,Task failed due to timeout in 113 seconds after 1 retries,1
+63.0,4,failed,permission,Task failed because permission denied in 63 seconds after 4 retries,1
+19.0,0,success,none,Task completed successfully in 19 seconds after 0 retries,0
+68.0,2,failed,timeout,Task failed due to timeout in 68 seconds after 2 retries,1
+43.0,3,failed,timeout,Task failed due to timeout in 43 seconds after 3 retries,1
+77.0,1,failed,timeout,Task failed due to timeout in 77 seconds after 1 retries,1
+58.0,4,failed,timeout,Task failed due to timeout in 58 seconds after 4 retries,1
+36.0,4,failed,data_quality,Task failed due to data quality check: null values found in 36 seconds after 4 retries,1
+94.0,1,failed,schema_mismatch,Task failed due to schema mismatch in 94 seconds after 1 retries,1
+90.0,1,failed,timeout,Task failed due to timeout in 90 seconds after 1 retries,1
+28.0,1,success,none,Task completed successfully in 28 seconds after 1 retries,0
+74.0,2,failed,schema_mismatch,Task failed due to schema mismatch in 74 seconds after 2 retries,1
+16.0,1,success,none,Task completed successfully in 16 seconds after 1 retries,0
+42.0,4,failed,missing_file,Task error: file not found in 42 seconds after 4 retries,1
+58.0,4,failed,missing_file,Task error: file not found in 58 seconds after 4 retries,1
+111.0,4,failed,missing_file,Task error: file not found in 111 seconds after 4 retries,1
+25.0,4,failed,missing_file,Task error: file not found in 25 seconds after 4 retries,1
+31.0,0,success,none,Task completed successfully in 31 seconds after 0 retries,0
+43.0,1,failed,missing_file,Task error: file not found in 43 seconds after 1 retries,1
+20.0,1,failed,data_quality,Task failed due to data quality check: null values found in 20 seconds after 1 retries,1
+40.0,1,failed,schema_mismatch,Task failed due to schema mismatch in 40 seconds after 1 retries,1
+34.0,2,failed,permission,Task failed because permission denied in 34 seconds after 2 retries,1
+75.0,1,failed,schema_mismatch,Task failed due to schema mismatch in 75 seconds after 1 retries,1
+42.0,4,failed,permission,Task failed because permission denied in 42 seconds after 4 retries,1
+47.0,3,failed,data_quality,Task failed due to data quality check: null values found in 47 seconds after 3 retries,1
+92.0,1,failed,schema_mismatch,Task failed due to schema mismatch in 92 seconds after 1 retries,1
+54.0,1,failed,schema_mismatch,Task failed due to schema mismatch in 54 seconds after 1 retries,1
+18.0,3,failed,permission,Task failed because permission denied in 18 seconds after 3 retries,1
+101.0,4,failed,permission,Task failed because permission denied in 101 seconds after 4 retries,1
+106.0,2,failed,timeout,Task failed due to timeout in 106 seconds after 2 retries,1
+26.0,0,success,none,Task completed successfully in 26 seconds after 0 retries,0
+30.0,0,success,none,Task completed successfully in 30 seconds after 0 retries,0
+91.0,1,failed,data_quality,Task failed due to data quality check: null values found in 91 seconds after 1 retries,1
+115.0,1,failed,permission,Task failed because permission denied in 115 seconds after 1 retries,1
+83.0,4,failed,missing_file,Task error: file not found in 83 seconds after 4 retries,1
+62.0,1,failed,data_quality,Task failed due to data quality check: null values found in 62 seconds after 1 retries,1
+97.0,3,failed,permission,Task failed because permission denied in 97 seconds after 3 retries,1
+35.0,1,success,none,Task completed successfully in 35 seconds after 1 retries,0
+28.0,4,failed,timeout,Task failed due to timeout in 28 seconds after 4 retries,1
+62.67,0,error,dbt_error,Timed out waiting for query execution,1
+26.47,0,error,dbt_error,Data quality check failed: null constraint violated,1
+54.13,0,error,dbt_error,Quality rule failed: duplicate primary key detected,1
+75.61,0,error,dbt_error,Unauthorized access to dataset,1
+47.67,0,error,dbt_error,No such file or directory during extract,1
+78.88,0,error,dbt_error,Timeout while loading data into warehouse,1
+81.12,0,error,dbt_error,Timeout while loading data into warehouse,1
+57.74,0,error,dbt_error,No such file or directory during extract,1
+17.15,0,error,dbt_error,Timed out waiting for query execution,1
+51.57,0,error,dbt_error,Column type mismatch while casting fields,1
+40.53,0,error,dbt_error,Timed out waiting for query execution,1
+15.76,0,error,dbt_error,Permission denied while writing to warehouse,1
+8.62,0,success,none,Loaded table successfully,0
+56.64,0,error,dbt_error,Source file not found in staging path,1
+50.71,0,error,dbt_error,Quality rule failed: duplicate primary key detected,1
+74.47,0,error,dbt_error,Source file not found in staging path,1
+31.62,0,error,dbt_error,Timeout while loading data into warehouse,1
+64.8,0,error,dbt_error,Timed out waiting for query execution,1
+56.51,0,error,dbt_error,No such file or directory during extract,1
+89.75,0,error,dbt_error,No such file or directory during extract,1
+67.71,0,error,dbt_error,Timed out waiting for query execution,1
+33.86,0,error,dbt_error,Timeout while loading data into warehouse,1
+29.44,0,error,dbt_error,Data quality check failed: null constraint violated,1
+55.19,0,error,dbt_error,Data quality check failed: null constraint violated,1
+31.23,0,error,dbt_error,Column type mismatch while casting fields,1
+69.34,0,error,dbt_error,Timed out waiting for query execution,1
+17.49,0,success,none,Transformation step finished,0
+42.07,0,error,dbt_error,Column type mismatch while casting fields,1
+15.62,0,success,none,Run completed,0
+18.41,0,error,dbt_error,Timeout while loading data into warehouse,1
+36.91,0,error,dbt_error,Permission denied while writing to warehouse,1
+80.13,0,error,dbt_error,Quality rule failed: duplicate primary key detected,1
+18.09,0,success,none,Transformation step finished,0
+50.9,0,error,dbt_error,No such file or directory during extract,1
+87.41,0,error,dbt_error,Column type mismatch while casting fields,1
+23.56,0,error,dbt_error,Source file not found in staging path,1
+51.88,0,error,dbt_error,Source file not found in staging path,1
+26.19,0,error,dbt_error,Schema drift: missing expected column,1
+21.39,0,error,dbt_error,Timeout while loading data into warehouse,1
+13.37,0,success,none,Loaded table successfully,0
+59.71,0,error,dbt_error,Permission denied while writing to warehouse,1
+43.53,0,error,dbt_error,Unauthorized access to dataset,1
+79.51,0,error,dbt_error,Timed out waiting for query execution,1
+57.65,0,error,dbt_error,Timeout while loading data into warehouse,1
+87.01,0,error,dbt_error,Permission denied while writing to warehouse,1
+61.91,0,error,dbt_error,Column type mismatch while casting fields,1
+21.09,0,error,dbt_error,Data quality check failed: null constraint violated,1
+56.4,0,error,dbt_error,Schema mismatch detected in transformed table,1
+11.13,0,success,none,Loaded table successfully,0
+17.45,0,error,dbt_error,Timed out waiting for query execution,1
+36.2,0,error,dbt_error,Quality rule failed: duplicate primary key detected,1
+15.31,0,success,none,Transformation step finished,0
+59.23,0,error,dbt_error,Data quality check failed: null constraint violated,1
+23.61,0,error,dbt_error,Source file not found in staging path,1
+26.17,0,error,dbt_error,Quality rule failed: duplicate primary key detected,1
+20.36,0,error,dbt_error,Schema mismatch detected in transformed table,1
+59.63,0,error,dbt_error,Timed out waiting for query execution,1
+24.33,0,error,dbt_error,No such file or directory during extract,1
+45.19,0,error,dbt_error,Quality rule failed: duplicate primary key detected,1
+55.5,0,error,dbt_error,Unauthorized access to dataset,1
+13.97,0,success,none,Loaded table successfully,0
+39.17,0,error,dbt_error,Quality rule failed: duplicate primary key detected,1
+6.37,0,success,none,Model completed successfully,0
+76.61,0,error,dbt_error,Data quality check failed: null constraint violated,1
+50.29,0,error,dbt_error,Schema drift: missing expected column,1
+83.71,0,error,dbt_error,Source file not found in staging path,1
+47.69,0,error,dbt_error,Unauthorized access to dataset,1
+12.05,0,success,none,Loaded table successfully,0
+39.08,0,error,dbt_error,Timeout while loading data into warehouse,1
+39.74,0,error,dbt_error,Schema drift: missing expected column,1
+36.62,0,error,dbt_error,No such file or directory during extract,1
+17.75,0,error,dbt_error,Permission denied while writing to warehouse,1
+33.93,0,error,dbt_error,Timeout while loading data into warehouse,1
+79.87,0,error,dbt_error,Source file not found in staging path,1
+80.2,0,error,dbt_error,Quality rule failed: duplicate primary key detected,1
+19.07,0,error,dbt_error,No such file or directory during extract,1
+71.73,0,error,dbt_error,Unauthorized access to dataset,1
+8.05,0,success,none,Run completed,0
+47.86,0,error,dbt_error,Timed out waiting for query execution,1
+5.43,0,success,none,Run completed,0
+26.88,0,error,dbt_error,Data quality check failed: null constraint violated,1
+45.6,0,error,dbt_error,Permission denied while writing to warehouse,1
+11.92,0,success,none,Model completed successfully,0
+77.41,0,error,dbt_error,Quality rule failed: duplicate primary key detected,1
+36.89,0,error,dbt_error,Quality rule failed: duplicate primary key detected,1
+77.6,0,error,dbt_error,No such file or directory during extract,1
+49.26,0,error,dbt_error,Schema mismatch detected in transformed table,1
+29.3,0,error,dbt_error,Source file not found in staging path,1
+9.14,0,success,none,Loaded table successfully,0
+85.07,0,error,dbt_error,Timed out waiting for query execution,1
+9.24,0,success,none,Transformation step finished,0
+58.49,0,error,dbt_error,Unauthorized access to dataset,1
+48.49,0,error,dbt_error,Column type mismatch while casting fields,1
+39.93,0,error,dbt_error,Timed out waiting for query execution,1
+84.96,0,error,dbt_error,Source file not found in staging path,1
+32.91,0,error,dbt_error,Quality rule failed: duplicate primary key detected,1
+79.2,0,error,dbt_error,Column type mismatch while casting fields,1
+9.77,0,success,none,Loaded table successfully,0
+83.51,0,error,dbt_error,Quality rule failed: duplicate primary key detected,1
+89.13,0,error,dbt_error,Source file not found in staging path,1
+87.36,0,error,dbt_error,Source file not found in staging path,1
+87.4,0,error,dbt_error,Unauthorized access to dataset,1
+18.11,0,success,none,Loaded table successfully,0
+12.89,0,success,none,Loaded table successfully,0
+15.84,0,success,none,Loaded table successfully,0
+87.75,0,error,dbt_error,Data quality check failed: null constraint violated,1
+73.61,0,error,dbt_error,No such file or directory during extract,1
+61.74,0,error,dbt_error,Timed out waiting for query execution,1
+21.02,0,error,dbt_error,Quality rule failed: duplicate primary key detected,1
+79.45,0,error,dbt_error,Quality rule failed: duplicate primary key detected,1
+62.01,0,error,dbt_error,Timed out waiting for query execution,1
+17.69,0,error,dbt_error,Permission denied while writing to warehouse,1
+62.34,0,error,dbt_error,Column type mismatch while casting fields,1
+71.01,0,error,dbt_error,Column type mismatch while casting fields,1
+16.41,0,success,none,Model completed successfully,0
+27.48,0,error,dbt_error,No such file or directory during extract,1
+5.69,0,success,none,Model completed successfully,0
+41.88,0,error,dbt_error,Timed out waiting for query execution,1
+33.31,0,error,dbt_error,Column type mismatch while casting fields,1
+66.14,0,error,dbt_error,Permission denied while writing to warehouse,1
+28.13,0,error,dbt_error,Schema drift: missing expected column,1
+61.48,0,error,dbt_error,Source file not found in staging path,1
+83.46,0,error,dbt_error,Source file not found in staging path,1
+49.59,0,error,dbt_error,Column type mismatch while casting fields,1
+34.15,0,error,dbt_error,Source file not found in staging path,1
+82.59,0,error,dbt_error,Source file not found in staging path,1
+11.63,0,success,none,Transformation step finished,0
+37.44,0,error,dbt_error,Unauthorized access to dataset,1
+33.76,0,error,dbt_error,Quality rule failed: duplicate primary key detected,1
+89.95,0,error,dbt_error,Column type mismatch while casting fields,1
+8.56,0,success,none,Transformation step finished,0
+37.19,0,error,dbt_error,Unauthorized access to dataset,1
+19.67,0,success,none,Loaded table successfully,0
+15.61,0,error,dbt_error,Timeout while loading data into warehouse,1
+70.89,0,error,dbt_error,Unauthorized access to dataset,1
+60.53,0,error,dbt_error,Column type mismatch while casting fields,1
+62.75,0,error,dbt_error,Schema drift: missing expected column,1
+65.83,0,error,dbt_error,Timeout while loading data into warehouse,1
+22.29,0,error,dbt_error,Data quality check failed: null constraint violated,1
+74.15,0,error,dbt_error,Timeout while loading data into warehouse,1
+42.36,0,error,dbt_error,Permission denied while writing to warehouse,1
+18.64,0,success,none,Transformation step finished,0
+46.16,0,error,dbt_error,Data quality check failed: null constraint violated,1
+73.99,0,error,dbt_error,Column type mismatch while casting fields,1
+52.63,0,error,dbt_error,Unauthorized access to dataset,1
+34.27,0,error,dbt_error,Column type mismatch while casting fields,1
+70.99,0,error,dbt_error,Timed out waiting for query execution,1
+12.02,0,success,none,Model completed successfully,0
+71.56,0,error,dbt_error,Schema mismatch detected in transformed table,1
+69.32,0,error,dbt_error,Quality rule failed: duplicate primary key detected,1
+42.43,0,error,dbt_error,Unauthorized access to dataset,1
+8.97,0,success,none,Model completed successfully,0
+42.64,0,error,dbt_error,No such file or directory during extract,1
+43.58,0,error,dbt_error,Unauthorized access to dataset,1
+15.12,0,success,none,Loaded table successfully,0
+14.29,0,success,none,Transformation step finished,0
+31.6,0,error,dbt_error,Permission denied while writing to warehouse,1
+76.79,0,error,dbt_error,Quality rule failed: duplicate primary key detected,1
+45.62,0,error,dbt_error,Data quality check failed: null constraint violated,1
+19.19,0,success,none,Transformation step finished,0
+23.71,0,error,dbt_error,Source file not found in staging path,1
+25.17,0,error,dbt_error,Unauthorized access to dataset,1
+65.29,0,error,dbt_error,Timed out waiting for query execution,1
+70.67,0,error,dbt_error,Permission denied while writing to warehouse,1
+64.12,0,error,dbt_error,No such file or directory during extract,1
+45.61,0,error,dbt_error,Unauthorized access to dataset,1
+15.35,0,success,none,Run completed,0
+48.35,0,error,dbt_error,Source file not found in staging path,1
+22.45,0,error,dbt_error,Timed out waiting for query execution,1
+82.63,0,error,dbt_error,Unauthorized access to dataset,1
+10.97,0,success,none,Run completed,0
+19.24,0,success,none,Loaded table successfully,0
+14.94,0,success,none,Model completed successfully,0
+16.8,0,success,none,Run completed,0
+74.02,0,error,dbt_error,Schema mismatch detected in transformed table,1
+17.45,0,success,none,Run completed,0
+31.2,0,error,dbt_error,Permission denied while writing to warehouse,1
+73.08,0,error,dbt_error,Timeout while loading data into warehouse,1
+79.38,0,error,dbt_error,Timeout while loading data into warehouse,1
+55.52,0,error,dbt_error,Schema mismatch detected in transformed table,1
+14.92,0,success,none,Model completed successfully,0
+16.11,0,error,dbt_error,Schema mismatch detected in transformed table,1
+39.28,0,error,dbt_error,Permission denied while writing to warehouse,1
+18.93,0,error,dbt_error,Timed out waiting for query execution,1
+23.52,0,error,dbt_error,Permission denied while writing to warehouse,1
+48.62,0,error,dbt_error,No such file or directory during extract,1
+59.52,0,error,dbt_error,Unauthorized access to dataset,1
+31.62,0,error,dbt_error,Permission denied while writing to warehouse,1
+73.74,0,error,dbt_error,Quality rule failed: duplicate primary key detected,1
+63.25,0,error,dbt_error,Source file not found in staging path,1
+19.98,0,success,none,Loaded table successfully,0
+66.46,0,error,dbt_error,No such file or directory during extract,1
+83.23,0,error,dbt_error,Data quality check failed: null constraint violated,1
+9.83,0,success,none,Run completed,0
+6.89,0,success,none,Transformation step finished,0
+89.6,0,error,dbt_error,No such file or directory during extract,1
+52.92,0,error,dbt_error,No such file or directory during extract,1
+16.9,0,success,none,Model completed successfully,0
+63.82,0,error,dbt_error,Data quality check failed: null constraint violated,1
+48.87,0,error,dbt_error,Source file not found in staging path,1
+40.42,0,error,dbt_error,No such file or directory during extract,1
+46.2,0,error,dbt_error,Source file not found in staging path,1
+47.01,0,error,dbt_error,Timed out waiting for query execution,1
+86.52,0,error,dbt_error,Timed out waiting for query execution,1
+6.37,0,success,none,Model completed successfully,0
+11.48,0,success,none,Transformation step finished,0
+56.73,0,error,dbt_error,Schema drift: missing expected column,1
+57.13,0,error,dbt_error,Permission denied while writing to warehouse,1
+41.52,0,error,dbt_error,No such file or directory during extract,1
+18.86,0,error,dbt_error,Quality rule failed: duplicate primary key detected,1
+38.43,0,error,dbt_error,Permission denied while writing to warehouse,1
+53.06,0,error,dbt_error,Permission denied while writing to warehouse,1
+51.16,0,error,dbt_error,Data quality check failed: null constraint violated,1
+78.4,0,error,dbt_error,Timed out waiting for query execution,1
+16.44,0,success,none,Run completed,0
+78.39,0,error,dbt_error,Source file not found in staging path,1
+84.68,0,error,dbt_error,Unauthorized access to dataset,1
+7.71,0,success,none,Transformation step finished,0
+41.33,0,error,dbt_error,Timeout while loading data into warehouse,1
+57.47,0,error,dbt_error,Column type mismatch while casting fields,1
+7.13,0,success,none,Model completed successfully,0
+16.19,0,success,none,Run completed,0
+46.49,0,error,dbt_error,No such file or directory during extract,1
+42.75,0,error,dbt_error,Schema drift: missing expected column,1
+73.26,0,error,dbt_error,Timeout while loading data into warehouse,1
+7.33,0,success,none,Model completed successfully,0
+21.12,0,error,dbt_error,Quality rule failed: duplicate primary key detected,1
+46.8,0,error,dbt_error,Quality rule failed: duplicate primary key detected,1
+35.49,0,error,dbt_error,Source file not found in staging path,1
+47.24,0,error,dbt_error,Timed out waiting for query execution,1
+65.89,0,error,dbt_error,Quality rule failed: duplicate primary key detected,1
+65.03,0,error,dbt_error,Permission denied while writing to warehouse,1
+44.64,0,error,dbt_error,Schema drift: missing expected column,1
+5.12,0,success,none,Transformation step finished,0
+72.55,0,error,dbt_error,Column type mismatch while casting fields,1
+39.61,0,error,dbt_error,Timeout while loading data into warehouse,1
+71.03,0,error,dbt_error,Source file not found in staging path,1
+43.52,0,error,dbt_error,Schema drift: missing expected column,1
+52.52,0,error,dbt_error,Schema drift: missing expected column,1
+20.41,0,error,dbt_error,Timeout while loading data into warehouse,1
+16.41,0,error,dbt_error,Source file not found in staging path,1
+58.18,0,error,dbt_error,Timed out waiting for query execution,1
+63.01,0,error,dbt_error,Quality rule failed: duplicate primary key detected,1
+11.08,0,success,none,Transformation step finished,0
+75.1,0,error,dbt_error,Schema drift: missing expected column,1
+77.4,0,error,dbt_error,No such file or directory during extract,1
+11.55,0,success,none,Model completed successfully,0
+47.68,0,error,dbt_error,Column type mismatch while casting fields,1
+20.9,0,error,dbt_error,Unauthorized access to dataset,1
+40.46,0,error,dbt_error,Quality rule failed: duplicate primary key detected,1
