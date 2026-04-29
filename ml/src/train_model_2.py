@@ -10,8 +10,8 @@ from sklearn.feature_extraction.text import TfidfVectorizer
 from sklearn.linear_model import LogisticRegression
 from sklearn.metrics import classification_report, confusion_matrix
 
-ROOT = Path(__file__).resolve().parents[1]
-DATA_PATH = ROOT / "data" / "etl_dataset.csv"
+ROOT = Path(__file__).resolve().parents[2]
+DATA_PATH = ROOT / "ETL-Project" / "backend" / "data" / "processed" / "etl_dataset.csv"
 MODEL_PATH = ROOT / "models" / "etl_failure_type_model.pkl"
 
 
