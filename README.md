@@ -1,6 +1,6 @@
 # ETL Failure Prediction & Root-Cause Assistant (PipeGuard AI)
 A course project for Applied Machine Learning at Stevens Institute of Technology.
-By: Miloni Mehta, Atharv Prashant Andhare, Salvatore Scotto Di Vetta
+**By:** Miloni Mehta · Atharv Prashant Andhare · Salvatore Scotto Di Vetta
 
 This project builds an ML-powered assistant that analyzes ETL run telemetry + logs to:
 1) **Predict failure risk** (Fail vs Success), and  
