@@ -1,6 +1,6 @@
 import React from 'react';
 import { Link, useLocation } from 'react-router-dom';
-import { ChartSpline, LayoutDashboard, GitCompare, Home } from 'lucide-react';
+import { ChartSpline, LayoutDashboard, Home } from 'lucide-react';
 
 const Navbar: React.FC = () => {
   const location = useLocation();
@@ -8,7 +8,6 @@ const Navbar: React.FC = () => {
   const navItems = [
     { path: '/', label: 'Home', icon: Home },
     { path: '/analysis', label: 'Analysis', icon: LayoutDashboard },
-    { path: '/compare', label: 'Compare', icon: GitCompare },
   ];
 
   return (

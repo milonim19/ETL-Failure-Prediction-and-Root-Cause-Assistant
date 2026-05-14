@@ -1,0 +1,702 @@
+[
+  {
+    "duration": 557.56,
+    "retry_count": 1,
+    "status": "success",
+    "error_type": "none",
+    "message": "dbt model stg_events_clickstream finished: PASS, freshness within SLA, invocation_id=job_83470_a203f2 | attempt=2 hostname=worker-9 memory_mb=11307"
+  },
+  {
+    "duration": 436.1,
+    "retry_count": 1,
+    "status": "success",
+    "error_type": "none",
+    "message": "dbt model raw_orders finished: PASS, freshness within SLA, invocation_id=job_45351_28a990"
+  },
+  {
+    "duration": 41.66,
+    "retry_count": 0,
+    "status": "success",
+    "error_type": "none",
+    "message": "dbt model analytics_session_rollup finished: PASS, freshness within SLA, invocation_id=job_86796_b64686"
+  },
+  {
+    "duration": 326.26,
+    "retry_count": 0,
+    "status": "success",
+    "error_type": "none",
+    "message": "dbt model stg_payments finished: PASS, freshness within SLA, invocation_id=job_81609_657464 | attempt=1 hostname=worker-4 memory_mb=1237"
+  },
+  {
+    "duration": 367.79,
+    "retry_count": 0,
+    "status": "success",
+    "error_type": "none",
+    "message": "Dagster DAG daily_orders_ingest completed successfully for table fact_orders; rows=1060703 duration=367.79s job_id=job_90543_602365 ts=2026-04-27T08:06:10Z"
+  },
+  {
+    "duration": 356.93,
+    "retry_count": 0,
+    "status": "success",
+    "error_type": "none",
+    "message": "task=zipcode_metrics_refresh.load target=analytics.session_rollup status=OK run_id=job_79620_3deaf7 committed partitions=23 at 2026-04-09T05:37:37Z"
+  },
+  {
+    "duration": 439.2,
+    "retry_count": 1,
+    "status": "success",
+    "error_type": "none",
+    "message": "task=dbt_marts_run.load target=inventory_snapshot status=OK run_id=job_96343_b90151 committed partitions=10 at 2026-04-15T03:52:35Z | attempt=2 hostname=worker-14 memory_mb=9379"
+  },
+  {
+    "duration": 73.09,
+    "retry_count": 0,
+    "status": "success",
+    "error_type": "none",
+    "message": "unknown"
+  },
+  {
+    "duration": 387.31,
+    "retry_count": 1,
+    "status": "success",
+    "error_type": "none",
+    "message": "dbt model stg_payments finished: PASS, freshness within SLA, invocation_id=job_27672_d2a2da"
+  },
+  {
+    "duration": 216.66,
+    "retry_count": 0,
+    "status": "success",
+    "error_type": "none",
+    "message": "task=billing_export_load.load target=stg.payments status=OK run_id=job_74188_2e1b47 committed partitions=45 at 2026-04-06T02:27:55Z"
+  },
+  {
+    "duration": 7.34,
+    "retry_count": 0,
+    "status": "success",
+    "error_type": "none",
+    "message": "dbt model crm_leads finished: PASS, freshness within SLA, invocation_id=job_72430_36fd1c"
+  },
+  {
+    "duration": 120.14,
+    "retry_count": 0,
+    "status": "success",
+    "error_type": "timeout",
+    "message": "Airflow task payment_recon exceeded execution_timeout after 120.14s; last heartbeat lost; job_id=job_83501_53a3ee table=stg.payments ts=2026-04-16T03:06:32Z"
+  },
+  {
+    "duration": 303.13,
+    "retry_count": 1,
+    "status": "degraded",
+    "error_type": "none",
+    "message": "dbt DAG daily_orders_ingest completed successfully for table crm.leads; rows=237842 duration=303.13s job_id=job_31934_ee9fe8 ts=2026-04-27T20:03:14Z"
+  },
+  {
+    "duration": 237.37,
+    "retry_count": 2,
+    "status": "timeout",
+    "error_type": "permission",
+    "message": "AccessDeniedException: role etl_runner cannot write to raw.orders; job_id=job_85371_04badc request_id=4aa727d9"
+  },
+  {
+    "duration": 470.99,
+    "retry_count": 1,
+    "status": "failed",
+    "error_type": "dbt_error",
+    "message": "dbt test failed: accepted_values on raw.orders.status returned 136 failures"
+  },
+  {
+    "duration": 568.94,
+    "retry_count": 0,
+    "status": "success",
+    "error_type": "none",
+    "message": "dbt model inventory_snapshot finished: PASS, freshness within SLA, invocation_id=job_19879_7b8b6a"
+  },
+  {
+    "duration": 457.29,
+    "retry_count": 1,
+    "status": "failed",
+    "error_type": "permission",
+    "message": "permission denied for schema analytics while executing INSERT into analytics.session_rollup; user=svc_etl"
+  },
+  {
+    "duration": 467.47,
+    "retry_count": 4,
+    "status": "success",
+    "error_type": "none",
+    "message": "dbt model stg_events_clickstream finished: PASS, freshness within SLA, invocation_id=job_37307_6f77ff"
+  },
+  {
+    "duration": 237.68,
+    "retry_count": 0,
+    "status": "success",
+    "error_type": "none",
+    "message": "Spark DAG daily_orders_ingest completed successfully for table billing.invoices; rows=193763 duration=237.68s job_id=job_74370_3a94e9 ts=2026-04-07T14:49:40Z"
+  },
+  {
+    "duration": 3197.23,
+    "retry_count": 3,
+    "status": "degraded",
+    "error_type": "none",
+    "message": "task=crm_delta_merge.load target=raw.orders status=OK run_id=job_65861_1fda0f committed partitions=18 at 2026-04-16T09:54:58Z"
+  },
+  {
+    "duration": 238.22,
+    "retry_count": 0,
+    "status": "success",
+    "error_type": "none",
+    "message": "dbt model warehouse_shipments finished: PASS, freshness within SLA, invocation_id=job_34439_f88d1d"
+  },
+  {
+    "duration": 2413.09,
+    "retry_count": 2,
+    "status": "error",
+    "error_type": "schema_mismatch",
+    "message": "dbt contract error in model stg_payments: missing column updated_at, extra column legacy_code"
+  },
+  {
+    "duration": 557.65,
+    "retry_count": 1,
+    "status": "failed",
+    "error_type": "dbt_error",
+    "message": "dbt test failed: accepted_values on inventory_snapshot.status returned 48 failures"
+  },
+  {
+    "duration": 248.71,
+    "retry_count": 0,
+    "status": "success",
+    "error_type": "none",
+    "message": "Glue DAG billing_export_load completed successfully for table inventory_snapshot; rows=1479782 duration=248.71s job_id=job_62542_4599d9 ts=2026-04-16T14:20:48Z"
+  },
+  {
+    "duration": 128.98,
+    "retry_count": 1,
+    "status": "error",
+    "error_type": "permission",
+    "message": "AccessDeniedException: role etl_runner cannot write to warehouse.shipments; job_id=job_31838_0df613 request_id=ec8ae0bb | attempt=2 hostname=worker-16 memory_mb=5089"
+  },
+  {
+    "duration": 4.46,
+    "retry_count": 0,
+    "status": "success",
+    "error_type": "none",
+    "message": "task=clickstream_spark_job.load target=billing.invoices status=OK run_id=job_41334_ca58bc committed partitions=33 at 2026-04-01T02:52:32Z"
+  },
+  {
+    "duration": 2306.83,
+    "retry_count": 1,
+    "status": "error",
+    "error_type": "timeout",
+    "message": "SLA miss: upstream batch still running after 2306.83s for clickstream_spark_job; marked timeout job_id=job_19549_7271e3"
+  },
+  {
+    "duration": 425.38,
+    "retry_count": 5,
+    "status": "success",
+    "error_type": "data_quality",
+    "message": "DQ rule violation in customer_dim_build: negative amount detected in warehouse.shipments; bad_rows=9698"
+  },
+  {
+    "duration": 3259.34,
+    "retry_count": 0,
+    "status": "failed",
+    "error_type": "none",
+    "message": "task=payment_recon.load target=raw.orders status=OK run_id=job_74808_724ca4 committed partitions=47 at 2026-04-20T02:06:58Z"
+  },
+  {
+    "duration": 2769.38,
+    "retry_count": 1,
+    "status": "warning",
+    "error_type": "none",
+    "message": "dbt model stg_payments finished: PASS, freshness within SLA, invocation_id=job_22301_b24c5a"
+  },
+  {
+    "duration": 505.34,
+    "retry_count": 0,
+    "status": "success",
+    "error_type": "none",
+    "message": "dbt model mart_revenue_daily finished: PASS, freshness within SLA, invocation_id=job_28499_8eb9fc"
+  },
+  {
+    "duration": 22.03,
+    "retry_count": 0,
+    "status": "success",
+    "error_type": "unknown",
+    "message": "task=fraud_features_etl.load target=analytics.session_rollup status=OK run_id=job_40881_b1bec1 committed partitions=32 at 2026-04-23T08:47:37Z"
+  },
+  {
+    "duration": 264.3,
+    "retry_count": 1,
+    "status": "success",
+    "error_type": "upstream_dependency",
+    "message": "External dependency not ready: watermark behind by 133 minutes for pipeline=clickstream_spark_job"
+  },
+  {
+    "duration": 1835.13,
+    "retry_count": 1,
+    "status": "timeout",
+    "error_type": "timeout",
+    "message": "SLA miss: upstream batch still running after 1835.13s for crm_delta_merge; marked timeout job_id=job_38209_0a98c3"
+  },
+  {
+    "duration": 14.17,
+    "retry_count": 0,
+    "status": "success",
+    "error_type": "none",
+    "message": "dbt model stg_payments finished: PASS, freshness within SLA, invocation_id=job_61327_08ebfe"
+  },
+  {
+    "duration": 384.45,
+    "retry_count": 0,
+    "status": "success",
+    "error_type": "none",
+    "message": "dbt model stg_payments finished: PASS, freshness within SLA, invocation_id=job_62163_1fa7c8"
+  },
+  {
+    "duration": 301.32,
+    "retry_count": 3,
+    "status": "timeout",
+    "error_type": "timeout",
+    "message": "Glue task crm_delta_merge exceeded execution_timeout after 301.32s; last heartbeat lost; job_id=job_53346_303fca table=fact_orders ts=2026-04-12T20:04:49Z"
+  },
+  {
+    "duration": 496.05,
+    "retry_count": 0,
+    "status": "success",
+    "error_type": "none",
+    "message": "task=billing_export_load.load target=mart.revenue_daily status=OK run_id=job_36305_a51188 committed partitions=5 at 2026-04-15T11:22:54Z"
+  },
+  {
+    "duration": 459.18,
+    "retry_count": 0,
+    "status": "degraded",
+    "error_type": "none",
+    "message": "task=billing_export_load.load target=crm.leads status=OK run_id=job_45657_cf2d1b committed partitions=11 at 2026-04-21T05:05:07Z"
+  },
+  {
+    "duration": 151.69,
+    "retry_count": 4,
+    "status": "failed",
+    "error_type": "missing_file",
+    "message": "Airflow sensor fraud_features_etl.wait_for_file failed: gs://bucket/raw/raw.orders/2026-04-05.csv missing"
+  },
+  {
+    "duration": 64.07,
+    "retry_count": 3,
+    "status": "timeout",
+    "error_type": "upstream_dependency",
+    "message": "Upstream dependency billing_api delayed; skipping zipcode_metrics_refresh for analytics.session_rollup; job_id=job_35970_836868"
+  },
+  {
+    "duration": 6988.8,
+    "retry_count": 2,
+    "status": "success",
+    "error_type": "timeout",
+    "message": "Glue task fraud_features_etl exceeded execution_timeout after 6988.8s; last heartbeat lost; job_id=job_76264_ff241b table=stg_events.clickstream ts=2026-04-22T12:57:39Z"
+  },
+  {
+    "duration": 499.33,
+    "retry_count": 0,
+    "status": "success",
+    "error_type": "none",
+    "message": "task=zipcode_metrics_refresh.load target=billing.invoices status=OK run_id=job_31711_4f7719 committed partitions=44 at 2026-04-02T09:50:52Z"
+  },
+  {
+    "duration": 240.88,
+    "retry_count": 1,
+    "status": "success",
+    "error_type": "none",
+    "message": "dbt model billing_invoices finished: PASS, freshness within SLA, invocation_id=job_90750_359d6b"
+  },
+  {
+    "duration": 65.21,
+    "retry_count": 1,
+    "status": "timeout",
+    "error_type": "permission",
+    "message": "AccessDeniedException: role etl_runner cannot write to warehouse.shipments; job_id=job_71461_878df6 request_id=67fc2b25 | attempt=2 hostname=worker-7 memory_mb=3651"
+  },
+  {
+    "duration": 57.82,
+    "retry_count": 0,
+    "status": "success",
+    "error_type": "none",
+    "message": "Prefect DAG clickstream_spark_job completed successfully for table fact_orders; rows=333734 duration=57.82s job_id=job_18725_75a1e0 ts=2026-04-01T21:36:50Z"
+  },
+  {
+    "duration": 547.23,
+    "retry_count": 3,
+    "status": "degraded",
+    "error_type": "data_quality",
+    "message": "row_count anomaly for raw.orders: expected 100k-130k, observed 9634; quarantined batch"
+  },
+  {
+    "duration": 7.51,
+    "retry_count": 1,
+    "status": "success",
+    "error_type": "none",
+    "message": "Glue DAG fraud_features_etl completed successfully for table warehouse.shipments; rows=139241 duration=7.51s job_id=job_11414_515590 ts=2026-04-05T19:24:26Z"
+  },
+  {
+    "duration": 59.51,
+    "retry_count": 0,
+    "status": "success",
+    "error_type": "none",
+    "message": "dbt model analytics_session_rollup finished: PASS, freshness within SLA, invocation_id=job_69096_ee95df"
+  },
+  {
+    "duration": 12.24,
+    "retry_count": 5,
+    "status": "success",
+    "error_type": "none",
+    "message": "dbt model inventory_snapshot finished: PASS, freshness within SLA, invocation_id=job_27786_8aaadf"
+  },
+  {
+    "duration": 3642.93,
+    "retry_count": 3,
+    "status": "degraded",
+    "error_type": "data_quality",
+    "message": "Great Expectations checkpoint failed for raw.customers: null_rate=0.24, duplicate_keys=10502 job_id=job_46832_0732af"
+  },
+  {
+    "duration": 597.77,
+    "retry_count": 1,
+    "status": "success",
+    "error_type": "none",
+    "message": "dbt model fact_orders finished: PASS, freshness within SLA, invocation_id=job_48550_b97e99"
+  },
+  {
+    "duration": 5.75,
+    "retry_count": 1,
+    "status": "success",
+    "error_type": "none",
+    "message": "Glue DAG fraud_features_etl completed successfully for table warehouse.shipments; rows=139241 duration=7.51s job_id=job_11414_515590 ts=2026-04-05T19:24:26Z"
+  },
+  {
+    "duration": 313.48,
+    "retry_count": 0,
+    "status": "success",
+    "error_type": "none",
+    "message": "dbt model stg_events_clickstream finished: PASS, freshness within SLA, invocation_id=job_43373_0a7e31"
+  },
+  {
+    "duration": 248.48,
+    "retry_count": 0,
+    "status": "success",
+    "error_type": "none",
+    "message": "task=daily_orders_ingest.load target=inventory_snapshot status=OK run_id=job_30090_dc4e10 committed partitions=31 at 2026-04-15T15:22:14Z"
+  },
+  {
+    "duration": 221.69,
+    "retry_count": 1,
+    "status": "success",
+    "error_type": "none",
+    "message": "dbt model warehouse_shipments finished: PASS, freshness within SLA, invocation_id=job_45097_dde9a9"
+  },
+  {
+    "duration": 1186.34,
+    "retry_count": 2,
+    "status": "failed",
+    "error_type": "upstream_dependency",
+    "message": "HTTP 503 from upstream service during extract for billing.invoices; circuit breaker open; retry=2"
+  },
+  {
+    "duration": 538.55,
+    "retry_count": 3,
+    "status": "success",
+    "error_type": "none",
+    "message": "task=payment_recon.load target=analytics.session_rollup status=OK run_id=job_23678_8ee8ae committed partitions=8 at 2026-04-07T08:57:03Z"
+  },
+  {
+    "duration": 227.83,
+    "retry_count": 2,
+    "status": "success",
+    "error_type": "none",
+    "message": "dbt model raw_customers finished: PASS, freshness within SLA, invocation_id=job_45506_158d43"
+  },
+  {
+    "duration": 9.74,
+    "retry_count": 0,
+    "status": "warning",
+    "error_type": "dbt_error",
+    "message": "dbt test failed: accepted_values on fact_orders.status returned 469 failures"
+  },
+  {
+    "duration": 5943.29,
+    "retry_count": 3,
+    "status": "failed",
+    "error_type": "schema_mismatch",
+    "message": "dbt contract error in model stg_events_clickstream: missing column updated_at, extra column legacy_code"
+  },
+  {
+    "duration": 76.1,
+    "retry_count": 4,
+    "status": "timeout",
+    "error_type": "permission",
+    "message": "permission denied for schema analytics while executing INSERT into raw.customers; user=svc_etl"
+  },
+  {
+    "duration": 9.14,
+    "retry_count": 0,
+    "status": "success",
+    "error_type": "none",
+    "message": "Airflow DAG inventory_sync completed successfully for table stg.payments; rows=6991 duration=9.14s job_id=job_28191_22c8b2 ts=2026-04-07T02:57:48Z | attempt=1 hostname=worker-6 memory_mb=2480"
+  },
+  {
+    "duration": 246.09,
+    "retry_count": 0,
+    "status": "success",
+    "error_type": "data_quality",
+    "message": "row_count anomaly for crm.leads: expected 100k-130k, observed 7301; quarantined batch"
+  },
+  {
+    "duration": 282.32,
+    "retry_count": 0,
+    "status": "success",
+    "error_type": "none",
+    "message": "dbt DAG billing_export_load completed successfully for table inventory_snapshot; rows=963184 duration=282.32s job_id=job_74196_8d2787 ts=2026-04-20T18:20:39Z"
+  },
+  {
+    "duration": 1.06,
+    "retry_count": 0,
+    "status": "success",
+    "error_type": "none",
+    "message": "task=zipcode_metrics_refresh.load target=stg_events.clickstream status=OK run_id=job_40983_c8a40f committed partitions=34 at 2026-04-26T15:47:19Z"
+  },
+  {
+    "duration": 8.01,
+    "retry_count": 0,
+    "status": "degraded",
+    "error_type": "none",
+    "message": "task=payment_recon.load target=stg.payments status=OK run_id=job_50737_cae61f committed partitions=18 at 2026-04-10T03:46:43Z"
+  },
+  {
+    "duration": 2768.21,
+    "retry_count": 1,
+    "status": "warning",
+    "error_type": "schema_mismatch",
+    "message": "Spark AnalysisException: Cannot resolve column 'event_ts' in input schema for pipeline=inventory_sync table=analytics.session_rollup"
+  },
+  {
+    "duration": 315.12,
+    "retry_count": 0,
+    "status": "success",
+    "error_type": "none",
+    "message": "task=zipcode_metrics_refresh.load target=stg.payments status=OK run_id=job_36807_071963 committed partitions=25 at 2026-04-28T16:18:03Z | attempt=1 hostname=worker-8 memory_mb=3967"
+  },
+  {
+    "duration": 538.92,
+    "retry_count": 0,
+    "status": "failed",
+    "error_type": "permission",
+    "message": "AccessDeniedException: role etl_runner cannot write to warehouse.shipments; job_id=job_19068_138a71 request_id=9facf86a"
+  },
+  {
+    "duration": 9.38,
+    "retry_count": 0,
+    "status": "success",
+    "error_type": "none",
+    "message": "dbt model stg_events_clickstream finished: PASS, freshness within SLA, invocation_id=job_78325_593ec1"
+  },
+  {
+    "duration": 492.39,
+    "retry_count": 1,
+    "status": "error",
+    "error_type": "permission",
+    "message": "permission denied for schema analytics while executing INSERT into analytics.session_rollup; user=svc_etl"
+  },
+  {
+    "duration": 376.23,
+    "retry_count": 0,
+    "status": "success",
+    "error_type": "none",
+    "message": "dbt model mart_revenue_daily finished: PASS, freshness within SLA, invocation_id=job_90397_ee7987"
+  },
+  {
+    "duration": 809.5,
+    "retry_count": 6,
+    "status": "failed",
+    "error_type": "data_quality",
+    "message": "row_count anomaly for billing.invoices: expected 100k-130k, observed 10480; quarantined batch"
+  },
+  {
+    "duration": 1364.93,
+    "retry_count": 0,
+    "status": "degraded",
+    "error_type": "upstream_dependency",
+    "message": "HTTP 503 from upstream service during extract for warehouse.shipments; circuit breaker open; retry=0"
+  },
+  {
+    "duration": 418.44,
+    "retry_count": 4,
+    "status": "error",
+    "error_type": "permission",
+    "message": "AccessDeniedException: role etl_runner cannot write to crm.leads; job_id=job_56954_b4e9aa request_id=9e50f3f0"
+  },
+  {
+    "duration": 1727.04,
+    "retry_count": 2,
+    "status": "success",
+    "error_type": "schema_mismatch",
+    "message": "dbt contract error in model dim_user: missing column updated_at, extra column legacy_code"
+  },
+  {
+    "duration": 196.11,
+    "retry_count": 0,
+    "status": "success",
+    "error_type": "none",
+    "message": "task=daily_orders_ingest.load target=inventory_snapshot status=OK run_id=job_74918_8f4e19 committed partitions=7 at 2026-04-23T15:24:50Z"
+  },
+  {
+    "duration": 404.98,
+    "retry_count": 0,
+    "status": "success",
+    "error_type": "none",
+    "message": "dbt model stg_payments finished: PASS, freshness within SLA, invocation_id=job_74210_01c858"
+  },
+  {
+    "duration": 40.24,
+    "retry_count": 0,
+    "status": "success",
+    "error_type": "none",
+    "message": "task=clickstream_spark_job.load target=warehouse.shipments status=OK run_id=job_42883_d9cb8b committed partitions=21 at 2026-04-01T12:26:18Z"
+  },
+  {
+    "duration": 1754.23,
+    "retry_count": 0,
+    "status": "success",
+    "error_type": "none",
+    "message": "Prefect DAG crm_delta_merge completed successfully for table crm.leads; rows=2321400 duration=1754.23s job_id=job_50880_961c27 ts=2026-04-25T14:07:14Z"
+  },
+  {
+    "duration": 218.31,
+    "retry_count": 1,
+    "status": "success",
+    "error_type": "none",
+    "message": "task=billing_export_load.load target=raw.customers status=OK run_id=job_27451_1818e6 committed partitions=38 at 2026-04-04T04:53:02Z"
+  },
+  {
+    "duration": 56.64,
+    "retry_count": 0,
+    "status": "faild",
+    "error_type": "none",
+    "message": "dbt model fact_orders finished: PASS, freshness within SLA, invocation_id=job_94039_6c8742"
+  },
+  {
+    "duration": 248.06,
+    "retry_count": 0,
+    "status": "success",
+    "error_type": "data_quality",
+    "message": "row_count anomaly for crm.leads: expected 100k-130k, observed 7301; quarantined batch"
+  },
+  {
+    "duration": 2.44,
+    "retry_count": 1,
+    "status": "success",
+    "error_type": "none",
+    "message": "Airflow DAG fraud_features_etl completed successfully for table stg.payments; rows=877100 duration=2.44s job_id=job_71162_719667 ts=2026-04-20T01:05:34Z"
+  },
+  {
+    "duration": 43.81,
+    "retry_count": 0,
+    "status": "success",
+    "error_type": "none",
+    "message": "Spark DAG zipcode_metrics_refresh completed successfully for table analytics.session_rollup; rows=830281 duration=43.81s job_id=job_14045_1cff62 ts=2026-04-16T13:09:06Z"
+  },
+  {
+    "duration": 83.87,
+    "retry_count": 3,
+    "status": "warning",
+    "error_type": "none",
+    "message": "dbt model stg_payments finished: PASS, freshness within SLA, invocation_id=job_29891_740a99 | attempt=4 hostname=worker-4 memory_mb=9573"
+  },
+  {
+    "duration": 220.95,
+    "retry_count": 0,
+    "status": "success",
+    "error_type": "none",
+    "message": "task=payment_recon.load target=dim_user status=OK run_id=job_31826_09def9 committed partitions=42 at 2026-04-23T14:04:49Z"
+  },
+  {
+    "duration": 246.13,
+    "retry_count": 1,
+    "status": "success",
+    "error_type": "none",
+    "message": "Dagster DAG fraud_features_etl completed successfully for table stg_events.clickstream; rows=142528 duration=246.13s job_id=job_67269_91300d ts=2026-04-11T00:35:56Z"
+  },
+  {
+    "duration": 23.93,
+    "retry_count": 0,
+    "status": "success",
+    "error_type": "none",
+    "message": "dbt DAG customer_dim_build completed successfully for table mart.revenue_daily; rows=1372369 duration=23.93s job_id=job_93508_b9c273 ts=2026-04-14T13:56:22Z"
+  },
+  {
+    "duration": 353.04,
+    "retry_count": 0,
+    "status": "success",
+    "error_type": "data_quality",
+    "message": "row_count anomaly for inventory_snapshot: expected 100k-130k, observed 13779; quarantined batch"
+  },
+  {
+    "duration": 301.13,
+    "retry_count": 0,
+    "status": "success",
+    "error_type": "none",
+    "message": "dbt model mart_revenue_daily finished: PASS, freshness within SLA, invocation_id=job_36375_70ed5a"
+  },
+  {
+    "duration": 146.85,
+    "retry_count": 4,
+    "status": "warning",
+    "error_type": "none",
+    "message": "task=payment_recon.load target=fact_orders status=OK run_id=job_45667_da2ccd committed partitions=37 at 2026-04-25T18:30:35Z"
+  },
+  {
+    "duration": 4049.79,
+    "retry_count": 5,
+    "status": "degraded",
+    "error_type": "timeout",
+    "message": "SLA miss: upstream batch still running after 4049.79s for billing_export_load; marked timeout job_id=job_40381_1a3c5b"
+  },
+  {
+    "duration": 413.16,
+    "retry_count": 2,
+    "status": "timedout",
+    "error_type": "none",
+    "message": "Spark DAG payment_recon completed successfully for table analytics.session_rollup; rows=823501 duration=413.16s job_id=job_92609_cb0a36 ts=2026-04-03T21:13:25Z"
+  },
+  {
+    "duration": 356.8,
+    "retry_count": 3,
+    "status": "warning",
+    "error_type": "none",
+    "message": "dbt model analytics_session_rollup finished: PASS, freshness within SLA, invocation_id=job_61011_bed0af"
+  },
+  {
+    "duration": 313.66,
+    "retry_count": 0,
+    "status": "success",
+    "error_type": "none",
+    "message": "task=zipcode_metrics_refresh.load target=stg.payments status=OK run_id=job_36807_071963 committed partitions=25 at 2026-04-28T16:18:03Z | attempt=1 hostname=worker-8 memory_mb=3967"
+  },
+  {
+    "duration": 89.31,
+    "retry_count": 0,
+    "status": "error",
+    "error_type": "permission",
+    "message": "403 Forbidden from object store during fraud_features_etl; check IAM policy for table=warehouse.shipments"
+  },
+  {
+    "duration": 5625.53,
+    "retry_count": 2,
+    "status": "error",
+    "error_type": "timeout",
+    "message": "Spark task billing_export_load exceeded execution_timeout after 5625.53s; last heartbeat lost; job_id=job_54774_884fc1 table=stg.payments ts=2026-04-15T02:20:07Z"
+  },
+  {
+    "duration": 5367.97,
+    "retry_count": 2,
+    "status": "success",
+    "error_type": "timeout",
+    "message": "Spark executor heartbeat timeout while writing crm.leads; stage=43 retry=2; java.net.SocketTimeoutException: Read timed out"
+  }
+]

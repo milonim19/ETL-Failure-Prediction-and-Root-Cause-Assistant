@@ -1,0 +1,1001 @@
+duration,retry_count,status,error_type,message
+65.86,0,success,none,task=customer_dim_build.load target=raw.orders status=OK run_id=job_40495_426f62 committed partitions=27 at 2026-04-01T20:26:03Z | attempt=1 hostname=worker-13 memory_mb=3681
+741.84,0,success,none,Spark DAG zipcode_metrics_refresh completed successfully for table analytics.session_rollup; rows=1213861 duration=741.84s job_id=job_85674_b87250 ts=2026-04-03T01:40:06Z
+426.54,4,failed,data_quality,DQ rule violation in clickstream_spark_job: negative amount detected in raw.orders; bad_rows=7518
+395.1,3,error,none,task=zipcode_metrics_refresh.load target=fact_orders status=OK run_id=job_60432_b94db2 committed partitions=1 at 2026-04-15T19:15:52Z | attempt=4 hostname=worker-24 memory_mb=24094
+384.93,0,failed,permission,403 Forbidden from object store during fraud_features_etl; check IAM policy for table=stg.payments
+1203.45,1,warning,none,Glue DAG inventory_sync completed successfully for table analytics.session_rollup; rows=88304 duration=1203.45s job_id=job_77839_2a0537 ts=2026-04-08T08:10:51Z
+268.3,0,error,data_quality,DQ rule violation in fraud_features_etl: negative amount detected in raw.orders; bad_rows=1234
+331.24,0,success,none,dbt DAG clickstream_spark_job completed successfully for table raw.customers; rows=690618 duration=331.24s job_id=job_63269_ca5e14 ts=2026-04-07T14:36:05Z
+577.06,0,success,none,"dbt model stg_payments finished: PASS, freshness within SLA, invocation_id=job_18907_b5d7f9"
+7.42,6,timeout,missing_file,Input path not found s3://lake/customer_dim_build/dt=2026-04-05/part-000.snappy.parquet; job_id=job_37938_d97edc
+227.91,2,failed,timeout,Glue task fraud_features_etl exceeded execution_timeout after 227.91s; last heartbeat lost; job_id=job_42914_5032d3 table=mart.revenue_daily ts=2026-04-28T01:50:58Z | attempt=3 hostname=worker-23 memory_mb=5396
+480.73,2,success,none,"dbt model dim_user finished: PASS, freshness within SLA, invocation_id=job_42706_a9cad2"
+492.7,0,success,none,dbt DAG clickstream_spark_job completed successfully for table mart.revenue_daily; rows=291251 duration=492.7s job_id=job_13101_4f509a ts=2026-04-13T11:57:05Z
+40.97,0,success,none,Prefect DAG fraud_features_etl completed successfully for table billing.invoices; rows=1385039 duration=40.97s job_id=job_97900_af945c ts=2026-04-14T02:32:51Z
+192.77,0,success,none,Prefect DAG zipcode_metrics_refresh completed successfully for table crm.leads; rows=711817 duration=192.77s job_id=job_52237_7c0a82 ts=2026-04-15T07:46:50Z | attempt=1 hostname=worker-8 memory_mb=16081
+248.8,0,success,none,task=daily_orders_ingest.load target=warehouse.shipments status=OK run_id=job_65724_110794 committed partitions=16 at 2026-04-26T18:51:29Z
+381.65,0,success,none,dbt DAG dbt_marts_run completed successfully for table raw.customers; rows=970060 duration=381.65s job_id=job_45614_66bf03 ts=2026-04-18T02:56:01Z
+264.49,4,success,upstream_dependency,External dependency not ready: watermark behind by 221 minutes for pipeline=fraud_features_etl
+229.77,3,failed,data_quality,"Great Expectations checkpoint failed for fact_orders: null_rate=0.64, duplicate_keys=1339 job_id=job_43065_1ac9f4"
+6186.09,3,error,upstream_dependency,Upstream dependency kafka_orders delayed; skipping dbt_marts_run for stg.payments; job_id=job_85849_212965
+14.45,1,success,none,task=payment_recon.load target=inventory_snapshot status=OK run_id=job_33086_70676e committed partitions=31 at 2026-04-21T09:50:00Z
+178.6,1,success,none,"dbt model mart_revenue_daily finished: PASS, freshness within SLA, invocation_id=job_77715_14805f"
+280.44,0,success,none,Prefect DAG customer_dim_build completed successfully for table stg_events.clickstream; rows=776654 duration=280.44s job_id=job_35242_e73fa5 ts=2026-04-24T19:30:36Z
+1748.17,1,success,none,Dagster DAG daily_orders_ingest completed successfully for table raw.customers; rows=215569 duration=1748.17s job_id=job_47268_f6f9ba ts=2026-04-15T12:24:17Z | attempt=2 hostname=worker-14 memory_mb=20379
+265.87,1,success,none,Prefect DAG zipcode_metrics_refresh completed successfully for table raw.orders; rows=340604 duration=265.87s job_id=job_23006_412134 ts=2026-04-07T22:46:27Z
+401.79,3,success,none,"dbt model fact_orders finished: PASS, freshness within SLA, invocation_id=job_39466_52e6a5"
+563.06,2,error,timeout,Dagster task dbt_marts_run exceeded execution_timeout after 563.06s; last heartbeat lost; job_id=job_15273_c8da1e table=raw.orders ts=2026-04-06T17:07:49Z
+227.8,6,degraded,none,Airflow DAG fraud_features_etl completed successfully for table fact_orders; rows=2174572 duration=227.8s job_id=job_96200_ef9550 ts=2026-04-15T15:02:45Z
+2243.27,0,success,none,"dbt model raw_customers finished: PASS, freshness within SLA, invocation_id=job_48254_46a115"
+316.39,1,degraded,data_quality,"row_count anomaly for billing.invoices: expected 100k-130k, observed 21747; quarantined batch"
+529.01,6,warning,none,"dbt model raw_customers finished: PASS, freshness within SLA, invocation_id=job_54375_abc88e | attempt=7 hostname=worker-4 memory_mb=21278"
+6.02,0,success,none,"dbt model stg_events_clickstream finished: PASS, freshness within SLA, invocation_id=job_84177_c38162 | attempt=1 hostname=worker-15 memory_mb=9937"
+133.46,0,success,none,task=dbt_marts_run.load target=stg.payments status=OK run_id=job_72071_6480d7 committed partitions=6 at 2026-04-10T14:28:16Z
+395.1,0,warning,schema_mismatch,Spark AnalysisException: Cannot resolve column 'event_ts' in input schema for pipeline=daily_orders_ingest table=inventory_snapshot
+247.49,2,success,none,Airflow DAG inventory_sync completed successfully for table billing.invoices; rows=1099664 duration=247.49s job_id=job_61717_ef6990 ts=2026-04-18T04:29:59Z
+14.94,0,success,none,task=fraud_features_etl.load target=stg_events.clickstream status=OK run_id=job_60940_cafc85 committed partitions=27 at 2026-04-22T19:40:04Z | attempt=1 hostname=worker-22 memory_mb=12548
+4991.14,2,success,timeout,Airflow task daily_orders_ingest exceeded execution_timeout after 4991.14s; last heartbeat lost; job_id=job_53713_05ac7f table=crm.leads ts=2026-04-05T20:33:20Z
+58.68,1,warning,none,task=billing_export_load.load target=stg.payments status=OK run_id=job_24896_a5c9f4 committed partitions=38 at 2026-04-16T16:19:16Z
+88.82,1,success,none,task=fraud_features_etl.load target=crm.leads status=OK run_id=job_52622_dc5f9c committed partitions=39 at 2026-04-20T19:19:01Z
+292.45,0,success,none,task=customer_dim_build.load target=raw.customers status=OK run_id=job_22656_c71214 committed partitions=36 at 2026-04-12T04:44:14Z
+461.12,1,success,none,"dbt model fact_orders finished: PASS, freshness within SLA, invocation_id=job_90422_549c83"
+253.53,3,failed,data_quality,"Great Expectations checkpoint failed for crm.leads: null_rate=0.41, duplicate_keys=14504 job_id=job_16895_1d0004"
+5.22,0,success,none,task=dbt_marts_run.load target=stg.payments status=OK run_id=job_53007_2b5b18 committed partitions=35 at 2026-04-16T15:40:46Z
+376.6,2,success,none,task=customer_dim_build.load target=dim_user status=OK run_id=job_23875_07137c committed partitions=20 at 2026-04-19T14:34:47Z
+398.47,0,success,none,"dbt model analytics_session_rollup finished: PASS, freshness within SLA, invocation_id=job_83889_405162 | attempt=1 hostname=worker-15 memory_mb=15320"
+261.47,2,failed,missing_file,Airflow sensor daily_orders_ingest.wait_for_file failed: gs://bucket/raw/warehouse.shipments/2026-04-11.csv missing
+2541.92,0,failed,missing_file,Airflow sensor fraud_features_etl.wait_for_file failed: gs://bucket/raw/raw.customers/2026-04-24.csv missing
+392.92,0,success,none,Spark DAG daily_orders_ingest completed successfully for table dim_user; rows=2039648 duration=392.92s job_id=job_50483_dc20e4 ts=2026-04-07T12:26:31Z
+6.1,3,timeout,schema_mismatch,Schema validation failed for inventory_snapshot: expected column customer_id INT but found STRING; job_id=job_68841_e63310 ts=2026-04-08T11:16:02Z
+3153.5,1,timeout,schema_mismatch,Schema validation failed for stg.payments: expected column customer_id INT but found STRING; job_id=job_77286_cfb4c6 ts=2026-04-14T03:20:21Z
+507.11,3,error,data_quality,"row_count anomaly for inventory_snapshot: expected 100k-130k, observed 9868; quarantined batch"
+5.94,1,success,data_quality,DQ rule violation in customer_dim_build: negative amount detected in stg.payments; bad_rows=6339
+391.04,2,success,none,Prefect DAG crm_delta_merge completed successfully for table analytics.session_rollup; rows=1919727 duration=391.04s job_id=job_72722_de57f8 ts=2026-04-26T04:54:35Z
+539.22,3,warning,missing_file,FileNotFoundError: landing file for fact_orders was not present by cutoff; sensor waited 10m
+598.92,0,success,none,Prefect DAG customer_dim_build completed successfully for table raw.orders; rows=598940 duration=598.92s job_id=job_93560_be4e64 ts=2026-04-17T05:49:29Z
+161.02,0,success,none,Glue DAG payment_recon completed successfully for table warehouse.shipments; rows=1091814 duration=161.02s job_id=job_77861_2f8208 ts=2026-04-18T04:17:15Z
+8.59,3,success,none,"dbt model stg_payments finished: PASS, freshness within SLA, invocation_id=job_76683_07baa7"
+90.08,2,success,none,"dbt model billing_invoices finished: PASS, freshness within SLA, invocation_id=job_26912_ba6369"
+380.32,3,success,none,task=zipcode_metrics_refresh.load target=dim_user status=OK run_id=job_13718_569d8a committed partitions=37 at 2026-04-21T20:59:58Z | attempt=4 hostname=worker-2 memory_mb=5691
+518.55,5,success,none,Dagster DAG inventory_sync completed successfully for table stg.payments; rows=1885822 duration=518.55s job_id=job_83616_4de723 ts=2026-04-08T16:59:01Z
+44.57,0,success,permission,permission denied for schema analytics while executing INSERT into analytics.session_rollup; user=svc_etl
+487.19,1,error,none,task=payment_recon.load target=dim_user status=OK run_id=job_88966_bfa65b committed partitions=46 at 2026-04-17T01:27:56Z
+492.21,0,success,none,"dbt model analytics_session_rollup finished: PASS, freshness within SLA, invocation_id=job_86507_2bd2b2"
+308.56,1,success,none,task=daily_orders_ingest.load target=inventory_snapshot status=OK run_id=job_28098_e7cd99 committed partitions=34 at 2026-04-18T11:50:04Z
+437.74,1,failed,permission,403 Forbidden from object store during fraud_features_etl; check IAM policy for table=dim_user
+147.02,0,success,none,unknown
+405.24,5,warning,upstream_dependency,External dependency not ready: watermark behind by 310 minutes for pipeline=zipcode_metrics_refresh | attempt=6 hostname=worker-11 memory_mb=9836
+488.16,0,success,none,Prefect DAG crm_delta_merge completed successfully for table warehouse.shipments; rows=2381527 duration=488.16s job_id=job_43720_a0cedd ts=2026-04-01T12:16:25Z
+350.13,0,success,none,Airflow DAG clickstream_spark_job completed successfully for table dim_user; rows=2107803 duration=350.13s job_id=job_97528_b4a1e7 ts=2026-04-10T05:48:54Z
+460.69,1,success,none,"dbt model crm_leads finished: PASS, freshness within SLA, invocation_id=job_68556_1a5e07"
+7.47,3,warning,permission,403 Forbidden from object store during daily_orders_ingest; check IAM policy for table=warehouse.shipments
+425.5,2,error,none,Prefect DAG payment_recon completed successfully for table billing.invoices; rows=934110 duration=425.5s job_id=job_55582_7aa1fd ts=2026-04-18T14:18:38Z
+24.15,0,success,none,"dbt model raw_customers finished: PASS, freshness within SLA, invocation_id=job_68515_84b878"
+356.19,2,warning,none,"dbt model warehouse_shipments finished: PASS, freshness within SLA, invocation_id=job_98965_d62aa5"
+208.2,0,success,none,Airflow DAG inventory_sync completed successfully for table inventory_snapshot; rows=165954 duration=208.2s job_id=job_80206_b80986 ts=2026-04-07T01:52:35Z
+2256.24,3,error,upstream_dependency,Upstream dependency vendor_sftp delayed; skipping crm_delta_merge for fact_orders; job_id=job_95029_f0d781
+307.09,1,success,none,task=inventory_sync.load target=analytics.session_rollup status=OK run_id=job_74044_1065c0 committed partitions=11 at 2026-04-21T17:51:43Z
+561.33,3,success,none,-
+552.06,0,success,none,task=clickstream_spark_job.load target=stg_events.clickstream status=OK run_id=job_79003_81d3fd committed partitions=24 at 2026-04-12T09:43:58Z
+346.03,2,success,none,Airflow DAG fraud_features_etl completed successfully for table raw.customers; rows=195375 duration=346.03s job_id=job_40115_e80fea ts=2026-04-28T20:38:09Z
+539.47,0,success,none,task=payment_recon.load target=warehouse.shipments status=OK run_id=job_20279_da7c44 committed partitions=5 at 2026-04-12T01:57:18Z
+159.17,0,success,none,"dbt model mart_revenue_daily finished: PASS, freshness within SLA, invocation_id=job_93086_256748"
+3360.46,3,timeout,timeout,Spark executor heartbeat timeout while writing warehouse.shipments; stage=37 retry=3; java.net.SocketTimeoutException: Read timed out
+391.11,3,degradedd,none,"dbt model dim_user finished: PASS, freshness within SLA, invocation_id=job_66441_0093ac"
+8.89,1,success,none,task=payment_recon.load target=billing.invoices status=OK run_id=job_82102_de71c0 committed partitions=29 at 2026-04-24T16:48:25Z | attempt=2 hostname=worker-20 memory_mb=16215
+6125.88,4,degraded,none,"dbt model crm_leads finished: PASS, freshness within SLA, invocation_id=job_42536_9e931d"
+216.81,0,success,none,"dbt model raw_customers finished: PASS, freshness within SLA, invocation_id=job_21253_dcafad | attempt=1 hostname=worker-11 memory_mb=21744"
+284.5,1,degraded,dbt_error,Database Error in model fact_orders: relation source_events does not exist
+112.83,1,error,data_quality,"Great Expectations checkpoint failed for inventory_snapshot: null_rate=0.28, duplicate_keys=6018 job_id=job_98288_c7b63b"
+183.97,0,success,none,Airflow DAG zipcode_metrics_refresh completed successfully for table inventory_snapshot; rows=1610458 duration=183.97s job_id=job_57059_d99648 ts=2026-04-16T04:58:15Z
+382.52,2,failed,timeout,Spark executor heartbeat timeout while writing crm.leads; stage=59 retry=2; java.net.SocketTimeoutException: Read timed out
+242.85,3,error,none,"dbt model analytics_session_rollup finished: PASS, freshness within SLA, invocation_id=job_90760_7be124"
+998.07,0,error,dbt_error,Database Error in model dim_user: relation source_events does not exist
+84.83,2,warning,dbt_error,Database Error in model stg_events_clickstream: relation source_orders does not exist | attempt=3 hostname=worker-14 memory_mb=7141
+248.24,0,warning,data_quality,"Great Expectations checkpoint failed for analytics.session_rollup: null_rate=0.21, duplicate_keys=2573 job_id=job_61949_9a89d2"
+192.06,3,timeout,missing_file,Airflow sensor dbt_marts_run.wait_for_file failed: gs://bucket/raw/inventory_snapshot/2026-04-11.csv missing
+384.18,3,success,upstream_dependency,Upstream dependency kafka_orders delayed; skipping daily_orders_ingest for warehouse.shipments; job_id=job_49537_a9841c
+3463.36,3,warning,none,Airflow DAG zipcode_metrics_refresh completed successfully for table raw.orders; rows=1669308 duration=3463.36s job_id=job_11807_f23756 ts=2026-04-02T02:12:05Z
+413.42,0,success,none,task=billing_export_load.load target=warehouse.shipments status=OK run_id=job_41278_c97c2b committed partitions=20 at 2026-04-03T15:49:08Z
+85.13,3,warning,none,Glue DAG customer_dim_build completed successfully for table crm.leads; rows=700031 duration=85.13s job_id=job_69663_e9a0aa ts=2026-04-02T18:11:24Z
+1858.11,1,degraded,none,Spark DAG inventory_sync completed successfully for table fact_orders; rows=221003 duration=1858.11s job_id=job_20208_953f15 ts=2026-04-04T18:16:43Z
+321.35,3,timeout,schema_mismatch,"dbt contract error in model stg_events_clickstream: missing column updated_at, extra column legacy_code"
+538.91,0,success,none,task=customer_dim_build.load target=warehouse.shipments status=OK run_id=job_22527_11d0a1 committed partitions=4 at 2026-04-21T14:21:28Z
+273.58,2,warning,schema_mismatch,"dbt contract error in model stg_events_clickstream: missing column updated_at, extra column legacy_code"
+486.6,0,degraded,upstream_dependency,HTTP 503 from upstream service during extract for raw.orders; circuit breaker open; retry=0
+284.67,1,degraded,none,Spark DAG dbt_marts_run completed successfully for table stg.payments; rows=1030976 duration=284.67s job_id=job_68459_59a2c1 ts=2026-04-02T22:21:32Z
+112.62,1,success,none,Spark DAG payment_recon completed successfully for table analytics.session_rollup; rows=2290607 duration=112.37s job_id=job_10342_a948e4 ts=2026-04-02T23:57:02Z
+511.57,4,error,none,task=clickstream_spark_job.load target=stg.payments status=OK run_id=job_51681_abef44 committed partitions=46 at 2026-04-23T13:03:46Z | attempt=5 hostname=worker-2 memory_mb=8134
+118.81,2,success,none,task=daily_orders_ingest.load target=dim_user status=OK run_id=job_29360_57277a committed partitions=5 at 2026-04-05T04:02:18Z
+146.44,1,timeout,upstream_dependency,HTTP 503 from upstream service during extract for warehouse.shipments; circuit breaker open; retry=1
+195.87,0,failed,upstream_dependency,HTTP 503 from upstream service during extract for raw.customers; circuit breaker open; retry=0 | attempt=1 hostname=worker-2 memory_mb=10175
+14.19,6,failed,schema_mismatch,Schema validation failed for dim_user: expected column customer_id INT but found STRING; job_id=job_73273_8e8cd5 ts=2026-04-14T23:47:53Z | attempt=7 hostname=worker-19 memory_mb=18523
+131.81,0,success,none,task=dbt_marts_run.load target=stg.payments status=OK run_id=job_72071_6480d7 committed partitions=6 at 2026-04-10T14:28:16Z
+257.18,1,success,none,task=fraud_features_etl.load target=stg_events.clickstream status=OK run_id=job_60738_d7525c committed partitions=37 at 2026-04-14T19:29:50Z
+452.43,2,success,timeout,SLA miss: upstream batch still running after 452.43s for inventory_sync; marked timeout job_id=job_18783_7fc478
+239.13,1,degraded,upstream_dependency,HTTP 503 from upstream service during extract for fact_orders; circuit breaker open; retry=1
+1562.6,3,failed,none,dbt DAG customer_dim_build completed successfully for table crm.leads; rows=2166443 duration=1562.6s job_id=job_67896_7f44c8 ts=2026-04-27T14:49:28Z
+3690.63,1,failed,timeout,dbt task daily_orders_ingest exceeded execution_timeout after 3690.63s; last heartbeat lost; job_id=job_58819_4fecdf table=raw.customers ts=2026-04-15T06:27:56Z
+20.21,3,success,none,"dbt model analytics_session_rollup finished: PASS, freshness within SLA, invocation_id=job_11109_620924"
+211.73,0,success,none,task=dbt_marts_run.load target=dim_user status=OK run_id=job_95998_3a606b committed partitions=16 at 2026-04-21T10:52:43Z
+2514.94,2,error,none,Dagster DAG inventory_sync completed successfully for table analytics.session_rollup; rows=759818 duration=2514.94s job_id=job_49347_3c9eb0 ts=2026-04-27T23:56:34Z
+114.78,0,error,upstream_dependency,HTTP 503 from upstream service during extract for analytics.session_rollup; circuit breaker open; retry=0
+2021.45,3,error,timeout,SLA miss: upstream batch still running after 2021.45s for payment_recon; marked timeout job_id=job_21539_8ba325
+1.64,5,error,upstream_dependency,External dependency not ready: watermark behind by 31 minutes for pipeline=fraud_features_etl
+376.66,0,warning,data_quality,"row_count anomaly for raw.customers: expected 100k-130k, observed 13791; quarantined batch"
+470.11,2,success,data_quality,"Great Expectations checkpoint failed for stg_events.clickstream: null_rate=0.23, duplicate_keys=437 job_id=job_63707_959307"
+77.54,4,degraded,data_quality,"Great Expectations checkpoint failed for raw.orders: null_rate=0.30, duplicate_keys=14363 job_id=job_98705_c4e394"
+81.14,1,success,none,task=payment_recon.load target=raw.orders status=OK run_id=job_64529_b07f82 committed partitions=40 at 2026-04-16T20:42:52Z
+6743.32,2,error,dbt_error,Database Error in model warehouse_shipments: relation source_customers does not exist
+7.22,1,success,none,
+312.38,0,success,none,task=crm_delta_merge.load target=analytics.session_rollup status=OK run_id=job_57624_bdfc15 committed partitions=36 at 2026-04-27T08:06:58Z
+434.36,1,success,none,Dagster DAG dbt_marts_run completed successfully for table raw.customers; rows=799425 duration=434.36s job_id=job_35679_2449d6 ts=2026-04-28T14:18:17Z
+368.2,3,degraded,upstream_dependency,HTTP 503 from upstream service during extract for stg.payments; circuit breaker open; retry=3
+589.08,1,success,none,task=fraud_features_etl.load target=stg.payments status=OK run_id=job_93476_d28f51 committed partitions=37 at 2026-04-04T12:49:28Z
+419.0,0,success,none,Spark DAG daily_orders_ingest completed successfully for table billing.invoices; rows=2354219 duration=419.0s job_id=job_69322_407e00 ts=2026-04-28T20:27:27Z | attempt=1 hostname=worker-9 memory_mb=7166
+465.31,2,warning,none,task=clickstream_spark_job.load target=crm.leads status=OK run_id=job_35362_a6b617 committed partitions=48 at 2026-04-06T02:42:40Z
+1503.46,3,degraded,none,task=inventory_sync.load target=billing.invoices status=OK run_id=job_51662_9fcb77 committed partitions=11 at 2026-04-06T18:57:16Z
+547.47,2,timedout,none,"dbt model crm_leads finished: PASS, freshness within SLA, invocation_id=job_99463_6918c7"
+396.23,0,sucess,upstream_dependency,Upstream dependency crm_api delayed; skipping billing_export_load for analytics.session_rollup; job_id=job_36945_19a6ac
+2204.5,2,error,schema_mismatch,Spark AnalysisException: Cannot resolve column 'event_ts' in input schema for pipeline=customer_dim_build table=crm.leads
+3496.1,4,warning,none,Airflow DAG inventory_sync completed successfully for table analytics.session_rollup; rows=2402235 duration=3496.1s job_id=job_82551_904c0a ts=2026-04-05T04:29:12Z
+2389.76,0,success,none,task=customer_dim_build.load target=billing.invoices status=OK run_id=job_98039_680298 committed partitions=22 at 2026-04-04T07:11:15Z
+4.45,0,success,none,Spark DAG billing_export_load completed successfully for table warehouse.shipments; rows=1941406 duration=4.45s job_id=job_57118_b02ffe ts=2026-04-24T12:04:18Z
+1238.28,0,success,data_quality,"row_count anomaly for mart.revenue_daily: expected 100k-130k, observed 13001; quarantined batch"
+297.85,0,success,none,"dbt model stg_events_clickstream finished: PASS, freshness within SLA, invocation_id=job_18239_410274"
+548.98,2,error,data_quality,"Great Expectations checkpoint failed for dim_user: null_rate=0.44, duplicate_keys=9221 job_id=job_73191_298547"
+157.55,0,success,none,task=payment_recon.load target=crm.leads status=OK run_id=job_92515_5672fc committed partitions=12 at 2026-04-19T05:20:49Z
+1393.56,3,timeout,dbt_error,dbt test failed: accepted_values on dim_user.status returned 466 failures
+253.71,0,degraded,permision,"dbt model billing_invoices finished: PASS, freshness within SLA, invocation_id=job_73192_c87dd7"
+357.44,0,success,none,"dbt model billing_invoices finished: PASS, freshness within SLA, invocation_id=job_57925_00f289"
+474.86,2,success,none,"dbt model crm_leads finished: PASS, freshness within SLA, invocation_id=job_61000_828974"
+411.29,3,degraded,none,"dbt model mart_revenue_daily finished: PASS, freshness within SLA, invocation_id=job_88579_211442"
+241.11,4,degraded,data_quality,DQ rule violation in zipcode_metrics_refresh: negative amount detected in stg_events.clickstream; bad_rows=5571
+2.63,0,failed,none,"dbt model analytics_session_rollup finished: PASS, freshness within SLA, invocation_id=job_40137_2a42e7"
+1220.34,0,degraded,none,Spark DAG zipcode_metrics_refresh completed successfully for table stg_events.clickstream; rows=2066466 duration=1220.34s job_id=job_30446_d237f1 ts=2026-04-04T02:51:27Z
+331.35,0,success,none,task=payment_recon.load target=fact_orders status=OK run_id=job_25776_dcfbcf committed partitions=44 at 2026-04-15T11:29:33Z
+178.58,0,success,none,"dbt model stg_payments finished: PASS, freshness within SLA, invocation_id=job_39958_144c48"
+50.12,2,success,none,task=customer_dim_build.load target=inventory_snapshot status=OK run_id=job_53864_66b500 committed partitions=23 at 2026-04-12T20:24:06Z
+142.17,3,warning,none,"dbt model dim_user finished: PASS, freshness within SLA, invocation_id=job_90256_ba15e8"
+1231.71,1,success,dbt_error,dbt run failed on model raw_customers: Compilation Error near line 66; invocation_id=job_81884_49323e
+1573.05,0,success,none,task=payment_recon.load target=inventory_snapshot status=OK run_id=job_80685_2dc4f4 committed partitions=28 at 2026-04-20T16:37:20Z
+13.91,4,success,none,Airflow DAG dbt_marts_run completed successfully for table inventory_snapshot; rows=2299448 duration=13.91s job_id=job_66418_6b4834 ts=2026-04-20T08:25:05Z
+449.61,2,success,none,task=clickstream_spark_job.load target=fact_orders status=OK run_id=job_33908_f5c6c4 committed partitions=18 at 2026-04-04T23:11:18Z
+482.69,6,success,none,task=daily_orders_ingest.load target=inventory_snapshot status=OK run_id=job_20515_fa3049 committed partitions=5 at 2026-04-05T02:02:25Z
+577.31,3,success,none,Prefect DAG daily_orders_ingest completed successfully for table stg.payments; rows=833587 duration=577.31s job_id=job_82034_6defa7 ts=2026-04-09T17:31:15Z
+1346.17,2,timeout,upstream_dependency,HTTP 503 from upstream service during extract for analytics.session_rollup; circuit breaker open; retry=2
+4210.71,1,warning,timeout,Dagster task dbt_marts_run exceeded execution_timeout after 4210.71s; last heartbeat lost; job_id=job_82682_eee680 table=inventory_snapshot ts=2026-04-17T05:38:39Z
+205.72,1,warning,upstream_dependency,HTTP 503 from upstream service during extract for dim_user; circuit breaker open; retry=1
+401.4,1,degraded,none,"dbt model warehouse_shipments finished: PASS, freshness within SLA, invocation_id=job_17641_7a2378"
+2707.65,1,success,upstream_dependency,External dependency not ready: watermark behind by 308 minutes for pipeline=payment_recon
+5744.75,2,success,data_quality,DQ rule violation in daily_orders_ingest: negative amount detected in mart.revenue_daily; bad_rows=2535
+438.29,2,success,none,"dbt model stg_payments finished: PASS, freshness within SLA, invocation_id=job_85527_be5ade"
+102.5,0,success,none,task=payment_recon.load target=stg_events.clickstream status=OK run_id=job_98294_1b19b9 committed partitions=33 at 2026-04-13T16:13:27Z
+349.23,1,success,none,dbt DAG fraud_features_etl completed successfully for table warehouse.shipments; rows=2416075 duration=349.23s job_id=job_41760_a31bfc ts=2026-04-25T15:39:29Z
+5613.16,2,success,timeout,N/A
+336.05,1,success,none,Glue DAG daily_orders_ingest completed successfully for table stg.payments; rows=252199 duration=336.05s job_id=job_86415_fbe3a1 ts=2026-04-17T01:34:59Z
+378.41,0,failed,none,"dbt model stg_events_clickstream finished: PASS, freshness within SLA, invocation_id=job_83490_55983f"
+4412.1,1,error,schema_mismatch,Schema validation failed for fact_orders: expected column customer_id INT but found STRING; job_id=job_60096_f7fc39 ts=2026-04-22T22:17:54Z
+546.77,2,success,none,dbt DAG zipcode_metrics_refresh completed successfully for table analytics.session_rollup; rows=610446 duration=546.77s job_id=job_51614_7345ea ts=2026-04-18T04:18:37Z | attempt=3 hostname=worker-6 memory_mb=1370
+225.17,1,success,none,"dbt model inventory_snapshot finished: PASS, freshness within SLA, invocation_id=job_89260_277461"
+3200.32,4,failed,schema_mismatch,Spark AnalysisException: Cannot resolve column 'event_ts' in input schema for pipeline=billing_export_load table=fact_orders
+532.37,2,success,none,dbt DAG crm_delta_merge completed successfully for table mart.revenue_daily; rows=1944471 duration=532.37s job_id=job_65372_8de58d ts=2026-04-02T18:49:20Z
+480.94,1,success,none,Airflow DAG customer_dim_build completed successfully for table raw.customers; rows=2146164 duration=480.94s job_id=job_68903_1d4027 ts=2026-04-03T19:04:17Z
+2.84,0,success,none,"dbt model crm_leads finished: PASS, freshness within SLA, invocation_id=job_70115_9cbee5"
+33.97,1,success,none,task=dbt_marts_run.load target=crm.leads status=OK run_id=job_21495_4202b3 committed partitions=40 at 2026-04-14T06:29:23Z
+1587.63,1,warning,none,"dbt model stg_events_clickstream finished: PASS, freshness within SLA, invocation_id=job_17626_ebe85c"
+602.85,0,success,none,Prefect DAG customer_dim_build completed successfully for table analytics.session_rollup; rows=1466618 duration=602.85s job_id=job_37175_f0cc8c ts=2026-04-14T15:04:29Z
+408.4,3,success,none,Glue DAG payment_recon completed successfully for table raw.orders; rows=1939820 duration=408.4s job_id=job_30366_642738 ts=2026-04-28T19:33:01Z
+6313.09,1,success,timeout,SLA miss: upstream batch still running after 6313.09s for inventory_sync; marked timeout job_id=job_14145_b6d71a | attempt=2 hostname=worker-16 memory_mb=16897
+894.75,6,error,missing_file,Airflow sensor payment_recon.wait_for_file failed: gs://bucket/raw/billing.invoices/2026-04-23.csv missing
+174.5,0,success,none,Dagster DAG daily_orders_ingest completed successfully for table raw.customers; rows=1335902 duration=174.5s job_id=job_83351_f6685a ts=2026-04-07T19:45:10Z
+504.16,1,success,none,Spark DAG inventory_sync completed successfully for table crm.leads; rows=1953347 duration=504.16s job_id=job_53559_c561bc ts=2026-04-23T19:25:24Z
+523.44,1,failed,upstream_dependency,External dependency not ready: watermark behind by 174 minutes for pipeline=daily_orders_ingest
+421.03,0,success,none,"dbt model fact_orders finished: PASS, freshness within SLA, invocation_id=job_81372_09294e | attempt=1 hostname=worker-20 memory_mb=12928"
+488.76,1,success,none,"dbt model analytics_session_rollup finished: PASS, freshness within SLA, invocation_id=job_79632_33ec26"
+1677.73,4,error,schema_mismatch,Schema validation failed for raw.orders: expected column customer_id INT but found STRING; job_id=job_87353_21affb ts=2026-04-11T13:56:13Z | attempt=5 hostname=worker-21 memory_mb=1026
+3180.46,4,timeout,upstream_dependency,External dependency not ready: watermark behind by 230 minutes for pipeline=zipcode_metrics_refresh
+5432.71,2,error,timeout,Spark executor heartbeat timeout while writing mart.revenue_daily; stage=84 retry=2; java.net.SocketTimeoutException: Read timed out
+13.92,1,success,none,task=zipcode_metrics_refresh.load target=warehouse.shipments status=OK run_id=job_18050_5ecc4d committed partitions=48 at 2026-04-19T06:09:21Z
+146.47,3,timeout,dbt_error,dbt test failed: accepted_values on stg_events.clickstream.status returned 300 failures
+1020.59,1,success,none,task=crm_delta_merge.load target=fact_orders status=OK run_id=job_29025_a3c318 committed partitions=25 at 2026-04-14T00:25:54Z
+157.21,1,error,data_quality,N/A
+48.28,1,success,none,Prefect DAG zipcode_metrics_refresh completed successfully for table stg_events.clickstream; rows=544950 duration=48.28s job_id=job_25963_15086e ts=2026-04-04T03:08:42Z
+58.29,2,success,none,"dbt model fact_orders finished: PASS, freshness within SLA, invocation_id=job_17872_7d76e9"
+563.09,2,warning,schem_mismatch,"dbt model mart_revenue_daily finished: PASS, freshness within SLA, invocation_id=job_53231_bc6edc"
+514.21,0,success,none,Prefect DAG dbt_marts_run completed successfully for table inventory_snapshot; rows=1253633 duration=514.21s job_id=job_36623_92ad4a ts=2026-04-02T13:59:13Z | attempt=1 hostname=worker-19 memory_mb=8326
+597.56,0,success,none,"dbt model raw_orders finished: PASS, freshness within SLA, invocation_id=job_15611_fdaccc | attempt=1 hostname=worker-23 memory_mb=21771"
+375.07,4,failed,schema_mismatch,Schema validation failed for raw.customers: expected column customer_id INT but found STRING; job_id=job_87984_409ffc ts=2026-04-08T02:17:51Z
+141.57,0,error,timeout,unknown
+89.23,0,success,none,"dbt model mart_revenue_daily finished: PASS, freshness within SLA, invocation_id=job_64005_ebaa43"
+79.19,0,error,none,task=crm_delta_merge.load target=stg.payments status=OK run_id=job_33111_8aa309 committed partitions=14 at 2026-04-02T01:58:01Z
+1290.19,0,error,schema_mismatch,Spark AnalysisException: Cannot resolve column 'event_ts' in input schema for pipeline=customer_dim_build table=stg_events.clickstream
+280.02,3,failed,missing_file,Input path not found s3://lake/dbt_marts_run/dt=2026-04-21/part-000.snappy.parquet; job_id=job_30550_bda898
+350.61,0,success,none,Glue DAG daily_orders_ingest completed successfully for table raw.orders; rows=411118 duration=350.61s job_id=job_76088_6abcad ts=2026-04-17T14:21:24Z | attempt=1 hostname=worker-22 memory_mb=10500
+436.72,0,timeout,permission,403 Forbidden from object store during crm_delta_merge; check IAM policy for table=dim_user
+54.2,1,success,data_quality,DQ rule violation in payment_recon: negative amount detected in stg_events.clickstream; bad_rows=8251
+230.37,1,success,none,task=customer_dim_build.load target=warehouse.shipments status=OK run_id=job_70014_c59dc6 committed partitions=7 at 2026-04-13T06:30:37Z
+13.21,0,success,none,Glue DAG inventory_sync completed successfully for table billing.invoices; rows=2223758 duration=13.21s job_id=job_85851_6c8616 ts=2026-04-21T11:52:49Z
+439.46,5,timeout,upstream_dependency,HTTP 503 from upstream service during extract for stg.payments; circuit breaker open; retry=5
+5566.12,2,warning,upstream_dependency,Upstream dependency billing_api delayed; skipping dbt_marts_run for analytics.session_rollup; job_id=job_47988_9666f0
+797.69,2,timeout,timeout,Spark executor heartbeat timeout while writing inventory_snapshot; stage=49 retry=2; java.net.SocketTimeoutException: Read timed out
+486.32,5,success,none,dbt DAG billing_export_load completed successfully for table fact_orders; rows=2203352 duration=486.32s job_id=job_86962_b5cc16 ts=2026-04-05T07:33:54Z
+447.82,0,success,none,task=payment_recon.load target=raw.orders status=OK run_id=job_49343_b39041 committed partitions=27 at 2026-04-27T23:10:35Z
+509.49,0,success,none,Spark DAG payment_recon completed successfully for table raw.orders; rows=1143742 duration=509.49s job_id=job_70429_680eae ts=2026-04-05T13:00:43Z
+2622.02,3,warning,timeout,-
+439.62,1,failed,permission,403 Forbidden from object store during fraud_features_etl; check IAM policy for table=dim_user
+588.95,0,success,none,"dbt model raw_customers finished: PASS, freshness within SLA, invocation_id=job_73472_4834e1"
+1226.11,0,success,none,"dbt model billing_invoices finished: PASS, freshness within SLA, invocation_id=job_76179_512671"
+14.78,0,success,upstream_dependency,External dependency not ready: watermark behind by 135 minutes for pipeline=fraud_features_etl
+57.03,3,warning,none,Glue DAG customer_dim_build completed successfully for table analytics.session_rollup; rows=1656039 duration=57.03s job_id=job_67417_d8db57 ts=2026-04-22T03:05:41Z
+249.14,0,success,none,task=billing_export_load.load target=crm.leads status=OK run_id=job_77032_ee439b committed partitions=32 at 2026-04-25T16:33:09Z
+287.62,0,success,none,task=crm_delta_merge.load target=inventory_snapshot status=OK run_id=job_44296_8fe872 committed partitions=28 at 2026-04-26T19:40:48Z
+289.84,1,success,none,task=fraud_features_etl.load target=stg.payments status=OK run_id=job_61299_21e10d committed partitions=19 at 2026-04-19T13:45:18Z
+5156.34,2,success,timeout,SLA miss: upstream batch still running after 5156.34s for inventory_sync; marked timeout job_id=job_12583_0c3fe3 | attempt=3 hostname=worker-16 memory_mb=3790
+582.12,0,success,none,Dagster DAG customer_dim_build completed successfully for table analytics.session_rollup; rows=1686304 duration=582.12s job_id=job_38059_95ea36 ts=2026-04-02T10:49:30Z
+188.2,2,error,dbt_error,dbt run failed on model analytics_session_rollup: Compilation Error near line 18; invocation_id=job_12438_093501
+515.28,1,warning,none,Spark DAG payment_recon completed successfully for table mart.revenue_daily; rows=116279 duration=515.28s job_id=job_88804_868017 ts=2026-04-08T04:08:04Z
+13.03,0,success,none,"dbt model crm_leads finished: PASS, freshness within SLA, invocation_id=job_63347_984075"
+99.4,0,success,none,Glue DAG crm_delta_merge completed successfully for table mart.revenue_daily; rows=473874 duration=99.4s job_id=job_43332_e3b90b ts=2026-04-02T17:51:12Z
+162.99,0,success,none,task=inventory_sync.load target=analytics.session_rollup status=OK run_id=job_25997_910170 committed partitions=17 at 2026-04-08T16:06:26Z
+3416.5,5,warning,timeout,Prefect task payment_recon exceeded execution_timeout after 3416.5s; last heartbeat lost; job_id=job_44205_27e6c7 table=raw.customers ts=2026-04-12T15:19:24Z
+510.47,1,success,none,"dbt model dim_user finished: PASS, freshness within SLA, invocation_id=job_27499_4d68e1"
+4582.57,0,error,timeout,Dagster task payment_recon exceeded execution_timeout after 4582.57s; last heartbeat lost; job_id=job_25381_0f2f41 table=dim_user ts=2026-04-17T15:50:37Z
+686.32,6,degraded,schema_mismatch,Schema validation failed for stg_events.clickstream: expected column customer_id INT but found STRING; job_id=job_42547_69c486 ts=2026-04-22T23:33:54Z
+2728.7,3,error,upstream_dependency,HTTP 503 from upstream service during extract for raw.orders; circuit breaker open; retry=3
+269.95,4,failed,timeout,Spark executor heartbeat timeout while writing crm.leads; stage=74 retry=4; java.net.SocketTimeoutException: Read timed out
+301.77,0,warning,none,Airflow DAG payment_recon completed successfully for table warehouse.shipments; rows=705960 duration=301.77s job_id=job_55823_f8dd4d ts=2026-04-28T10:20:39Z
+558.55,0,success,none,task=payment_recon.load target=dim_user status=OK run_id=job_20625_bbf3e6 committed partitions=39 at 2026-04-23T17:28:15Z
+167.27,4,success,timeout,Spark executor heartbeat timeout while writing stg.payments; stage=42 retry=4; java.net.SocketTimeoutException: Read timed out
+5.78,0,success,none,Glue DAG payment_recon completed successfully for table stg_events.clickstream; rows=1834482 duration=5.78s job_id=job_79111_485b52 ts=2026-04-17T03:03:26Z
+222.94,1,success,none,Airflow DAG daily_orders_ingest completed successfully for table billing.invoices; rows=189908 duration=222.94s job_id=job_96714_0e5ea9 ts=2026-04-26T06:38:02Z | attempt=2 hostname=worker-20 memory_mb=9009
+3497.41,2,success,permision,Dagster DAG dbt_marts_run completed successfully for table inventory_snapshot; rows=367648 duration=3497.41s job_id=job_90837_d229f7 ts=2026-04-22T14:22:53Z
+3.33,0,success,none,task=crm_delta_merge.load target=warehouse.shipments status=OK run_id=job_71799_620554 committed partitions=37 at 2026-04-15T21:18:26Z
+1.27,2,degraded,none,"dbt model billing_invoices finished: PASS, freshness within SLA, invocation_id=job_94974_511e36"
+377.08,0,warning,data_quality,"row_count anomaly for raw.customers: expected 100k-130k, observed 13791; quarantined batch"
+389.66,0,warning,none,Spark DAG crm_delta_merge completed successfully for table stg_events.clickstream; rows=2336401 duration=389.66s job_id=job_54606_6dc343 ts=2026-04-25T01:41:57Z
+384.15,4,failed,timeout,SLA miss: upstream batch still running after 384.15s for inventory_sync; marked timeout job_id=job_28058_271e53
+302.31,4,error,dbt_error,dbt run failed on model analytics_session_rollup: Compilation Error near line 103; invocation_id=job_68009_d03779
+3220.64,3,warning,none,Airflow DAG inventory_sync completed successfully for table dim_user; rows=1871532 duration=3220.64s job_id=job_46671_19487e ts=2026-04-20T05:20:49Z
+221.74,1,warning,none,Airflow DAG payment_recon completed successfully for table analytics.session_rollup; rows=1274905 duration=221.74s job_id=job_13655_95b96b ts=2026-04-18T21:34:20Z
+563.46,1,success,none,task=clickstream_spark_job.load target=crm.leads status=OK run_id=job_49216_906c9d committed partitions=34 at 2026-04-26T20:51:13Z | attempt=2 hostname=worker-2 memory_mb=14434
+245.95,0,success,none,"dbt model inventory_snapshot finished: PASS, freshness within SLA, invocation_id=job_74165_8fb6df"
+232.31,6,success,none,task=dbt_marts_run.load target=mart.revenue_daily status=OK run_id=job_13667_d81059 committed partitions=19 at 2026-04-05T21:28:03Z
+303.51,1,success,data_quality,"row_count anomaly for inventory_snapshot: expected 100k-130k, observed 21165; quarantined batch"
+45.93,1,success,none,task=crm_delta_merge.load target=stg_events.clickstream status=OK run_id=job_12446_08c361 committed partitions=14 at 2026-04-18T06:32:39Z
+99.26,0,success,none,Spark DAG payment_recon completed successfully for table raw.customers; rows=761169 duration=99.26s job_id=job_63382_64d57b ts=2026-04-02T22:22:20Z
+338.58,0,success,none,task=billing_export_load.load target=raw.orders status=OK run_id=job_40636_a02af9 committed partitions=44 at 2026-04-01T09:47:59Z
+5834.63,2,success,schema_mismatch,Spark AnalysisException: Cannot resolve column 'event_ts' in input schema for pipeline=daily_orders_ingest table=stg.payments
+193.75,3,timeout,missing_file,Airflow sensor dbt_marts_run.wait_for_file failed: gs://bucket/raw/inventory_snapshot/2026-04-11.csv missing
+12.65,1,success,none,Spark DAG customer_dim_build completed successfully for table analytics.session_rollup; rows=35443 duration=12.65s job_id=job_59332_5285b8 ts=2026-04-12T14:04:52Z
+242.15,2,success,none,task=inventory_sync.load target=mart.revenue_daily status=OK run_id=job_77155_649a9d committed partitions=17 at 2026-04-10T09:58:40Z
+2443.37,3,success,data_quality,"Great Expectations checkpoint failed for inventory_snapshot: null_rate=0.14, duplicate_keys=17003 job_id=job_94012_9c5d5f"
+11.32,5,success,none,task=customer_dim_build.load target=fact_orders status=OK run_id=job_35805_a65cbe committed partitions=2 at 2026-04-10T02:17:17Z
+7.25,0,success,none,task=daily_orders_ingest.load target=raw.orders status=OK run_id=job_51062_5c8187 committed partitions=29 at 2026-04-23T02:22:03Z | attempt=1 hostname=worker-14 memory_mb=8150
+74.25,1,success,none,"dbt model analytics_session_rollup finished: PASS, freshness within SLA, invocation_id=job_77792_56a94a"
+2993.22,2,failed,timeout,SLA miss: upstream batch still running after 2993.22s for payment_recon; marked timeout job_id=job_71541_4e6d19
+353.37,4,success,none,Glue DAG dbt_marts_run completed successfully for table crm.leads; rows=15586 duration=353.37s job_id=job_53072_d53e6c ts=2026-04-15T01:32:10Z
+6628.24,1,error,timeout,dbt task clickstream_spark_job exceeded execution_timeout after 6628.24s; last heartbeat lost; job_id=job_47237_81247e table=raw.orders ts=2026-04-09T06:20:43Z
+3235.16,0,timeout,dbt_error,dbt run failed on model stg_payments: Compilation Error near line 140; invocation_id=job_35124_53e111 | attempt=1 hostname=worker-9 memory_mb=4655
+794.62,2,warning,upstream_dependency,Upstream dependency vendor_sftp delayed; skipping fraud_features_etl for analytics.session_rollup; job_id=job_75350_882a91
+7.22,0,success,data_quality,"Great Expectations checkpoint failed for crm.leads: null_rate=0.25, duplicate_keys=829 job_id=job_77143_f1d5da"
+334.43,0,success,none,"dbt model analytics_session_rollup finished: PASS, freshness within SLA, invocation_id=job_49677_24f921 | attempt=1 hostname=worker-21 memory_mb=17310"
+372.85,2,warning,upstream_dependency,External dependency not ready: watermark behind by 275 minutes for pipeline=crm_delta_merge
+28.6,2,success,none,task=payment_recon.load target=stg.payments status=OK run_id=job_84473_07ed72 committed partitions=25 at 2026-04-20T22:07:50Z | attempt=3 hostname=worker-4 memory_mb=22626
+1110.87,0,success,none,Airflow DAG fraud_features_etl completed successfully for table analytics.session_rollup; rows=1723356 duration=1110.87s job_id=job_69593_8084bc ts=2026-04-17T00:24:07Z
+283.49,0,success,none,"dbt model stg_payments finished: PASS, freshness within SLA, invocation_id=job_62328_1a777d"
+423.64,0,success,none,task=daily_orders_ingest.load target=warehouse.shipments status=OK run_id=job_30700_1b0aaf committed partitions=45 at 2026-04-21T19:34:42Z
+3265.69,0,failed,timeout,Spark task daily_orders_ingest exceeded execution_timeout after 3265.69s; last heartbeat lost; job_id=job_25031_eb8bcf table=raw.orders ts=2026-04-05T11:54:35Z
+2995.47,0,timedout,timeout,dbt task fraud_features_etl exceeded execution_timeout after 2995.47s; last heartbeat lost; job_id=job_67941_fda288 table=raw.orders ts=2026-04-27T23:06:43Z
+171.2,4,failed,timeout,Spark executor heartbeat timeout while writing analytics.session_rollup; stage=83 retry=4; java.net.SocketTimeoutException: Read timed out
+230.85,0,success,none,Spark DAG billing_export_load completed successfully for table stg_events.clickstream; rows=2387499 duration=230.85s job_id=job_88494_826b88 ts=2026-04-04T19:31:18Z
+1018.69,1,success,none,task=dbt_marts_run.load target=raw.customers status=OK run_id=job_66164_b31885 committed partitions=32 at 2026-04-20T02:53:25Z
+443.73,0,success,none,"dbt model stg_events_clickstream finished: PASS, freshness within SLA, invocation_id=job_97163_01f20f"
+264.35,0,success,none,task=clickstream_spark_job.load target=stg.payments status=OK run_id=job_65576_ae4552 committed partitions=41 at 2026-04-08T11:02:08Z
+190.64,0,success,schem_mismatch,task=payment_recon.load target=billing.invoices status=OK run_id=job_59866_744d0c committed partitions=5 at 2026-04-15T10:18:42Z
+6686.5,0,success,timeout,SLA miss: upstream batch still running after 6686.5s for payment_recon; marked timeout job_id=job_67186_86ec69
+269.11,0,error,data_quality,DQ rule violation in fraud_features_etl: negative amount detected in raw.orders; bad_rows=1234
+1407.06,0,warning,data_quality,N/A
+93.58,0,success,none,Glue DAG customer_dim_build completed successfully for table billing.invoices; rows=766502 duration=93.58s job_id=job_84329_c58317 ts=2026-04-06T07:18:57Z
+9.15,5,success,none,"dbt model raw_customers finished: PASS, freshness within SLA, invocation_id=job_10951_b88925 | attempt=6 hostname=worker-12 memory_mb=11333"
+2.72,2,warning,none,task=clickstream_spark_job.load target=warehouse.shipments status=OK run_id=job_69233_dc83a8 committed partitions=1 at 2026-04-22T17:18:05Z
+544.54,1,success,none,dbt DAG zipcode_metrics_refresh completed successfully for table mart.revenue_daily; rows=2088529 duration=544.54s job_id=job_28764_1289bb ts=2026-04-19T18:22:23Z
+239.34,0,success,none,"dbt model warehouse_shipments finished: PASS, freshness within SLA, invocation_id=job_72429_80ba28"
+11.37,3,success,none,"dbt model warehouse_shipments finished: PASS, freshness within SLA, invocation_id=job_58200_e55060"
+2099.5,1,error,missing_file,FileNotFoundError: landing file for crm.leads was not present by cutoff; sensor waited 12m
+3170.34,3,degraded,none,Airflow DAG payment_recon completed successfully for table mart.revenue_daily; rows=1641574 duration=3170.34s job_id=job_81819_f196ff ts=2026-04-14T17:14:12Z
+142.61,1,success,none,task=daily_orders_ingest.load target=warehouse.shipments status=OK run_id=job_85455_781288 committed partitions=44 at 2026-04-26T05:22:26Z
+3416.35,5,warning,timeout,Prefect task payment_recon exceeded execution_timeout after 3416.5s; last heartbeat lost; job_id=job_44205_27e6c7 table=raw.customers ts=2026-04-12T15:19:24Z
+329.44,0,success,none,Glue DAG daily_orders_ingest completed successfully for table warehouse.shipments; rows=2176509 duration=329.44s job_id=job_82883_0abbdf ts=2026-04-26T19:17:59Z | attempt=1 hostname=worker-19 memory_mb=7269
+580.27,0,success,none,dbt DAG daily_orders_ingest completed successfully for table analytics.session_rollup; rows=1866210 duration=580.27s job_id=job_49400_5e3a20 ts=2026-04-17T10:40:56Z
+120.67,2,degraded,schema_mismatch,Schema validation failed for raw.customers: expected column customer_id INT but found STRING; job_id=job_44167_883259 ts=2026-04-06T14:33:56Z
+1820.34,1,failed,none,"dbt model raw_customers finished: PASS, freshness within SLA, invocation_id=job_45815_6ec756"
+120.69,2,success,none,"dbt model analytics_session_rollup finished: PASS, freshness within SLA, invocation_id=job_87937_96ce29"
+567.92,4,error,none,task=dbt_marts_run.load target=stg_events.clickstream status=OK run_id=job_21395_1eb216 committed partitions=5 at 2026-04-14T11:23:11Z
+23.13,0,success,none,"dbt model warehouse_shipments finished: PASS, freshness within SLA, invocation_id=job_65702_b3661d"
+3152.33,4,failed,permission,permission denied for schema analytics while executing INSERT into mart.revenue_daily; user=svc_etl
+96.61,2,warning,none,Airflow DAG billing_export_load completed successfully for table stg.payments; rows=1974333 duration=96.61s job_id=job_73886_821323 ts=2026-04-25T23:54:26Z
+459.16,5,warning,none,Glue DAG clickstream_spark_job completed successfully for table stg.payments; rows=2078641 duration=459.16s job_id=job_97194_fd1d61 ts=2026-04-04T15:19:53Z
+269.08,0,success,none,"dbt model inventory_snapshot finished: PASS, freshness within SLA, invocation_id=job_42472_72d51e"
+1957.66,4,error,timeout,Dagster task billing_export_load exceeded execution_timeout after 1957.66s; last heartbeat lost; job_id=job_50166_2c869f table=fact_orders ts=2026-04-08T08:04:28Z
+173.4,0,failed,timeout,SLA miss: upstream batch still running after 173.4s for inventory_sync; marked timeout job_id=job_49892_42f559
+126.4,1,success,none,"dbt model raw_customers finished: PASS, freshness within SLA, invocation_id=job_91134_495551"
+422.57,0,success,none,Airflow DAG zipcode_metrics_refresh completed successfully for table raw.orders; rows=2153803 duration=422.57s job_id=job_34928_41a862 ts=2026-04-13T18:01:24Z | attempt=1 hostname=worker-19 memory_mb=7649
+518.86,1,degraded,none,task=fraud_features_etl.load target=mart.revenue_daily status=OK run_id=job_32427_479664 committed partitions=18 at 2026-04-18T08:40:23Z
+1484.69,6,degraded,none,Spark DAG daily_orders_ingest completed successfully for table analytics.session_rollup; rows=65672 duration=1484.69s job_id=job_38741_7e8488 ts=2026-04-09T06:26:05Z
+69.81,0,success,none,"dbt model stg_payments finished: PASS, freshness within SLA, invocation_id=job_84666_d824e7"
+12.57,3,warning,permission,permission denied for schema analytics while executing INSERT into analytics.session_rollup; user=svc_etl
+2593.64,2,timeout,timeout,Airflow task payment_recon exceeded execution_timeout after 2593.64s; last heartbeat lost; job_id=job_39401_59323f table=fact_orders ts=2026-04-14T14:01:52Z
+379.79,3,degraded,upstream_dependency,Upstream dependency billing_api delayed; skipping dbt_marts_run for stg.payments; job_id=job_47618_ada8f0
+262.94,1,success,none,"dbt model fact_orders finished: PASS, freshness within SLA, invocation_id=job_53707_6e3842"
+292.25,0,success,none,"dbt model raw_customers finished: PASS, freshness within SLA, invocation_id=job_57298_f2a7b7 | attempt=1 hostname=worker-14 memory_mb=12691"
+1575.37,0,timeout,timeout,Glue task zipcode_metrics_refresh exceeded execution_timeout after 1575.37s; last heartbeat lost; job_id=job_29623_184544 table=raw.orders ts=2026-04-16T05:06:04Z
+2105.62,3,timeout,dbt_error,dbt test failed: accepted_values on fact_orders.status returned 244 failures
+9.44,2,success,none,task=clickstream_spark_job.load target=raw.orders status=OK run_id=job_31333_f24f1b committed partitions=13 at 2026-04-03T07:42:55Z | attempt=3 hostname=worker-11 memory_mb=3566
+439.53,5,success,none,Spark DAG customer_dim_build completed successfully for table warehouse.shipments; rows=630008 duration=439.53s job_id=job_63383_b3db00 ts=2026-04-17T03:40:38Z
+595.75,2,timeout,schema_mismatch,"dbt contract error in model billing_invoices: missing column updated_at, extra column legacy_code"
+178.87,0,success,none,task=customer_dim_build.load target=raw.customers status=OK run_id=job_70390_10cb7b committed partitions=42 at 2026-04-16T09:19:17Z
+676.82,5,success,none,Prefect DAG clickstream_spark_job completed successfully for table raw.orders; rows=663643 duration=676.82s job_id=job_83505_67e631 ts=2026-04-28T03:50:01Z
+382.4,0,error,upstream_dependency,Upstream dependency vendor_sftp delayed; skipping crm_delta_merge for warehouse.shipments; job_id=job_46487_b80b99
+189.53,1,success,none,task=fraud_features_etl.load target=fact_orders status=OK run_id=job_97771_4cc4d6 committed partitions=22 at 2026-04-06T01:57:24Z
+99.6,1,success,none,Airflow DAG inventory_sync completed successfully for table warehouse.shipments; rows=476581 duration=99.6s job_id=job_29727_277364 ts=2026-04-05T18:11:03Z
+423.8,5,warning,data_quality,DQ rule violation in inventory_sync: negative amount detected in dim_user; bad_rows=6978
+425.72,3,success,none,task=customer_dim_build.load target=raw.customers status=OK run_id=job_21749_bfdaed committed partitions=7 at 2026-04-20T14:58:27Z | attempt=4 hostname=worker-16 memory_mb=4589
+564.68,2,success,none,"dbt model billing_invoices finished: PASS, freshness within SLA, invocation_id=job_96334_178eda"
+587.55,0,degraded,data_quality,"row_count anomaly for dim_user: expected 100k-130k, observed 6676; quarantined batch"
+3550.24,2,timeout,data_quality,DQ rule violation in payment_recon: negative amount detected in dim_user; bad_rows=1360
+230.23,0,failed,timeout,Spark executor heartbeat timeout while writing raw.orders; stage=84 retry=0; java.net.SocketTimeoutException: Read timed out
+32.29,0,success,none,"dbt model billing_invoices finished: PASS, freshness within SLA, invocation_id=job_57826_d1570b"
+3485.61,0,degraded,upstream_dependency,Upstream dependency crm_api delayed; skipping dbt_marts_run for crm.leads; job_id=job_36978_e1a824
+269.07,0,success,upstream_dependency,External dependency not ready: watermark behind by 139 minutes for pipeline=billing_export_load | attempt=1 hostname=worker-10 memory_mb=20231
+1955.7,4,error,timeout,Dagster task billing_export_load exceeded execution_timeout after 1957.66s; last heartbeat lost; job_id=job_50166_2c869f table=fact_orders ts=2026-04-08T08:04:28Z
+606.56,0,degraded,timeout,SLA miss: upstream batch still running after 606.56s for daily_orders_ingest; marked timeout job_id=job_71589_afba2c
+6701.0,3,sucess,missing_file,FileNotFoundError: landing file for stg_events.clickstream was not present by cutoff; sensor waited 8m
+631.89,1,error,timeout,Dagster task customer_dim_build exceeded execution_timeout after 631.89s; last heartbeat lost; job_id=job_79152_c6e9e4 table=inventory_snapshot ts=2026-04-16T17:50:38Z
+4517.93,2,failed,timeout,Prefect task dbt_marts_run exceeded execution_timeout after 4517.93s; last heartbeat lost; job_id=job_69509_1ed597 table=dim_user ts=2026-04-28T18:22:07Z
+7.45,0,success,none,task=fraud_features_etl.load target=inventory_snapshot status=OK run_id=job_56131_b632cf committed partitions=10 at 2026-04-18T03:03:38Z
+413.48,1,success,none,Airflow DAG clickstream_spark_job completed successfully for table raw.customers; rows=2232002 duration=413.48s job_id=job_16964_553be5 ts=2026-04-19T09:41:28Z
+2030.27,1,warning,unknown,task=clickstream_spark_job.load target=warehouse.shipments status=OK run_id=job_51302_b20ff4 committed partitions=10 at 2026-04-06T06:49:15Z
+2103.65,0,success,none,"dbt model stg_payments finished: PASS, freshness within SLA, invocation_id=job_23106_3974f2"
+2141.28,1,success,none,task=inventory_sync.load target=stg.payments status=OK run_id=job_14050_f0bf0e committed partitions=13 at 2026-04-24T15:40:55Z
+3630.43,6,success,timeout,Spark executor heartbeat timeout while writing dim_user; stage=40 retry=6; java.net.SocketTimeoutException: Read timed out | attempt=7 hostname=worker-10 memory_mb=19945
+533.3,3,failed,permission,permission denied for schema analytics while executing INSERT into billing.invoices; user=svc_etl
+278.97,0,degraded,missing_file,FileNotFoundError: landing file for mart.revenue_daily was not present by cutoff; sensor waited 38m
+2340.97,1,success,data_quality,"row_count anomaly for crm.leads: expected 100k-130k, observed 8853; quarantined batch"
+99.33,1,success,none,dbt DAG payment_recon completed successfully for table inventory_snapshot; rows=27136 duration=99.33s job_id=job_98562_2ce408 ts=2026-04-05T10:57:18Z
+507.41,0,success,none,task=crm_delta_merge.load target=crm.leads status=OK run_id=job_90892_195ffe committed partitions=48 at 2026-04-05T23:09:47Z
+116.07,1,warning,missing_file,Input path not found s3://lake/dbt_marts_run/dt=2026-04-22/part-000.snappy.parquet; job_id=job_94555_abd2d8
+2575.33,5,timeout,data_quality,"Great Expectations checkpoint failed for raw.customers: null_rate=0.15, duplicate_keys=10639 job_id=job_71833_5006f2 | attempt=6 hostname=worker-24 memory_mb=5727"
+3351.8,3,error,data_quality,DQ rule violation in payment_recon: negative amount detected in raw.customers; bad_rows=9938
+268.93,0,success,none,task=customer_dim_build.load target=stg_events.clickstream status=OK run_id=job_13177_658b2b committed partitions=1 at 2026-04-22T03:30:09Z
+2307.46,0,warning,data_quality,"row_count anomaly for billing.invoices: expected 100k-130k, observed 28588; quarantined batch"
+32.54,0,success,none,"dbt model mart_revenue_daily finished: PASS, freshness within SLA, invocation_id=job_17784_5f59ee"
+1894.55,1,success,permission,403 Forbidden from object store during daily_orders_ingest; check IAM policy for table=stg_events.clickstream
+4.25,2,error,data_quality,"Great Expectations checkpoint failed for stg_events.clickstream: null_rate=0.15, duplicate_keys=5937 job_id=job_80283_fac0b3"
+223.82,3,success,none,Prefect DAG crm_delta_merge completed successfully for table stg_events.clickstream; rows=1024353 duration=223.82s job_id=job_49677_878dfc ts=2026-04-25T20:04:33Z
+1025.88,6,failed,upstream_dependency,HTTP 503 from upstream service during extract for warehouse.shipments; circuit breaker open; retry=6 | attempt=7 hostname=worker-7 memory_mb=12941
+9.52,4,failed,missing_file,FileNotFoundError: landing file for mart.revenue_daily was not present by cutoff; sensor waited 11m
+6376.82,1,degraded,none,Airflow DAG billing_export_load completed successfully for table crm.leads; rows=51834 duration=6376.82s job_id=job_90681_78cc23 ts=2026-04-09T09:07:15Z
+198.71,0,success,none,"dbt model stg_payments finished: PASS, freshness within SLA, invocation_id=job_44018_722453"
+445.08,2,failed,data_quality,DQ rule violation in customer_dim_build: negative amount detected in dim_user; bad_rows=4639
+77.15,0,success,upstream_dependency,External dependency not ready: watermark behind by 295 minutes for pipeline=fraud_features_etl
+351.52,3,success,none,task=clickstream_spark_job.load target=dim_user status=OK run_id=job_40263_935add committed partitions=47 at 2026-04-24T04:12:07Z
+4616.32,3,degraded,timeout,Spark executor heartbeat timeout while writing dim_user; stage=61 retry=3; java.net.SocketTimeoutException: Read timed out | attempt=4 hostname=worker-6 memory_mb=2904
+441.59,0,degraded,dbt_error,dbt test failed: accepted_values on dim_user.status returned 73 failures | attempt=1 hostname=worker-1 memory_mb=19961
+467.21,0,success,none,"dbt model inventory_snapshot finished: PASS, freshness within SLA, invocation_id=job_83941_8e1491"
+1066.97,1,success,none,Prefect DAG clickstream_spark_job completed successfully for table raw.customers; rows=708298 duration=1066.97s job_id=job_46520_cd995d ts=2026-04-07T20:06:13Z
+552.72,0,success,none,Spark DAG crm_delta_merge completed successfully for table fact_orders; rows=331711 duration=552.72s job_id=job_21385_185cde ts=2026-04-09T04:14:24Z
+423.96,0,success,none,Airflow DAG zipcode_metrics_refresh completed successfully for table raw.orders; rows=2153803 duration=422.57s job_id=job_34928_41a862 ts=2026-04-13T18:01:24Z | attempt=1 hostname=worker-19 memory_mb=7649
+325.32,4,success,none,Spark DAG clickstream_spark_job completed successfully for table mart.revenue_daily; rows=1497982 duration=325.32s job_id=job_97552_4cdc05 ts=2026-04-26T22:56:18Z
+301.17,0,success,none,task=daily_orders_ingest.load target=stg_events.clickstream status=OK run_id=job_45117_e551c9 committed partitions=17 at 2026-04-28T14:53:29Z
+582.54,2,failed,missing_file,FileNotFoundError: landing file for stg.payments was not present by cutoff; sensor waited 9m
+14.16,0,success,none,"dbt model fact_orders finished: PASS, freshness within SLA, invocation_id=job_30571_77f8db"
+243.81,2,success,none,task=inventory_sync.load target=mart.revenue_daily status=OK run_id=job_77155_649a9d committed partitions=17 at 2026-04-10T09:58:40Z
+78.36,0,success,none,task=billing_export_load.load target=raw.orders status=OK run_id=job_68600_7b5d0a committed partitions=10 at 2026-04-19T03:58:00Z
+212.65,0,success,none,task=zipcode_metrics_refresh.load target=dim_user status=OK run_id=job_63285_59d4a9 committed partitions=35 at 2026-04-09T07:37:03Z
+670.31,0,success,none,task=fraud_features_etl.load target=stg.payments status=OK run_id=job_28332_70280d committed partitions=8 at 2026-04-18T15:13:27Z
+6937.49,3,warning,data_quality,"Great Expectations checkpoint failed for stg.payments: null_rate=0.20, duplicate_keys=3095 job_id=job_72111_502995 | attempt=4 hostname=worker-21 memory_mb=18834"
+441.65,0,success,none,"dbt model fact_orders finished: PASS, freshness within SLA, invocation_id=job_80912_6a96e0"
+473.27,5,success,none,task=zipcode_metrics_refresh.load target=raw.customers status=OK run_id=job_28786_424dff committed partitions=9 at 2026-04-28T00:00:32Z
+385.76,0,success,none,"dbt model stg_payments finished: PASS, freshness within SLA, invocation_id=job_67887_3bd48b"
+129.01,1,success,none,"dbt model dim_user finished: PASS, freshness within SLA, invocation_id=job_43260_d3da34"
+13.52,0,warning,none,dbt DAG payment_recon completed successfully for table warehouse.shipments; rows=261491 duration=13.52s job_id=job_20855_8be427 ts=2026-04-28T04:20:53Z
+64.12,0,success,none,"dbt model mart_revenue_daily finished: PASS, freshness within SLA, invocation_id=job_76252_eb984c | attempt=1 hostname=worker-11 memory_mb=19882"
+510.52,2,success,dbt_error,dbt run failed on model stg_events_clickstream: Compilation Error near line 78; invocation_id=job_16990_001498
+12.69,0,success,none,"dbt model billing_invoices finished: PASS, freshness within SLA, invocation_id=job_66866_a7279b"
+76.2,0,success,none,task=payment_recon.load target=raw.orders status=OK run_id=job_72324_38c090 committed partitions=20 at 2026-04-21T03:38:54Z
+2889.52,5,error,missing_file,Input path not found s3://lake/customer_dim_build/dt=2026-04-19/part-000.snappy.parquet; job_id=job_65822_78086e
+194.9,0,success,unknown,unknown
+428.14,1,success,none,task=billing_export_load.load target=raw.customers status=OK run_id=job_51727_05770f committed partitions=44 at 2026-04-05T14:33:33Z
+40.89,0,success,none,"dbt model raw_customers finished: PASS, freshness within SLA, invocation_id=job_95726_f03f01"
+21.78,1,success,none,Glue DAG billing_export_load completed successfully for table analytics.session_rollup; rows=1888649 duration=21.78s job_id=job_17144_3b67dc ts=2026-04-09T23:05:15Z | attempt=2 hostname=worker-23 memory_mb=19850
+13.15,1,timeout,permission,AccessDeniedException: role etl_runner cannot write to raw.orders; job_id=job_58404_3b7fb9 request_id=778fd206
+287.11,1,failed,dbt_error,Database Error in model inventory_snapshot: relation source_customers does not exist | attempt=2 hostname=worker-24 memory_mb=8928
+597.03,1,success,none,task=clickstream_spark_job.load target=billing.invoices status=OK run_id=job_16400_58b3af committed partitions=18 at 2026-04-16T07:50:07Z
+4.15,1,success,none,task=customer_dim_build.load target=stg_events.clickstream status=OK run_id=job_47726_b4e7ea committed partitions=22 at 2026-04-20T16:46:17Z
+60.99,0,success,none,"dbt model dim_user finished: PASS, freshness within SLA, invocation_id=job_79414_6456f5"
+595.67,2,failed,upstream_dependency,HTTP 503 from upstream service during extract for stg.payments; circuit breaker open; retry=2
+2650.06,0,warning,-,task=billing_export_load.load target=crm.leads status=OK run_id=job_63778_c1a85e committed partitions=6 at 2026-04-01T22:31:57Z | attempt=1 hostname=worker-20 memory_mb=21946
+291.22,1,success,none,dbt DAG inventory_sync completed successfully for table stg_events.clickstream; rows=1926074 duration=291.22s job_id=job_48401_185c2c ts=2026-04-01T07:32:12Z
+56.16,0,success,none,Airflow DAG fraud_features_etl completed successfully for table mart.revenue_daily; rows=250841 duration=56.16s job_id=job_89557_17871e ts=2026-04-18T00:51:49Z
+420.82,0,success,none,"dbt model warehouse_shipments finished: PASS, freshness within SLA, invocation_id=job_44078_b5d058"
+459.05,3,failed,upstream_dependency,External dependency not ready: watermark behind by 196 minutes for pipeline=zipcode_metrics_refresh
+117.6,3,success,none,"dbt model raw_orders finished: PASS, freshness within SLA, invocation_id=job_39468_42f70b | attempt=4 hostname=worker-21 memory_mb=3750"
+12.17,0,success,none,dbt DAG clickstream_spark_job completed successfully for table billing.invoices; rows=957807 duration=12.17s job_id=job_43563_774757 ts=2026-04-06T23:41:42Z
+1556.58,2,timeout,schema_mismatch,Schema validation failed for stg_events.clickstream: expected column customer_id INT but found STRING; job_id=job_67920_242994 ts=2026-04-07T03:38:10Z
+230.75,2,error,none,Spark DAG dbt_marts_run completed successfully for table mart.revenue_daily; rows=1845757 duration=230.75s job_id=job_79755_8150b5 ts=2026-04-09T20:26:06Z
+308.54,0,success,none,"dbt model billing_invoices finished: PASS, freshness within SLA, invocation_id=job_99751_e70929"
+233.55,1,degraded,none,
+1206.64,2,timeout,missing_file,Airflow sensor dbt_marts_run.wait_for_file failed: gs://bucket/raw/mart.revenue_daily/2026-04-26.csv missing
+1655.01,0,success,upstream_dependency,HTTP 503 from upstream service during extract for raw.orders; circuit breaker open; retry=0
+12.0,1,success,none,"dbt model dim_user finished: PASS, freshness within SLA, invocation_id=job_38155_898ca6 | attempt=2 hostname=worker-17 memory_mb=12750"
+366.15,2,failed,missing_file,Airflow sensor customer_dim_build.wait_for_file failed: gs://bucket/raw/warehouse.shipments/2026-04-25.csv missing
+1804.4,1,error,permission,permission denied for schema analytics while executing INSERT into crm.leads; user=svc_etl
+223.43,0,degraded,data_quality,"Great Expectations checkpoint failed for stg_events.clickstream: null_rate=0.71, duplicate_keys=14426 job_id=job_31402_fe6547"
+438.84,0,success,none,Glue DAG customer_dim_build completed successfully for table stg_events.clickstream; rows=380884 duration=438.84s job_id=job_89278_3fc0e7 ts=2026-04-11T15:06:51Z
+10.01,0,success,none,task=daily_orders_ingest.load target=inventory_snapshot status=OK run_id=job_94850_1fa801 committed partitions=37 at 2026-04-02T05:07:26Z
+121.24,2,success,none,Airflow DAG payment_recon completed successfully for table raw.customers; rows=1112331 duration=121.24s job_id=job_75215_434d97 ts=2026-04-13T22:46:00Z
+53.8,4,success,none,
+461.8,4,success,data_quality,"row_count anomaly for stg_events.clickstream: expected 100k-130k, observed 7412; quarantined batch"
+401.8,1,success,none,Prefect DAG billing_export_load completed successfully for table raw.orders; rows=143164 duration=401.8s job_id=job_16293_eac6da ts=2026-04-06T00:31:17Z
+4270.75,1,warning,missing_file,Airflow sensor fraud_features_etl.wait_for_file failed: gs://bucket/raw/inventory_snapshot/2026-04-28.csv missing
+4257.4,4,error,missing_file,Input path not found s3://lake/clickstream_spark_job/dt=2026-04-01/part-000.snappy.parquet; job_id=job_99204_87b495
+6821.36,2,timeout,timeout,Spark executor heartbeat timeout while writing stg_events.clickstream; stage=20 retry=2; java.net.SocketTimeoutException: Read timed out
+280.46,2,failed,none,task=inventory_sync.load target=stg_events.clickstream status=OK run_id=job_39662_61705f committed partitions=47 at 2026-04-09T05:06:47Z
+104.9,2,success,none,"dbt model warehouse_shipments finished: PASS, freshness within SLA, invocation_id=job_15370_18da7e"
+544.27,1,success,none,"dbt model dim_user finished: PASS, freshness within SLA, invocation_id=job_42931_a664c3"
+14.53,0,success,none,"dbt model crm_leads finished: PASS, freshness within SLA, invocation_id=job_61608_dab84e"
+1632.15,6,warning,upstream_dependency,HTTP 503 from upstream service during extract for stg_events.clickstream; circuit breaker open; retry=6
+198.06,0,success,none,"dbt model stg_payments finished: PASS, freshness within SLA, invocation_id=job_44692_ac2bba"
+100.27,0,success,none,dbt DAG billing_export_load completed successfully for table dim_user; rows=344900 duration=100.27s job_id=job_60494_31cafb ts=2026-04-24T10:42:03Z
+271.79,1,success,none,"dbt model crm_leads finished: PASS, freshness within SLA, invocation_id=job_34386_6ca7f3"
+3766.08,1,success,timeout,SLA miss: upstream batch still running after 3766.08s for clickstream_spark_job; marked timeout job_id=job_55657_f64167
+188.61,4,success,data_quality,"row_count anomaly for raw.orders: expected 100k-130k, observed 13341; quarantined batch | attempt=5 hostname=worker-12 memory_mb=19761"
+380.84,3,timeout,upstream_dependency,Upstream dependency crm_api delayed; skipping payment_recon for stg.payments; job_id=job_95119_be6d35
+213.74,1,success,none,Airflow DAG dbt_marts_run completed successfully for table billing.invoices; rows=400595 duration=213.74s job_id=job_89450_02d089 ts=2026-04-18T02:09:12Z
+350.78,3,success,none,Dagster DAG payment_recon completed successfully for table warehouse.shipments; rows=2254895 duration=350.78s job_id=job_29510_02e6e5 ts=2026-04-15T01:06:16Z
+354.95,1,degraded,upstream_dependency,External dependency not ready: watermark behind by 299 minutes for pipeline=payment_recon
+1.33,0,success,none,Dagster DAG crm_delta_merge completed successfully for table billing.invoices; rows=231251 duration=1.33s job_id=job_60961_d29976 ts=2026-04-26T10:27:23Z | attempt=1 hostname=worker-10 memory_mb=13124
+148.06,1,failed,upstream_dependency,Upstream dependency crm_api delayed; skipping daily_orders_ingest for warehouse.shipments; job_id=job_22930_6b43c7
+106.22,1,success,none,"dbt model crm_leads finished: PASS, freshness within SLA, invocation_id=job_99180_0eed38"
+300.79,0,success,none,Prefect DAG payment_recon completed successfully for table dim_user; rows=1201492 duration=300.79s job_id=job_43619_23505c ts=2026-04-23T14:29:53Z
+802.2,1,failed,permission,403 Forbidden from object store during crm_delta_merge; check IAM policy for table=dim_user | attempt=2 hostname=worker-13 memory_mb=5528
+7.17,2,success,none,Spark DAG fraud_features_etl completed successfully for table crm.leads; rows=273260 duration=7.17s job_id=job_82987_8028a2 ts=2026-04-18T11:33:42Z
+58.25,1,success,none,Prefect DAG zipcode_metrics_refresh completed successfully for table inventory_snapshot; rows=996936 duration=58.25s job_id=job_60600_273289 ts=2026-04-20T14:04:54Z
+39.89,0,success,upstream_dependency,External dependency not ready: watermark behind by 88 minutes for pipeline=clickstream_spark_job
+304.86,4,timeout,data_quality,DQ rule violation in inventory_sync: negative amount detected in fact_orders; bad_rows=5533 | attempt=5 hostname=worker-7 memory_mb=13159
+490.46,0,error,none,task=crm_delta_merge.load target=dim_user status=OK run_id=job_27112_9e51a0 committed partitions=48 at 2026-04-16T11:30:46Z
+2025.26,3,degraded,schema_mismatch,Schema validation failed for mart.revenue_daily: expected column customer_id INT but found STRING; job_id=job_83647_2e3d1b ts=2026-04-05T05:56:38Z
+292.52,2,error,permision,task=daily_orders_ingest.load target=inventory_snapshot status=OK run_id=job_98049_06ae75 committed partitions=12 at 2026-04-11T03:05:42Z
+204.14,2,warning,none,Spark DAG crm_delta_merge completed successfully for table raw.orders; rows=1816002 duration=204.14s job_id=job_31873_f0a887 ts=2026-04-08T11:09:51Z
+331.92,6,error,permission,AccessDeniedException: role etl_runner cannot write to fact_orders; job_id=job_54843_fa5974 request_id=c8348bd9 | attempt=7 hostname=worker-12 memory_mb=2640
+549.9,0,warning,N/A,task=crm_delta_merge.load target=crm.leads status=OK run_id=job_53371_71b14e committed partitions=13 at 2026-04-04T22:18:10Z
+23.13,0,success,none,"dbt model raw_customers finished: PASS, freshness within SLA, invocation_id=job_68515_84b878"
+13.47,1,success,none,task=payment_recon.load target=mart.revenue_daily status=OK run_id=job_18076_06e0a3 committed partitions=6 at 2026-04-12T02:11:57Z
+450.81,0,success,none,task=daily_orders_ingest.load target=stg.payments status=OK run_id=job_56254_8c4a52 committed partitions=30 at 2026-04-15T11:48:35Z | attempt=1 hostname=worker-22 memory_mb=6173
+192.56,4,success,permission,403 Forbidden from object store during dbt_marts_run; check IAM policy for table=billing.invoices
+265.96,0,success,none,"dbt model stg_payments finished: PASS, freshness within SLA, invocation_id=job_54708_6e50bd"
+2724.31,2,degraded,none,task=crm_delta_merge.load target=stg_events.clickstream status=OK run_id=job_71571_6fc17a committed partitions=10 at 2026-04-11T18:36:12Z
+100.48,0,success,-,task=crm_delta_merge.load target=dim_user status=OK run_id=job_89268_611ce1 committed partitions=19 at 2026-04-07T23:30:51Z
+356.74,1,timeout,timeout,Spark executor heartbeat timeout while writing stg.payments; stage=23 retry=1; java.net.SocketTimeoutException: Read timed out
+391.52,0,success,none,task=daily_orders_ingest.load target=crm.leads status=OK run_id=job_17321_e5bc4a committed partitions=9 at 2026-04-23T04:48:04Z
+491.4,0,success,none,"dbt model raw_customers finished: PASS, freshness within SLA, invocation_id=job_41360_d4328f"
+9.26,0,error,dbt_error,dbt test failed: accepted_values on crm.leads.status returned 203 failures
+6018.65,3,error,upstream_dependency,HTTP 503 from upstream service during extract for stg_events.clickstream; circuit breaker open; retry=3
+2794.2,6,degraded,timeout,Glue task payment_recon exceeded execution_timeout after 2794.2s; last heartbeat lost; job_id=job_72937_f9493a table=crm.leads ts=2026-04-10T09:02:53Z
+1436.5,0,success,timeout,SLA miss: upstream batch still running after 1436.5s for clickstream_spark_job; marked timeout job_id=job_93454_c94597
+57.3,4,error,missing_file,Airflow sensor customer_dim_build.wait_for_file failed: gs://bucket/raw/analytics.session_rollup/2026-04-07.csv missing
+1713.82,2,timeout,missing_file,FileNotFoundError: landing file for stg.payments was not present by cutoff; sensor waited 14m
+589.89,0,success,none,"dbt model dim_user finished: PASS, freshness within SLA, invocation_id=job_30896_e61d66"
+2245.35,1,warning,schema_mismatch,"dbt contract error in model analytics_session_rollup: missing column updated_at, extra column legacy_code"
+469.0,0,success,-,-
+412.28,5,success,none,task=inventory_sync.load target=inventory_snapshot status=OK run_id=job_14068_fc3a68 committed partitions=28 at 2026-04-16T13:58:19Z
+381.98,1,degraded,schema_mismatch,unknown
+345.55,2,success,none,Spark DAG daily_orders_ingest completed successfully for table billing.invoices; rows=1894755 duration=345.55s job_id=job_86763_28f7b9 ts=2026-04-17T17:52:49Z | attempt=3 hostname=worker-24 memory_mb=21938
+148.81,0,success,none,task=customer_dim_build.load target=warehouse.shipments status=OK run_id=job_31552_074e1b committed partitions=32 at 2026-04-24T22:02:05Z
+545.37,2,success,none,dbt DAG daily_orders_ingest completed successfully for table raw.customers; rows=2289829 duration=545.37s job_id=job_21321_09f23a ts=2026-04-22T07:09:17Z
+13.33,0,success,timeot,"dbt model stg_events_clickstream finished: PASS, freshness within SLA, invocation_id=job_34728_34f675"
+335.39,3,timeout,timeout,Glue task inventory_sync exceeded execution_timeout after 335.39s; last heartbeat lost; job_id=job_13626_af7f12 table=raw.orders ts=2026-04-24T13:36:19Z
+3225.9,1,failed,timeout,Spark executor heartbeat timeout while writing dim_user; stage=78 retry=1; java.net.SocketTimeoutException: Read timed out
+557.19,0,success,none,"dbt model stg_events_clickstream finished: PASS, freshness within SLA, invocation_id=job_55680_3d187e"
+477.12,2,success,none,Spark DAG crm_delta_merge completed successfully for table stg.payments; rows=1925597 duration=477.12s job_id=job_42195_070197 ts=2026-04-23T09:51:26Z
+196.14,6,degraded,permission,AccessDeniedException: role etl_runner cannot write to analytics.session_rollup; job_id=job_24166_d3c4e4 request_id=5d71962e | attempt=7 hostname=worker-22 memory_mb=19077
+5573.81,3,success,timeout,Spark executor heartbeat timeout while writing dim_user; stage=72 retry=3; java.net.SocketTimeoutException: Read timed out
+354.09,1,success,none,"dbt model fact_orders finished: PASS, freshness within SLA, invocation_id=job_40432_70f973"
+12.72,3,error,permission,403 Forbidden from object store during billing_export_load; check IAM policy for table=stg.payments
+229.46,6,success,none,dbt DAG payment_recon completed successfully for table inventory_snapshot; rows=820956 duration=229.46s job_id=job_38722_2b6f98 ts=2026-04-21T18:49:46Z
+1741.42,0,failed,timeout,Airflow task zipcode_metrics_refresh exceeded execution_timeout after 1741.42s; last heartbeat lost; job_id=job_85053_fe6bad table=raw.customers ts=2026-04-26T06:24:21Z
+205.4,0,success,none,"dbt model mart_revenue_daily finished: PASS, freshness within SLA, invocation_id=job_75655_3afa2e | attempt=1 hostname=worker-8 memory_mb=5823"
+336.93,1,success,schem_mismatch,Prefect DAG crm_delta_merge completed successfully for table billing.invoices; rows=1699606 duration=336.93s job_id=job_78112_6a1058 ts=2026-04-20T21:01:30Z
+388.5,0,success,none,Prefect DAG payment_recon completed successfully for table crm.leads; rows=1841488 duration=388.5s job_id=job_49580_4748b4 ts=2026-04-05T00:35:46Z
+379.03,1,success,data_quality,"row_count anomaly for billing.invoices: expected 100k-130k, observed 24390; quarantined batch"
+357.59,2,success,none,task=billing_export_load.load target=inventory_snapshot status=OK run_id=job_14739_8de5e7 committed partitions=25 at 2026-04-18T20:37:12Z
+346.26,2,failed,timeout,SLA miss: upstream batch still running after 346.26s for daily_orders_ingest; marked timeout job_id=job_31416_f639c2
+319.23,0,success,none,task=clickstream_spark_job.load target=crm.leads status=OK run_id=job_12913_608a1c committed partitions=32 at 2026-04-09T11:56:51Z
+156.86,1,success,none,task=customer_dim_build.load target=analytics.session_rollup status=OK run_id=job_17458_023e49 committed partitions=2 at 2026-04-27T15:44:05Z
+95.15,3,failed,data_quality,"Great Expectations checkpoint failed for raw.orders: null_rate=0.07, duplicate_keys=9569 job_id=job_66169_2f527d"
+114.41,0,success,none,Spark DAG customer_dim_build completed successfully for table inventory_snapshot; rows=1193128 duration=114.41s job_id=job_87774_bb536b ts=2026-04-27T19:09:15Z
+491.56,0,success,none,task=dbt_marts_run.load target=stg_events.clickstream status=OK run_id=job_52809_83c14b committed partitions=6 at 2026-04-15T05:24:53Z
+358.79,3,success,none,Prefect DAG crm_delta_merge completed successfully for table stg_events.clickstream; rows=205232 duration=358.79s job_id=job_14434_bdce9c ts=2026-04-13T06:58:18Z
+523.47,0,success,none,task=billing_export_load.load target=mart.revenue_daily status=OK run_id=job_73818_b41ce4 committed partitions=16 at 2026-04-11T05:23:40Z
+209.52,1,success,none,Spark DAG fraud_features_etl completed successfully for table warehouse.shipments; rows=824936 duration=209.52s job_id=job_79582_c15270 ts=2026-04-17T21:29:56Z
+150.1,0,success,none,Glue DAG clickstream_spark_job completed successfully for table crm.leads; rows=2430946 duration=150.1s job_id=job_44694_63014f ts=2026-04-21T01:24:33Z
+2030.33,1,success,none,"dbt model mart_revenue_daily finished: PASS, freshness within SLA, invocation_id=job_16710_b70500"
+186.01,0,success,none,dbt DAG billing_export_load completed successfully for table stg.payments; rows=2274733 duration=186.01s job_id=job_31483_bfdf53 ts=2026-04-25T10:30:50Z
+482.02,1,warning,none,task=inventory_sync.load target=raw.customers status=OK run_id=job_60840_cde724 committed partitions=5 at 2026-04-18T09:06:44Z
+358.02,1,success,none,task=clickstream_spark_job.load target=warehouse.shipments status=OK run_id=job_74798_73f1e6 committed partitions=13 at 2026-04-15T14:06:00Z
+114.07,0,warning,upstream_dependency,Upstream dependency crm_api delayed; skipping fraud_features_etl for inventory_snapshot; job_id=job_54656_a64ffd
+5488.02,0,success,timeout,Spark task dbt_marts_run exceeded execution_timeout after 5488.02s; last heartbeat lost; job_id=job_34218_009fb3 table=raw.orders ts=2026-04-28T05:00:12Z
+49.3,1,success,none,Prefect DAG zipcode_metrics_refresh completed successfully for table stg_events.clickstream; rows=544950 duration=48.28s job_id=job_25963_15086e ts=2026-04-04T03:08:42Z
+3.36,1,success,none,task=customer_dim_build.load target=crm.leads status=OK run_id=job_12207_467d4d committed partitions=16 at 2026-04-24T04:36:41Z
+183.28,0,success,none,Spark DAG billing_export_load completed successfully for table raw.customers; rows=801883 duration=183.28s job_id=job_94978_046a03 ts=2026-04-01T04:10:22Z
+434.58,2,success,none,task=billing_export_load.load target=raw.orders status=OK run_id=job_54742_23cbd7 committed partitions=24 at 2026-04-05T05:21:05Z
+50.92,2,success,upstream_dependency,Upstream dependency vendor_sftp delayed; skipping crm_delta_merge for raw.orders; job_id=job_47889_f3e223
+4.28,2,error,permission,permission denied for schema analytics while executing INSERT into stg_events.clickstream; user=svc_etl
+2482.56,6,degraded,upstream_dependency,External dependency not ready: watermark behind by 328 minutes for pipeline=payment_recon
+182.64,1,failed,permission,AccessDeniedException: role etl_runner cannot write to stg_events.clickstream; job_id=job_12153_7efb13 request_id=f9257ff6
+2019.5,1,timeout,timeout,Airflow task zipcode_metrics_refresh exceeded execution_timeout after 2019.5s; last heartbeat lost; job_id=job_22256_6aea0f table=stg_events.clickstream ts=2026-04-26T21:47:03Z
+140.36,3,failed,permission,403 Forbidden from object store during zipcode_metrics_refresh; check IAM policy for table=analytics.session_rollup
+1061.79,0,failed,upstream_dependency,External dependency not ready: watermark behind by 156 minutes for pipeline=crm_delta_merge
+6791.0,0,degraded,none,"dbt model crm_leads finished: PASS, freshness within SLA, invocation_id=job_84356_ff541e | attempt=1 hostname=worker-23 memory_mb=4666"
+354.69,1,success,none,task=daily_orders_ingest.load target=stg.payments status=OK run_id=job_33565_61602b committed partitions=33 at 2026-04-08T04:36:11Z
+399.94,2,error,schema_mismatch,Schema validation failed for crm.leads: expected column customer_id INT but found STRING; job_id=job_65328_c52e45 ts=2026-04-18T02:55:06Z
+11.97,0,success,none,task=daily_orders_ingest.load target=dim_user status=OK run_id=job_89281_deab73 committed partitions=33 at 2026-04-05T12:51:52Z
+72.21,1,warning,none,"dbt model raw_orders finished: PASS, freshness within SLA, invocation_id=job_16403_554bad"
+11.0,1,success,none,task=billing_export_load.load target=raw.orders status=OK run_id=job_41508_4a28dd committed partitions=2 at 2026-04-28T22:21:45Z
+5917.6,2,degraded,data_quality,"row_count anomaly for inventory_snapshot: expected 100k-130k, observed 22827; quarantined batch"
+230.43,1,success,none,"dbt model billing_invoices finished: PASS, freshness within SLA, invocation_id=job_23643_1554e7"
+6.28,0,success,none,"dbt model mart_revenue_daily finished: PASS, freshness within SLA, invocation_id=job_85459_3a76a5"
+554.07,0,failed,data_quality,"Great Expectations checkpoint failed for dim_user: null_rate=0.12, duplicate_keys=19676 job_id=job_43779_f1fb43"
+174.14,4,timeout,data_quality,"row_count anomaly for raw.orders: expected 100k-130k, observed 349; quarantined batch | attempt=5 hostname=worker-14 memory_mb=4182"
+206.01,6,success,dbt_error,dbt test failed: accepted_values on raw.customers.status returned 400 failures
+498.22,0,error,permission,403 Forbidden from object store during zipcode_metrics_refresh; check IAM policy for table=stg_events.clickstream | attempt=1 hostname=worker-11 memory_mb=8299
+2.8,2,success,none,task=daily_orders_ingest.load target=raw.orders status=OK run_id=job_17259_93250f committed partitions=2 at 2026-04-07T13:09:19Z
+263.32,1,success,none,dbt DAG zipcode_metrics_refresh completed successfully for table stg.payments; rows=1275174 duration=263.32s job_id=job_78746_b9348d ts=2026-04-10T01:28:07Z
+12.51,0,success,none,task=zipcode_metrics_refresh.load target=crm.leads status=OK run_id=job_18498_b094d7 committed partitions=46 at 2026-04-10T20:54:06Z
+8.31,0,success,none,Glue DAG zipcode_metrics_refresh completed successfully for table dim_user; rows=431858 duration=8.31s job_id=job_93463_43de12 ts=2026-04-08T05:20:58Z
+135.25,2,failed,none,Airflow DAG billing_export_load completed successfully for table inventory_snapshot; rows=956844 duration=135.25s job_id=job_94139_363983 ts=2026-04-24T07:51:39Z
+240.11,4,degraded,data_quality,DQ rule violation in zipcode_metrics_refresh: negative amount detected in stg_events.clickstream; bad_rows=5571
+467.29,2,success,data_quality,
+62.51,0,success,data_quality,DQ rule violation in inventory_sync: negative amount detected in crm.leads; bad_rows=891
+365.32,0,success,none,dbt DAG crm_delta_merge completed successfully for table raw.orders; rows=1445229 duration=365.32s job_id=job_62850_a17b91 ts=2026-04-14T04:44:03Z
+2317.55,0,success,none,task=payment_recon.load target=warehouse.shipments status=OK run_id=job_55185_49e9cb committed partitions=30 at 2026-04-13T03:57:29Z
+142.68,0,success,none,Spark DAG fraud_features_etl completed successfully for table analytics.session_rollup; rows=1354935 duration=142.68s job_id=job_50251_43f3b4 ts=2026-04-02T06:08:31Z
+315.33,3,success,none,task=daily_orders_ingest.load target=raw.customers status=OK run_id=job_93763_d72db9 committed partitions=7 at 2026-04-16T21:26:40Z
+424.84,1,warning,none,task=inventory_sync.load target=raw.orders status=OK run_id=job_85028_1f0603 committed partitions=35 at 2026-04-24T00:50:03Z
+335.03,3,timeout,timeout,Glue task inventory_sync exceeded execution_timeout after 335.39s; last heartbeat lost; job_id=job_13626_af7f12 table=raw.orders ts=2026-04-24T13:36:19Z
+465.5,0,success,none,Spark DAG payment_recon completed successfully for table crm.leads; rows=2338515 duration=465.5s job_id=job_84431_1f7b7f ts=2026-04-15T21:37:59Z
+582.99,2,warning,none,"dbt model mart_revenue_daily finished: PASS, freshness within SLA, invocation_id=job_89918_6f5eae"
+471.45,4,success,none,"dbt model raw_customers finished: PASS, freshness within SLA, invocation_id=job_90010_accb40"
+531.57,1,success,none,"dbt model dim_user finished: PASS, freshness within SLA, invocation_id=job_91204_7834a9"
+2818.08,4,timeout,dbt_error,dbt test failed: accepted_values on fact_orders.status returned 90 failures
+791.18,1,success,none,"dbt model dim_user finished: PASS, freshness within SLA, invocation_id=job_94649_27a068"
+140.65,0,warning,data_quality,DQ rule violation in inventory_sync: negative amount detected in warehouse.shipments; bad_rows=1762
+224.53,0,warning,missing_file,Input path not found s3://lake/dbt_marts_run/dt=2026-04-10/part-000.snappy.parquet; job_id=job_94320_1534c0
+231.99,3,error,dbt_error,dbt test failed: accepted_values on fact_orders.status returned 177 failures
+575.43,3,success,upstream_dependency,HTTP 503 from upstream service during extract for raw.customers; circuit breaker open; retry=3 | attempt=4 hostname=worker-1 memory_mb=11128
+5.25,2,success,none,task=zipcode_metrics_refresh.load target=billing.invoices status=OK run_id=job_60570_2157b2 committed partitions=28 at 2026-04-23T17:51:47Z
+126.4,0,success,none,dbt DAG zipcode_metrics_refresh completed successfully for table stg_events.clickstream; rows=1581988 duration=126.4s job_id=job_94560_a88256 ts=2026-04-10T22:43:17Z
+286.59,0,success,none,"dbt model dim_user finished: PASS, freshness within SLA, invocation_id=job_44816_c3c65a"
+142.1,1,success,upstream_dependency,External dependency not ready: watermark behind by 303 minutes for pipeline=payment_recon
+202.32,3,success,none,task=billing_export_load.load target=mart.revenue_daily status=OK run_id=job_74107_782553 committed partitions=19 at 2026-04-15T17:57:11Z
+249.73,0,warning,data_quality,"Great Expectations checkpoint failed for analytics.session_rollup: null_rate=0.21, duplicate_keys=2573 job_id=job_61949_9a89d2"
+310.96,1,success,none,task=clickstream_spark_job.load target=dim_user status=OK run_id=job_58784_5df094 committed partitions=26 at 2026-04-12T06:43:23Z | attempt=2 hostname=worker-6 memory_mb=7394
+559.77,5,degraded,none,"dbt model warehouse_shipments finished: PASS, freshness within SLA, invocation_id=job_13149_1afbbe"
+5237.63,1,failed,timeout,SLA miss: upstream batch still running after 5237.63s for payment_recon; marked timeout job_id=job_25095_535463
+235.52,2,success,upstream_dependency,Upstream dependency vendor_sftp delayed; skipping payment_recon for analytics.session_rollup; job_id=job_95278_020aca
+4859.91,1,success,timeot,task=daily_orders_ingest.load target=raw.customers status=OK run_id=job_97418_5d5a32 committed partitions=32 at 2026-04-12T04:40:03Z
+106.36,0,success,none,Glue DAG daily_orders_ingest completed successfully for table inventory_snapshot; rows=2075661 duration=106.36s job_id=job_26136_405ddf ts=2026-04-06T17:27:04Z
+533.22,2,degraded,none,-
+195.33,0,success,none,"dbt model inventory_snapshot finished: PASS, freshness within SLA, invocation_id=job_55617_63b5b5"
+568.77,2,warning,dbt_error,dbt run failed on model fact_orders: Compilation Error near line 53; invocation_id=job_81352_8bb912
+176.2,0,success,none,Airflow DAG payment_recon completed successfully for table fact_orders; rows=2230156 duration=176.2s job_id=job_35762_108acf ts=2026-04-19T15:50:28Z
+2259.54,2,success,none,"dbt model fact_orders finished: PASS, freshness within SLA, invocation_id=job_20345_482e9f | attempt=3 hostname=worker-3 memory_mb=4328"
+2356.69,2,timeout,data_quality,DQ rule violation in customer_dim_build: negative amount detected in billing.invoices; bad_rows=5189
+85.82,1,degraded,none,task=customer_dim_build.load target=inventory_snapshot status=OK run_id=job_60098_c0e46f committed partitions=7 at 2026-04-24T10:39:13Z
+58.06,3,success,upstream_dependency,External dependency not ready: watermark behind by 68 minutes for pipeline=payment_recon
+471.32,0,success,none,Airflow DAG customer_dim_build completed successfully for table stg.payments; rows=2464851 duration=471.32s job_id=job_68255_d5352d ts=2026-04-24T19:34:11Z
+271.04,0,success,none,"dbt model stg_payments finished: PASS, freshness within SLA, invocation_id=job_44013_eb5aa4"
+439.83,0,success,none,task=crm_delta_merge.load target=analytics.session_rollup status=OK run_id=job_93281_30be82 committed partitions=17 at 2026-04-02T21:26:20Z
+1645.86,2,success,none,dbt DAG billing_export_load completed successfully for table analytics.session_rollup; rows=1187235 duration=1645.86s job_id=job_48384_03434b ts=2026-04-20T15:21:04Z
+396.67,1,error,missing_file,FileNotFoundError: landing file for billing.invoices was not present by cutoff; sensor waited 37m
+6519.19,6,degraded,timeout,SLA miss: upstream batch still running after 6519.19s for inventory_sync; marked timeout job_id=job_88602_596e08
+304.92,0,success,none,"dbt model crm_leads finished: PASS, freshness within SLA, invocation_id=job_51665_832a6c"
+337.42,0,success,none,task=crm_delta_merge.load target=raw.customers status=OK run_id=job_64224_96fbeb committed partitions=26 at 2026-04-04T08:14:44Z
+359.19,5,success,none,"dbt model analytics_session_rollup finished: PASS, freshness within SLA, invocation_id=job_26268_e1bfdd"
+586.73,2,warning,data_quality,"Great Expectations checkpoint failed for raw.customers: null_rate=0.54, duplicate_keys=18776 job_id=job_44066_8cb5b8"
+323.63,0,warning,none,"dbt model fact_orders finished: PASS, freshness within SLA, invocation_id=job_11881_79eb39"
+572.77,0,degraded,timeout,Prefect task inventory_sync exceeded execution_timeout after 572.77s; last heartbeat lost; job_id=job_47904_29f929 table=fact_orders ts=2026-04-13T23:01:59Z
+2439.82,1,warning,none,"dbt model raw_customers finished: PASS, freshness within SLA, invocation_id=job_46822_af51c9"
+224.64,3,success,none,Glue DAG dbt_marts_run completed successfully for table raw.orders; rows=1782609 duration=224.64s job_id=job_27682_10623d ts=2026-04-14T09:34:47Z
+1106.41,6,warning,none,"dbt model billing_invoices finished: PASS, freshness within SLA, invocation_id=job_26766_ca3892"
+473.36,2,failed,upstream_dependency,Upstream dependency billing_api delayed; skipping crm_delta_merge for warehouse.shipments; job_id=job_91368_843616
+2088.06,0,success,none,"dbt model warehouse_shipments finished: PASS, freshness within SLA, invocation_id=job_60674_c18b4f | attempt=1 hostname=worker-3 memory_mb=23946"
+438.4,6,warning,none,"dbt model inventory_snapshot finished: PASS, freshness within SLA, invocation_id=job_85412_b5e71f"
+2303.7,1,error,permission,AccessDeniedException: role etl_runner cannot write to crm.leads; job_id=job_30316_8d2105 request_id=48170c72 | attempt=2 hostname=worker-3 memory_mb=24396
+356.21,0,failed,none,"dbt model inventory_snapshot finished: PASS, freshness within SLA, invocation_id=job_40862_8ecb31"
+1757.82,1,sucess,schema_mismatch,Schema validation failed for raw.customers: expected column customer_id INT but found STRING; job_id=job_76574_c60e06 ts=2026-04-20T20:19:12Z
+76.05,2,degraded,permission,permission denied for schema analytics while executing INSERT into fact_orders; user=svc_etl
+197.77,0,success,dbt_error,dbt test failed: accepted_values on analytics.session_rollup.status returned 245 failures | attempt=1 hostname=worker-18 memory_mb=6890
+108.19,1,success,none,task=fraud_features_etl.load target=raw.orders status=OK run_id=job_80770_b44576 committed partitions=8 at 2026-04-18T18:56:02Z
+287.39,3,error,permission,permission denied for schema analytics while executing INSERT into dim_user; user=svc_etl
+151.68,0,failed,permission,403 Forbidden from object store during fraud_features_etl; check IAM policy for table=billing.invoices
+186.78,0,success,none,task=inventory_sync.load target=raw.orders status=OK run_id=job_76295_be0533 committed partitions=32 at 2026-04-28T21:02:36Z
+342.59,0,success,none,task=dbt_marts_run.load target=warehouse.shipments status=OK run_id=job_17656_46f59c committed partitions=12 at 2026-04-17T23:44:12Z | attempt=1 hostname=worker-12 memory_mb=18942
+3257.73,0,faild,none,Spark DAG customer_dim_build completed successfully for table analytics.session_rollup; rows=953918 duration=3257.73s job_id=job_34370_227699 ts=2026-04-24T01:35:17Z
+211.17,4,success,data_quality,"Great Expectations checkpoint failed for stg.payments: null_rate=0.24, duplicate_keys=15493 job_id=job_71384_046f8e"
+5.93,2,degraded,none,task=billing_export_load.load target=crm.leads status=OK run_id=job_99732_2f8304 committed partitions=29 at 2026-04-15T10:48:18Z
+190.25,0,success,none,task=fraud_features_etl.load target=stg_events.clickstream status=OK run_id=job_33183_39bb4a committed partitions=26 at 2026-04-08T13:55:51Z
+1.48,5,failed,none,task=customer_dim_build.load target=dim_user status=OK run_id=job_74668_2a9f01 committed partitions=15 at 2026-04-10T01:00:11Z
+378.27,3,success,none,task=dbt_marts_run.load target=dim_user status=OK run_id=job_20899_589443 committed partitions=29 at 2026-04-01T03:00:38Z | attempt=4 hostname=worker-7 memory_mb=24087
+213.77,0,success,data_quality,"row_count anomaly for raw.orders: expected 100k-130k, observed 21837; quarantined batch"
+67.29,0,timedout,none,task=fraud_features_etl.load target=raw.orders status=OK run_id=job_47252_f770e9 committed partitions=15 at 2026-04-18T10:55:07Z
+247.7,0,success,none,"dbt model billing_invoices finished: PASS, freshness within SLA, invocation_id=job_81661_128fa4"
+210.49,0,success,none,Airflow DAG inventory_sync completed successfully for table stg.payments; rows=1640736 duration=210.49s job_id=job_19552_4d06a4 ts=2026-04-13T11:23:59Z
+410.91,0,success,none,"dbt model raw_orders finished: PASS, freshness within SLA, invocation_id=job_64264_9030e5"
+4464.97,3,timeout,data_quality,"Great Expectations checkpoint failed for stg.payments: null_rate=0.57, duplicate_keys=4151 job_id=job_28542_94510f"
+114.99,0,success,none,task=customer_dim_build.load target=billing.invoices status=OK run_id=job_85084_dfa6f9 committed partitions=7 at 2026-04-24T00:09:20Z
+529.76,5,success,timeout,Prefect task fraud_features_etl exceeded execution_timeout after 529.76s; last heartbeat lost; job_id=job_89150_1efa00 table=inventory_snapshot ts=2026-04-03T19:56:00Z
+505.63,0,success,none,"dbt model analytics_session_rollup finished: PASS, freshness within SLA, invocation_id=job_43025_545592 | attempt=1 hostname=worker-2 memory_mb=21288"
+383.95,4,degraded,timeout,Spark executor heartbeat timeout while writing stg.payments; stage=9 retry=4; java.net.SocketTimeoutException: Read timed out
+594.54,0,success,none,Glue DAG customer_dim_build completed successfully for table analytics.session_rollup; rows=667483 duration=594.54s job_id=job_49129_34bf08 ts=2026-04-20T01:29:17Z
+252.72,4,degraded,N/A,task=crm_delta_merge.load target=fact_orders status=OK run_id=job_60222_a52f40 committed partitions=26 at 2026-04-13T05:34:10Z
+382.49,0,warning,schema_mismatch,Spark AnalysisException: Cannot resolve column 'event_ts' in input schema for pipeline=payment_recon table=stg_events.clickstream
+392.53,1,success,data_quality,"Great Expectations checkpoint failed for analytics.session_rollup: null_rate=0.22, duplicate_keys=18360 job_id=job_50781_be5e90"
+10.65,0,success,none,task=inventory_sync.load target=warehouse.shipments status=OK run_id=job_79337_ae95a8 committed partitions=24 at 2026-04-01T13:36:42Z
+1670.37,0,success,none,dbt DAG billing_export_load completed successfully for table raw.customers; rows=92883 duration=1670.37s job_id=job_46746_172de7 ts=2026-04-06T12:29:51Z
+280.12,5,success,none,task=clickstream_spark_job.load target=stg.payments status=OK run_id=job_87136_023200 committed partitions=4 at 2026-04-09T06:36:41Z
+549.1,5,error,dbt_error,dbt test failed: accepted_values on raw.orders.status returned 85 failures
+2636.14,0,degraded,none,Prefect DAG clickstream_spark_job completed successfully for table inventory_snapshot; rows=1723612 duration=2636.14s job_id=job_31443_a47296 ts=2026-04-27T00:55:18Z
+133.88,1,failed,schema_mismatch,Schema validation failed for billing.invoices: expected column customer_id INT but found STRING; job_id=job_58167_9df143 ts=2026-04-17T23:58:02Z | attempt=2 hostname=worker-1 memory_mb=20310
+97.76,6,success,upstream_dependency,External dependency not ready: watermark behind by 211 minutes for pipeline=clickstream_spark_job
+273.98,1,success,none,Dagster DAG fraud_features_etl completed successfully for table stg_events.clickstream; rows=931465 duration=273.98s job_id=job_89681_479d81 ts=2026-04-10T13:14:16Z
+500.41,0,success,none,"dbt model raw_orders finished: PASS, freshness within SLA, invocation_id=job_74407_af4257"
+990.04,1,success,none,"dbt model stg_payments finished: PASS, freshness within SLA, invocation_id=job_76631_3247e2"
+520.73,0,success,none,Dagster DAG customer_dim_build completed successfully for table analytics.session_rollup; rows=991255 duration=520.73s job_id=job_17264_fc932f ts=2026-04-22T17:54:18Z
+364.0,3,failed,dbt_error,dbt test failed: accepted_values on analytics.session_rollup.status returned 142 failures
+591.09,1,success,none,task=fraud_features_etl.load target=inventory_snapshot status=OK run_id=job_56891_84c6e7 committed partitions=2 at 2026-04-02T17:22:22Z | attempt=2 hostname=worker-7 memory_mb=19241
+69.98,5,degraded,data_quality,"row_count anomaly for inventory_snapshot: expected 100k-130k, observed 11112; quarantined batch"
+1209.05,2,failed,data_quality,DQ rule violation in billing_export_load: negative amount detected in analytics.session_rollup; bad_rows=9603
+5271.36,1,degradedd,N/A,Glue DAG billing_export_load completed successfully for table billing.invoices; rows=1298256 duration=5271.36s job_id=job_62548_ed5b26 ts=2026-04-15T21:35:36Z
+375.63,4,success,none,Airflow DAG customer_dim_build completed successfully for table inventory_snapshot; rows=1594573 duration=375.63s job_id=job_93229_f521ca ts=2026-04-12T05:00:03Z
+321.84,2,success,none,Dagster DAG inventory_sync completed successfully for table crm.leads; rows=1040324 duration=321.84s job_id=job_61573_aece50 ts=2026-04-10T15:04:16Z
+278.77,0,success,none,"dbt model mart_revenue_daily finished: PASS, freshness within SLA, invocation_id=job_12251_9bef18"
+6336.9,1,success,data_quality,"Great Expectations checkpoint failed for raw.orders: null_rate=0.52, duplicate_keys=13546 job_id=job_72749_5c1969 | attempt=2 hostname=worker-10 memory_mb=9626"
+1.38,3,success,none,"dbt model dim_user finished: PASS, freshness within SLA, invocation_id=job_25046_86f651"
+64.52,0,success,none,Spark DAG fraud_features_etl completed successfully for table billing.invoices; rows=1708821 duration=64.52s job_id=job_16299_b476e1 ts=2026-04-10T06:41:00Z
+1788.74,4,error,schema_mismatch,Schema validation failed for raw.orders: expected column customer_id INT but found STRING; job_id=job_95344_a0c9f7 ts=2026-04-23T05:07:43Z
+491.81,1,success,none,"dbt model mart_revenue_daily finished: PASS, freshness within SLA, invocation_id=job_54346_e44958"
+10.69,3,failed,upstream_dependency,External dependency not ready: watermark behind by 317 minutes for pipeline=crm_delta_merge
+8.56,0,success,none,task=daily_orders_ingest.load target=crm.leads status=OK run_id=job_69535_f6d2a8 committed partitions=4 at 2026-04-06T04:49:14Z
+175.06,4,degraded,none,"dbt model inventory_snapshot finished: PASS, freshness within SLA, invocation_id=job_71493_acfdad"
+91.04,0,success,none,Dagster DAG customer_dim_build completed successfully for table raw.orders; rows=2318686 duration=91.04s job_id=job_70016_e58379 ts=2026-04-02T08:34:54Z
+539.98,0,success,none,"dbt model raw_customers finished: PASS, freshness within SLA, invocation_id=job_28625_3dde3d"
+3049.36,0,warning,none,task=dbt_marts_run.load target=mart.revenue_daily status=OK run_id=job_68041_7b5877 committed partitions=32 at 2026-04-27T00:40:27Z
+305.65,1,success,none,Glue DAG billing_export_load completed successfully for table stg.payments; rows=1737003 duration=305.65s job_id=job_93186_0ea4eb ts=2026-04-06T21:45:46Z | attempt=2 hostname=worker-3 memory_mb=13598
+871.64,0,success,none,task=inventory_sync.load target=raw.customers status=OK run_id=job_38621_08c2eb committed partitions=26 at 2026-04-19T11:34:07Z
+77.58,1,success,none,"dbt model raw_orders finished: PASS, freshness within SLA, invocation_id=job_85221_8fbccd"
+541.5,0,failed,missing_file,FileNotFoundError: landing file for crm.leads was not present by cutoff; sensor waited 5m
+289.44,0,success,upstream_dependency,External dependency not ready: watermark behind by 164 minutes for pipeline=payment_recon
+104.75,1,success,none,"dbt model crm_leads finished: PASS, freshness within SLA, invocation_id=job_90342_ef91e4"
+3243.99,4,failed,timeout,Spark executor heartbeat timeout while writing raw.orders; stage=73 retry=4; java.net.SocketTimeoutException: Read timed out
+595.87,0,success,none,Glue DAG zipcode_metrics_refresh completed successfully for table billing.invoices; rows=1709296 duration=595.87s job_id=job_98234_22cebf ts=2026-04-07T07:48:33Z
+541.54,1,success,none,Prefect DAG customer_dim_build completed successfully for table stg.payments; rows=783722 duration=541.54s job_id=job_80852_6e569b ts=2026-04-24T08:08:54Z
+91.28,0,success,data_quality,"row_count anomaly for crm.leads: expected 100k-130k, observed 11466; quarantined batch"
+228.02,0,success,upstream_dependency,HTTP 503 from upstream service during extract for crm.leads; circuit breaker open; retry=0
+268.0,0,error,data_quality,DQ rule violation in fraud_features_etl: negative amount detected in raw.orders; bad_rows=1234
+259.45,3,success,permission,permission denied for schema analytics while executing INSERT into billing.invoices; user=svc_etl
+4.1,1,success,data_quality,"Great Expectations checkpoint failed for billing.invoices: null_rate=0.23, duplicate_keys=19517 job_id=job_34897_005809"
+2879.32,1,degraded,none,"dbt model crm_leads finished: PASS, freshness within SLA, invocation_id=job_94547_dc9236 | attempt=2 hostname=worker-16 memory_mb=5820"
+86.88,0,success,none,task=dbt_marts_run.load target=mart.revenue_daily status=OK run_id=job_27239_ebdb56 committed partitions=28 at 2026-04-02T14:19:23Z
+925.44,1,success,none,task=clickstream_spark_job.load target=dim_user status=OK run_id=job_93257_a60ab4 committed partitions=32 at 2026-04-10T16:00:16Z
+450.76,0,failed,N/A,"dbt model stg_payments finished: PASS, freshness within SLA, invocation_id=job_10435_59ae00"
+217.9,3,error,missing_file,FileNotFoundError: landing file for dim_user was not present by cutoff; sensor waited 33m
+2795.4,4,error,schema_mismatch,Spark AnalysisException: Cannot resolve column 'event_ts' in input schema for pipeline=customer_dim_build table=mart.revenue_daily
+5137.65,0,timeout,dbt_error,dbt run failed on model inventory_snapshot: Compilation Error near line 50; invocation_id=job_32948_a44b31
+7.18,0,success,none,Glue DAG fraud_features_etl completed successfully for table raw.orders; rows=104735 duration=8.57s job_id=job_19905_239b99 ts=2026-04-16T05:11:22Z
+1214.62,1,success,none,"dbt model crm_leads finished: PASS, freshness within SLA, invocation_id=job_14840_12e8e4"
+566.54,4,error,data_quality,"Great Expectations checkpoint failed for crm.leads: null_rate=0.31, duplicate_keys=17056 job_id=job_58589_f80ab7"
+190.06,0,success,none,Glue DAG zipcode_metrics_refresh completed successfully for table analytics.session_rollup; rows=1101890 duration=190.06s job_id=job_20741_8beb8d ts=2026-04-11T21:08:20Z
+4.44,5,success,none,N/A
+107.95,1,degraded,none,Spark DAG inventory_sync completed successfully for table raw.orders; rows=927067 duration=107.95s job_id=job_29373_ad109f ts=2026-04-14T15:23:58Z
+516.72,0,success,none,task=crm_delta_merge.load target=crm.leads status=OK run_id=job_27616_4b208d committed partitions=3 at 2026-04-11T12:43:37Z
+475.41,0,success,none,task=billing_export_load.load target=fact_orders status=OK run_id=job_67654_4ccab6 committed partitions=37 at 2026-04-23T12:41:42Z
+362.45,1,failed,data_quality,DQ rule violation in customer_dim_build: negative amount detected in raw.customers; bad_rows=462
+414.53,0,success,none,task=zipcode_metrics_refresh.load target=raw.customers status=OK run_id=job_70532_ef96a9 committed partitions=35 at 2026-04-11T23:06:19Z
+4801.13,3,error,timeout,SLA miss: upstream batch still running after 4801.13s for customer_dim_build; marked timeout job_id=job_85892_3ae366
+438.8,4,error,data_quality,"Great Expectations checkpoint failed for dim_user: null_rate=0.65, duplicate_keys=18368 job_id=job_69464_7a9fbb"
+461.08,6,error,permission,-
+504.25,4,timeout,data_quality,DQ rule violation in payment_recon: negative amount detected in raw.orders; bad_rows=1393
+899.11,0,failed,schema_mismatch,Spark AnalysisException: Cannot resolve column 'event_ts' in input schema for pipeline=inventory_sync table=mart.revenue_daily
+2980.35,0,error,upstream_dependency,HTTP 503 from upstream service during extract for raw.orders; circuit breaker open; retry=0 | attempt=1 hostname=worker-18 memory_mb=13598
+478.57,0,success,none,Airflow DAG payment_recon completed successfully for table fact_orders; rows=41924 duration=478.57s job_id=job_84873_f1f91b ts=2026-04-14T19:47:44Z | attempt=1 hostname=worker-15 memory_mb=7596
+8.57,0,success,none,Glue DAG fraud_features_etl completed successfully for table raw.orders; rows=104735 duration=8.57s job_id=job_19905_239b99 ts=2026-04-16T05:11:22Z
+3392.02,0,error,none,Airflow DAG payment_recon completed successfully for table dim_user; rows=2465127 duration=3392.02s job_id=job_94927_c56d49 ts=2026-04-05T12:27:48Z
+274.94,2,error,data_quality,"row_count anomaly for crm.leads: expected 100k-130k, observed 1214; quarantined batch"
+484.37,2,success,none,"dbt model mart_revenue_daily finished: PASS, freshness within SLA, invocation_id=job_66093_e0a245"
+215.43,0,timeout,permission,AccessDeniedException: role etl_runner cannot write to crm.leads; job_id=job_61516_45d700 request_id=2af37913
+958.74,1,success,none,Airflow DAG payment_recon completed successfully for table analytics.session_rollup; rows=8377 duration=958.74s job_id=job_57091_aeb13f ts=2026-04-01T07:34:40Z
+252.62,0,success,none,Glue DAG customer_dim_build completed successfully for table crm.leads; rows=582516 duration=252.62s job_id=job_84411_8b9852 ts=2026-04-21T05:32:38Z
+314.02,1,error,none,Airflow DAG daily_orders_ingest completed successfully for table stg_events.clickstream; rows=919127 duration=314.02s job_id=job_13022_310773 ts=2026-04-27T21:27:45Z
+311.66,0,success,none,task=dbt_marts_run.load target=billing.invoices status=OK run_id=job_65365_a8fc0c committed partitions=40 at 2026-04-14T23:16:13Z
+465.44,3,success,none,task=fraud_features_etl.load target=warehouse.shipments status=OK run_id=job_28058_19e670 committed partitions=1 at 2026-04-17T16:15:54Z
+631.31,0,success,none,Airflow DAG zipcode_metrics_refresh completed successfully for table stg.payments; rows=487438 duration=631.31s job_id=job_83402_aaa6ed ts=2026-04-18T12:05:17Z | attempt=1 hostname=worker-20 memory_mb=6177
+97.67,0,error,schema_mismatch,Spark AnalysisException: Cannot resolve column 'event_ts' in input schema for pipeline=payment_recon table=warehouse.shipments
+272.29,5,success,none,task=dbt_marts_run.load target=analytics.session_rollup status=OK run_id=job_13296_8174a5 committed partitions=32 at 2026-04-03T12:07:13Z | attempt=6 hostname=worker-14 memory_mb=18034
+5019.27,6,warning,upstream_dependency,HTTP 503 from upstream service during extract for billing.invoices; circuit breaker open; retry=6
+8.14,0,success,none,task=dbt_marts_run.load target=inventory_snapshot status=OK run_id=job_26456_d2887d committed partitions=4 at 2026-04-28T09:53:55Z
+419.21,2,success,none,"dbt model analytics_session_rollup finished: PASS, freshness within SLA, invocation_id=job_23248_3e9697"
+280.88,0,error,upstream_dependency,External dependency not ready: watermark behind by 80 minutes for pipeline=billing_export_load
+1755.15,6,success,schema_mismatch,Spark AnalysisException: Cannot resolve column 'event_ts' in input schema for pipeline=payment_recon table=stg_events.clickstream | attempt=7 hostname=worker-15 memory_mb=21884
+592.8,0,success,none,Airflow DAG zipcode_metrics_refresh completed successfully for table warehouse.shipments; rows=1957391 duration=592.8s job_id=job_76496_81c05e ts=2026-04-19T23:35:36Z
+2.93,1,timeout,upstream_dependency,HTTP 503 from upstream service during extract for raw.orders; circuit breaker open; retry=1
+3299.01,0,error,schema_mismatch,Schema validation failed for mart.revenue_daily: expected column customer_id INT but found STRING; job_id=job_98307_e2ddf9 ts=2026-04-18T13:20:16Z
+300.74,1,warning,data_quality,"Great Expectations checkpoint failed for inventory_snapshot: null_rate=0.57, duplicate_keys=4674 job_id=job_67997_475e8e"
+471.76,4,failed,upstream_dependency,HTTP 503 from upstream service during extract for stg.payments; circuit breaker open; retry=4
+644.26,3,degraded,timeout,SLA miss: upstream batch still running after 644.26s for clickstream_spark_job; marked timeout job_id=job_97522_090638
+3343.18,0,failed,none,Glue DAG customer_dim_build completed successfully for table billing.invoices; rows=1560847 duration=3343.18s job_id=job_74576_997657 ts=2026-04-04T04:52:41Z
+475.24,1,failed,schema_mismatch,Schema validation failed for raw.orders: expected column customer_id INT but found STRING; job_id=job_67873_d55465 ts=2026-04-15T07:24:42Z
+309.4,0,success,none,task=payment_recon.load target=inventory_snapshot status=OK run_id=job_16528_e6f83a committed partitions=44 at 2026-04-06T12:05:59Z
+1219.58,1,error,data_quality,"row_count anomaly for warehouse.shipments: expected 100k-130k, observed 13318; quarantined batch"
+5774.34,0,error,N/A,"dbt model stg_events_clickstream finished: PASS, freshness within SLA, invocation_id=job_20984_7ec19e"
+132.31,2,failed,timeout,dbt task billing_export_load exceeded execution_timeout after 132.74s; last heartbeat lost; job_id=job_53948_1ed97f table=inventory_snapshot ts=2026-04-05T07:13:27Z
+4.75,1,success,none,"dbt model crm_leads finished: PASS, freshness within SLA, invocation_id=job_14244_7f0cd5"
+159.1,0,success,none,task=payment_recon.load target=crm.leads status=OK run_id=job_92515_5672fc committed partitions=12 at 2026-04-19T05:20:49Z
+6.57,3,success,unknown,dbt DAG daily_orders_ingest completed successfully for table mart.revenue_daily; rows=918564 duration=6.57s job_id=job_55848_9ea986 ts=2026-04-20T20:01:35Z
+267.32,1,timeout,upstream_dependency,External dependency not ready: watermark behind by 234 minutes for pipeline=crm_delta_merge
+2295.13,4,warning,none,task=zipcode_metrics_refresh.load target=stg.payments status=OK run_id=job_31745_7ef572 committed partitions=16 at 2026-04-03T13:31:20Z
+208.86,2,success,schema_mismatch,Schema validation failed for raw.orders: expected column customer_id INT but found STRING; job_id=job_39654_1b4221 ts=2026-04-10T11:57:45Z
+457.23,6,timeout,upstream_dependency,Upstream dependency billing_api delayed; skipping customer_dim_build for stg_events.clickstream; job_id=job_45319_978d34 | attempt=7 hostname=worker-15 memory_mb=10636
+545.93,1,success,schema_mismatch,"dbt contract error in model raw_customers: missing column updated_at, extra column legacy_code | attempt=2 hostname=worker-5 memory_mb=23489"
+3238.08,5,faild,data_quality,"Great Expectations checkpoint failed for dim_user: null_rate=0.29, duplicate_keys=8897 job_id=job_18006_e73a94"
+456.84,2,failed,schema_mismatch,"dbt contract error in model crm_leads: missing column updated_at, extra column legacy_code"
+102.4,4,warning,upstream_dependency,External dependency not ready: watermark behind by 184 minutes for pipeline=payment_recon
+1687.24,5,success,data_quality,DQ rule violation in inventory_sync: negative amount detected in analytics.session_rollup; bad_rows=8738
+2027.25,0,success,none,task=customer_dim_build.load target=mart.revenue_daily status=OK run_id=job_84675_54ccfa committed partitions=26 at 2026-04-20T00:25:00Z
+11.64,2,failed,permission,403 Forbidden from object store during inventory_sync; check IAM policy for table=stg_events.clickstream | attempt=3 hostname=worker-13 memory_mb=9719
+170.11,2,success,data_quality,"row_count anomaly for dim_user: expected 100k-130k, observed 6736; quarantined batch"
+83.04,1,success,upstream_dependency,HTTP 503 from upstream service during extract for inventory_snapshot; circuit breaker open; retry=1
+125.44,0,success,none,task=daily_orders_ingest.load target=stg.payments status=OK run_id=job_47621_0f3c8e committed partitions=5 at 2026-04-15T11:12:04Z
+460.22,0,success,none,task=daily_orders_ingest.load target=crm.leads status=OK run_id=job_71290_20e0de committed partitions=5 at 2026-04-17T15:47:48Z
+12.17,1,success,none,"dbt model stg_events_clickstream finished: PASS, freshness within SLA, invocation_id=job_20178_7a08a7"
+288.4,1,success,none,"dbt model fact_orders finished: PASS, freshness within SLA, invocation_id=job_82542_eb0c23"
+240.26,0,success,none,task=inventory_sync.load target=stg_events.clickstream status=OK run_id=job_66151_c57841 committed partitions=18 at 2026-04-02T08:17:50Z
+366.05,1,success,data_quality,"row_count anomaly for raw.customers: expected 100k-130k, observed 15424; quarantined batch"
+1544.74,6,warning,none,task=daily_orders_ingest.load target=dim_user status=OK run_id=job_93466_ce50ae committed partitions=4 at 2026-04-05T05:03:38Z
+127.86,0,failed,timeout,SLA miss: upstream batch still running after 127.86s for zipcode_metrics_refresh; marked timeout job_id=job_76711_5499bb
+328.3,4,success,none,task=customer_dim_build.load target=stg_events.clickstream status=OK run_id=job_41117_e95190 committed partitions=8 at 2026-04-10T23:17:31Z
+548.79,1,success,none,task=clickstream_spark_job.load target=mart.revenue_daily status=OK run_id=job_29228_acc7ca committed partitions=8 at 2026-04-23T02:44:35Z
+466.85,3,success,none,Prefect DAG payment_recon completed successfully for table analytics.session_rollup; rows=194617 duration=466.85s job_id=job_76978_2e4c6f ts=2026-04-01T07:16:16Z
+141.08,5,warning,none,task=payment_recon.load target=billing.invoices status=OK run_id=job_48795_f44b5b committed partitions=43 at 2026-04-27T19:10:19Z | attempt=6 hostname=worker-14 memory_mb=18201
+489.89,1,timeout,upstream_dependency,External dependency not ready: watermark behind by 186 minutes for pipeline=daily_orders_ingest
+3.5,1,success,none,task=payment_recon.load target=mart.revenue_daily status=OK run_id=job_31273_3b9bc1 committed partitions=38 at 2026-04-12T07:49:33Z
+225.03,4,timedout,none,task=dbt_marts_run.load target=warehouse.shipments status=OK run_id=job_56128_f7c029 committed partitions=45 at 2026-04-23T15:28:14Z
+1482.98,0,success,timeout,Glue task billing_export_load exceeded execution_timeout after 1482.98s; last heartbeat lost; job_id=job_89209_1bfc7a table=fact_orders ts=2026-04-17T14:50:44Z
+253.79,0,success,none,task=billing_export_load.load target=dim_user status=OK run_id=job_87333_1bef20 committed partitions=48 at 2026-04-20T23:55:54Z
+522.16,0,success,none,Airflow DAG clickstream_spark_job completed successfully for table crm.leads; rows=355076 duration=522.16s job_id=job_52909_4791ff ts=2026-04-17T06:54:11Z
+4.98,5,failed,upstream_dependency,External dependency not ready: watermark behind by 101 minutes for pipeline=clickstream_spark_job
+3.56,1,degraded,none,"dbt model stg_events_clickstream finished: PASS, freshness within SLA, invocation_id=job_73501_1c2493"
+339.41,2,error,timeot,Prefect DAG payment_recon completed successfully for table inventory_snapshot; rows=1289214 duration=339.41s job_id=job_94142_d24dfb ts=2026-04-10T00:14:41Z | attempt=3 hostname=worker-16 memory_mb=16574
+9.06,1,success,none,task=payment_recon.load target=raw.orders status=OK run_id=job_53715_6a8eef committed partitions=38 at 2026-04-24T21:15:23Z
+1348.77,0,success,none,"dbt model stg_events_clickstream finished: PASS, freshness within SLA, invocation_id=job_10673_b045b9"
+5.85,1,success,missing_file,Airflow sensor customer_dim_build.wait_for_file failed: gs://bucket/raw/warehouse.shipments/2026-04-23.csv missing
+11.66,1,success,none,"dbt model warehouse_shipments finished: PASS, freshness within SLA, invocation_id=job_33358_fa253f"
+1287.85,1,success,permission,AccessDeniedException: role etl_runner cannot write to warehouse.shipments; job_id=job_36702_ae9c2c request_id=9930dd3e
+2398.46,2,error,none,dbt DAG dbt_marts_run completed successfully for table billing.invoices; rows=1587927 duration=2398.46s job_id=job_20336_f068f9 ts=2026-04-22T05:17:19Z
+59.95,0,failed,data_quality,"row_count anomaly for inventory_snapshot: expected 100k-130k, observed 14542; quarantined batch"
+1139.41,1,degraded,schema_mismatch,"dbt contract error in model crm_leads: missing column updated_at, extra column legacy_code | attempt=2 hostname=worker-2 memory_mb=13401"
+402.59,2,failed,missing_file,Airflow sensor dbt_marts_run.wait_for_file failed: gs://bucket/raw/fact_orders/2026-04-04.csv missing
+351.07,2,success,schema_mismatch,Spark AnalysisException: Cannot resolve column 'event_ts' in input schema for pipeline=daily_orders_ingest table=fact_orders
+264.11,2,error,timeot,Spark DAG clickstream_spark_job completed successfully for table billing.invoices; rows=704194 duration=264.11s job_id=job_47092_991eb8 ts=2026-04-13T14:47:14Z
+525.03,0,warning,none,task=billing_export_load.load target=fact_orders status=OK run_id=job_27181_b89636 committed partitions=2 at 2026-04-26T02:17:22Z
+137.38,1,success,none,"dbt model mart_revenue_daily finished: PASS, freshness within SLA, invocation_id=job_44779_fdebb0 | attempt=2 hostname=worker-21 memory_mb=17705"
+266.37,0,success,none,"dbt model raw_customers finished: PASS, freshness within SLA, invocation_id=job_35533_b09c9c | attempt=1 hostname=worker-9 memory_mb=8519"
+141.95,2,success,none,task=zipcode_metrics_refresh.load target=stg.payments status=OK run_id=job_72791_b44586 committed partitions=19 at 2026-04-22T04:51:06Z
+436.74,2,success,none,Airflow DAG payment_recon completed successfully for table analytics.session_rollup; rows=1054369 duration=436.74s job_id=job_27912_83eaf2 ts=2026-04-06T00:47:23Z
+494.63,2,success,none,task=dbt_marts_run.load target=dim_user status=OK run_id=job_54839_4f37bd committed partitions=21 at 2026-04-13T02:05:46Z
+381.16,1,warning,timeout,Spark executor heartbeat timeout while writing stg_events.clickstream; stage=64 retry=1; java.net.SocketTimeoutException: Read timed out
+485.1,1,error,permission,AccessDeniedException: role etl_runner cannot write to raw.orders; job_id=job_45422_2b0de0 request_id=795deefc
+573.79,0,success,none,Spark DAG customer_dim_build completed successfully for table fact_orders; rows=2458772 duration=573.79s job_id=job_85192_31ef32 ts=2026-04-11T21:39:49Z
+4.95,1,success,none,dbt DAG clickstream_spark_job completed successfully for table analytics.session_rollup; rows=552839 duration=4.95s job_id=job_64649_f692f0 ts=2026-04-14T10:47:55Z
+552.74,0,success,dbt_error,dbt run failed on model stg_events_clickstream: Compilation Error near line 134; invocation_id=job_49870_44b02f
+43.94,1,success,none,"dbt model warehouse_shipments finished: PASS, freshness within SLA, invocation_id=job_43478_61c000"
+8.6,2,warning,none,task=billing_export_load.load target=stg.payments status=OK run_id=job_60356_33befc committed partitions=21 at 2026-04-01T03:36:10Z
+257.73,0,success,schem_mismatch,Prefect DAG dbt_marts_run completed successfully for table stg.payments; rows=1363631 duration=257.73s job_id=job_17535_94baf2 ts=2026-04-14T13:55:50Z
+504.35,2,success,none,"dbt model raw_orders finished: PASS, freshness within SLA, invocation_id=job_12605_1f48b2"
+371.13,1,warning,upstream_dependency,HTTP 503 from upstream service during extract for raw.customers; circuit breaker open; retry=1
+306.58,4,timeout,data_quality,DQ rule violation in inventory_sync: negative amount detected in fact_orders; bad_rows=5533 | attempt=5 hostname=worker-7 memory_mb=13159
+175.05,2,timeout,permission,403 Forbidden from object store during crm_delta_merge; check IAM policy for table=inventory_snapshot
+176.73,1,success,none,task=clickstream_spark_job.load target=stg.payments status=OK run_id=job_38807_4f6fb6 committed partitions=47 at 2026-04-14T01:08:00Z
+100.75,4,degraded,missing_file,Input path not found s3://lake/crm_delta_merge/dt=2026-04-25/part-000.snappy.parquet; job_id=job_75621_d54018
+144.19,2,failed,data_quality,DQ rule violation in daily_orders_ingest: negative amount detected in crm.leads; bad_rows=7318
+38.28,0,success,none,"dbt model stg_events_clickstream finished: PASS, freshness within SLA, invocation_id=job_18691_4a5dac"
+1141.22,5,success,permission,AccessDeniedException: role etl_runner cannot write to analytics.session_rollup; job_id=job_92842_3b3b27 request_id=62df1b6a
+530.19,0,failed,dbt_error,dbt run failed on model crm_leads: Compilation Error near line 80; invocation_id=job_73051_246258
+3589.63,0,error,permission,permission denied for schema analytics while executing INSERT into dim_user; user=svc_etl
+312.82,0,success,none,"dbt model raw_customers finished: PASS, freshness within SLA, invocation_id=job_50444_8b14ff | attempt=1 hostname=worker-2 memory_mb=19608"
+584.51,2,success,none,"dbt model analytics_session_rollup finished: PASS, freshness within SLA, invocation_id=job_65882_a8abf5"
+438.53,0,timeout,permission,AccessDeniedException: role etl_runner cannot write to warehouse.shipments; job_id=job_67564_c3b227 request_id=fd07f508
+456.38,2,failed,schema_mismatch,"dbt contract error in model crm_leads: missing column updated_at, extra column legacy_code"
+60.0,1,success,N/A,Dagster DAG zipcode_metrics_refresh completed successfully for table fact_orders; rows=1257749 duration=60.0s job_id=job_19411_31dda5 ts=2026-04-10T03:36:00Z
+160.71,5,degraded,dbt_error,Database Error in model stg_payments: relation source_customers does not exist
+137.0,3,error,timeout,Prefect task payment_recon exceeded execution_timeout after 137.0s; last heartbeat lost; job_id=job_38859_bdcd53 table=stg.payments ts=2026-04-19T19:48:51Z
+517.13,0,success,none,task=billing_export_load.load target=mart.revenue_daily status=OK run_id=job_66922_5e56f6 committed partitions=36 at 2026-04-05T13:43:20Z
+487.86,0,degraded,upstream_dependency,HTTP 503 from upstream service during extract for raw.orders; circuit breaker open; retry=0
+226.3,0,success,none,task=customer_dim_build.load target=warehouse.shipments status=OK run_id=job_99998_e984f8 committed partitions=8 at 2026-04-19T07:12:28Z | attempt=1 hostname=worker-11 memory_mb=9864
+2106.15,0,error,permission,permission denied for schema analytics while executing INSERT into warehouse.shipments; user=svc_etl | attempt=1 hostname=worker-20 memory_mb=22512
+335.53,2,success,none,"dbt model stg_payments finished: PASS, freshness within SLA, invocation_id=job_96054_f74c64"
+5.05,0,success,none,Glue DAG billing_export_load completed successfully for table fact_orders; rows=2469784 duration=5.05s job_id=job_14806_47a1f4 ts=2026-04-03T09:19:26Z
+3089.47,0,error,timeout,SLA miss: upstream batch still running after 3089.47s for customer_dim_build; marked timeout job_id=job_90471_40d133
+180.74,0,success,none,task=payment_recon.load target=mart.revenue_daily status=OK run_id=job_62393_897f6b committed partitions=1 at 2026-04-26T10:50:52Z
+387.63,0,success,none,dbt DAG crm_delta_merge completed successfully for table crm.leads; rows=744835 duration=387.63s job_id=job_56689_9f6a8a ts=2026-04-25T03:21:13Z
+301.7,0,success,none,task=daily_orders_ingest.load target=stg_events.clickstream status=OK run_id=job_45117_e551c9 committed partitions=17 at 2026-04-28T14:53:29Z
+94.99,2,error,none,"dbt model analytics_session_rollup finished: PASS, freshness within SLA, invocation_id=job_91958_873e64"
+831.49,0,timeout,permission,AccessDeniedException: role etl_runner cannot write to stg_events.clickstream; job_id=job_23304_8eb00a request_id=ddc2df6e
+164.4,0,failed,unknown,Glue DAG dbt_marts_run completed successfully for table raw.customers; rows=1356160 duration=164.4s job_id=job_35750_7a1458 ts=2026-04-10T16:05:36Z
+495.09,0,success,none,Prefect DAG customer_dim_build completed successfully for table analytics.session_rollup; rows=2378908 duration=495.09s job_id=job_24396_4e5bb3 ts=2026-04-14T13:57:15Z | attempt=1 hostname=worker-13 memory_mb=4032
+452.26,0,timeout,dbt_error,dbt test failed: accepted_values on raw.customers.status returned 28 failures | attempt=1 hostname=worker-3 memory_mb=14738
+4.96,1,success,none,"dbt model crm_leads finished: PASS, freshness within SLA, invocation_id=job_16233_929164 | attempt=2 hostname=worker-10 memory_mb=5243"
+538.49,6,failed,dbt_error,dbt test failed: accepted_values on stg_events.clickstream.status returned 408 failures
+3050.74,6,warning,none,"dbt model mart_revenue_daily finished: PASS, freshness within SLA, invocation_id=job_10564_b5669b"
+8.76,4,success,none,task=crm_delta_merge.load target=raw.orders status=OK run_id=job_90565_85e511 committed partitions=19 at 2026-04-22T13:47:49Z
+239.42,0,error,data_quality,DQ rule violation in payment_recon: negative amount detected in dim_user; bad_rows=9565
+300.59,1,success,timeout,Spark executor heartbeat timeout while writing analytics.session_rollup; stage=84 retry=1; java.net.SocketTimeoutException: Read timed out
+17.98,2,success,none,dbt DAG billing_export_load completed successfully for table billing.invoices; rows=430446 duration=17.98s job_id=job_44167_699dc6 ts=2026-04-23T18:38:22Z
+1020.02,0,failed,missing_file,Input path not found s3://lake/payment_recon/dt=2026-04-01/part-000.snappy.parquet; job_id=job_82884_ada6a5
+4.45,1,success,none,Spark DAG clickstream_spark_job completed successfully for table dim_user; rows=550590 duration=4.45s job_id=job_68064_ae329f ts=2026-04-06T23:24:56Z | attempt=2 hostname=worker-18 memory_mb=1075
+191.25,1,success,none,task=fraud_features_etl.load target=stg.payments status=OK run_id=job_95955_ae2831 committed partitions=19 at 2026-04-16T20:13:52Z
+1405.93,0,success,timeout,SLA miss: upstream batch still running after 1405.93s for zipcode_metrics_refresh; marked timeout job_id=job_68278_64bced
+5.17,4,failed,upstream_dependency,HTTP 503 from upstream service during extract for billing.invoices; circuit breaker open; retry=4
+386.49,0,success,none,"dbt model stg_events_clickstream finished: PASS, freshness within SLA, invocation_id=job_62228_00d636"
+302.28,0,success,none,"dbt model crm_leads finished: PASS, freshness within SLA, invocation_id=job_17619_cc9992"
+145.01,0,success,none,"dbt model analytics_session_rollup finished: PASS, freshness within SLA, invocation_id=job_78860_926ad1"
+182.41,0,error,schema_mismatch,Schema validation failed for fact_orders: expected column customer_id INT but found STRING; job_id=job_37514_da310b ts=2026-04-27T00:10:49Z
+301.3,0,success,none,"dbt model crm_leads finished: PASS, freshness within SLA, invocation_id=job_17619_cc9992"
+182.11,2,success,none,"dbt model warehouse_shipments finished: PASS, freshness within SLA, invocation_id=job_40714_9edb63"
+1370.23,0,success,none,"dbt model fact_orders finished: PASS, freshness within SLA, invocation_id=job_55167_876c71 | attempt=1 hostname=worker-24 memory_mb=20990"
+132.74,2,failed,timeout,dbt task billing_export_load exceeded execution_timeout after 132.74s; last heartbeat lost; job_id=job_53948_1ed97f table=inventory_snapshot ts=2026-04-05T07:13:27Z
+1960.67,1,failed,schema_mismatch,"dbt contract error in model stg_events_clickstream: missing column updated_at, extra column legacy_code"
+56.87,5,success,none,dbt DAG fraud_features_etl completed successfully for table stg_events.clickstream; rows=127309 duration=56.87s job_id=job_15405_c178f1 ts=2026-04-25T10:00:17Z
+476.5,0,success,timeout,SLA miss: upstream batch still running after 476.5s for zipcode_metrics_refresh; marked timeout job_id=job_63835_998423
+110.42,4,failed,missing_file,Input path not found s3://lake/billing_export_load/dt=2026-04-23/part-000.snappy.parquet; job_id=job_68629_f5e566
+352.56,4,degraded,none,task=daily_orders_ingest.load target=warehouse.shipments status=OK run_id=job_55205_be4721 committed partitions=24 at 2026-04-24T20:39:08Z
+1068.18,0,error,upstream_dependency,Upstream dependency kafka_orders delayed; skipping dbt_marts_run for crm.leads; job_id=job_18392_bc97bf
+185.92,3,success,none,task=billing_export_load.load target=stg.payments status=OK run_id=job_81190_5db2af committed partitions=44 at 2026-04-25T07:44:14Z | attempt=4 hostname=worker-11 memory_mb=21487
+231.73,0,success,none,task=daily_orders_ingest.load target=crm.leads status=OK run_id=job_34614_fa21ed committed partitions=37 at 2026-04-20T13:27:23Z
+313.1,1,success,none,"dbt model warehouse_shipments finished: PASS, freshness within SLA, invocation_id=job_43460_1ceeef"
+6.65,3,success,none,"dbt model fact_orders finished: PASS, freshness within SLA, invocation_id=job_24416_516911 | attempt=4 hostname=worker-3 memory_mb=4008"
+507.38,1,success,data_quality,DQ rule violation in fraud_features_etl: negative amount detected in crm.leads; bad_rows=3398
+465.72,0,success,none,Glue DAG payment_recon completed successfully for table mart.revenue_daily; rows=2021641 duration=465.72s job_id=job_62452_7fa59c ts=2026-04-04T17:02:38Z | attempt=1 hostname=worker-7 memory_mb=723
+375.89,4,failed,permission,403 Forbidden from object store during dbt_marts_run; check IAM policy for table=stg_events.clickstream
+1100.75,2,failed,data_quality,"Great Expectations checkpoint failed for inventory_snapshot: null_rate=0.54, duplicate_keys=12797 job_id=job_25198_804442 | attempt=3 hostname=worker-5 memory_mb=23984"
+11.34,0,success,none,task=crm_delta_merge.load target=warehouse.shipments status=OK run_id=job_22312_282bbd committed partitions=38 at 2026-04-27T15:33:13Z | attempt=1 hostname=worker-20 memory_mb=24217
+104.12,3,success,none,Prefect DAG payment_recon completed successfully for table mart.revenue_daily; rows=840160 duration=104.12s job_id=job_59789_545c76 ts=2026-04-12T07:08:46Z
+95.44,5,error,data_quality,"row_count anomaly for raw.orders: expected 100k-130k, observed 23519; quarantined batch"
+67.22,0,success,none,"dbt model mart_revenue_daily finished: PASS, freshness within SLA, invocation_id=job_71865_0001e2"
+112.37,1,success,none,Spark DAG payment_recon completed successfully for table analytics.session_rollup; rows=2290607 duration=112.37s job_id=job_10342_a948e4 ts=2026-04-02T23:57:02Z
+3565.06,1,failed,none,Glue DAG clickstream_spark_job completed successfully for table fact_orders; rows=375089 duration=3565.06s job_id=job_88416_abf93f ts=2026-04-27T07:18:35Z
+4809.32,5,warning,none,"dbt model raw_customers finished: PASS, freshness within SLA, invocation_id=job_88661_e03d1f | attempt=6 hostname=worker-3 memory_mb=5110"
+347.92,2,error,schem_mismatch,"dbt model crm_leads finished: PASS, freshness within SLA, invocation_id=job_60905_ca8473"
+2174.71,6,timeout,timeout,Prefect task inventory_sync exceeded execution_timeout after 2174.71s; last heartbeat lost; job_id=job_13772_0ff36d table=warehouse.shipments ts=2026-04-04T14:45:54Z
+109.46,3,success,none,task=zipcode_metrics_refresh.load target=stg.payments status=OK run_id=job_34127_a82d85 committed partitions=1 at 2026-04-14T16:09:36Z
+288.61,6,error,schema_mismatch,"dbt contract error in model inventory_snapshot: missing column updated_at, extra column legacy_code"
+5899.38,2,degraded,timeout,Spark executor heartbeat timeout while writing inventory_snapshot; stage=49 retry=2; java.net.SocketTimeoutException: Read timed out
+129.76,0,success,none,Spark DAG payment_recon completed successfully for table warehouse.shipments; rows=151615 duration=129.76s job_id=job_93049_7f5a71 ts=2026-04-21T18:27:56Z
+779.77,0,degradedd,timeout,Spark executor heartbeat timeout while writing mart.revenue_daily; stage=49 retry=0; java.net.SocketTimeoutException: Read timed out
+543.38,2,success,upstream_dependency,External dependency not ready: watermark behind by 307 minutes for pipeline=dbt_marts_run
+588.25,4,success,data_quality,"row_count anomaly for billing.invoices: expected 100k-130k, observed 5212; quarantined batch"
+469.74,3,error,upstream_dependency,Upstream dependency billing_api delayed; skipping daily_orders_ingest for dim_user; job_id=job_14178_436694
+3508.48,0,failed,none,task=daily_orders_ingest.load target=billing.invoices status=OK run_id=job_65274_c8deaa committed partitions=44 at 2026-04-18T12:47:07Z
+2851.79,2,timeout,upstream_dependency,Upstream dependency vendor_sftp delayed; skipping clickstream_spark_job for dim_user; job_id=job_23181_e0e81b
+61.94,1,success,none,task=daily_orders_ingest.load target=fact_orders status=OK run_id=job_92026_99e5f4 committed partitions=43 at 2026-04-08T11:48:10Z
+65.82,0,success,none,"dbt model inventory_snapshot finished: PASS, freshness within SLA, invocation_id=job_31860_5724b6"
+2257.59,3,error,upstream_dependency,Upstream dependency vendor_sftp delayed; skipping crm_delta_merge for fact_orders; job_id=job_95029_f0d781
+384.29,0,degraded,permission,403 Forbidden from object store during inventory_sync; check IAM policy for table=mart.revenue_daily
+190.01,0,success,none,"dbt model crm_leads finished: PASS, freshness within SLA, invocation_id=job_21082_4e4d6a"
+415.91,0,success,upstream_dependency,Upstream dependency billing_api delayed; skipping fraud_features_etl for raw.orders; job_id=job_39961_f14c7c
+506.69,0,success,none,
+1748.31,2,success,none,Spark DAG zipcode_metrics_refresh completed successfully for table stg.payments; rows=199410 duration=1748.31s job_id=job_75929_6491c0 ts=2026-04-25T14:26:23Z
+404.04,0,success,none,Spark DAG daily_orders_ingest completed successfully for table raw.customers; rows=2288039 duration=404.04s job_id=job_23124_7f29d2 ts=2026-04-09T13:39:50Z
+255.48,0,success,none,Dagster DAG clickstream_spark_job completed successfully for table raw.orders; rows=2008665 duration=255.48s job_id=job_84100_1a2e72 ts=2026-04-22T03:07:46Z | attempt=1 hostname=worker-1 memory_mb=12098
+288.54,1,warning,schema_mismatch,"dbt contract error in model dim_user: missing column updated_at, extra column legacy_code"
+265.25,0,success,none,Prefect DAG crm_delta_merge completed successfully for table inventory_snapshot; rows=593013 duration=265.25s job_id=job_99699_99959d ts=2026-04-23T18:14:30Z
+496.55,0,success,none,"dbt model warehouse_shipments finished: PASS, freshness within SLA, invocation_id=job_95888_523ddb | attempt=1 hostname=worker-15 memory_mb=14146"
+366.56,6,success,none,dbt DAG billing_export_load completed successfully for table warehouse.shipments; rows=1581784 duration=366.56s job_id=job_64481_398581 ts=2026-04-01T09:06:41Z
+5.82,6,degraded,data_quality,"Great Expectations checkpoint failed for warehouse.shipments: null_rate=0.22, duplicate_keys=2130 job_id=job_87838_d9c842 | attempt=7 hostname=worker-15 memory_mb=6093"
+4471.2,6,error,timeout,Glue task daily_orders_ingest exceeded execution_timeout after 4471.2s; last heartbeat lost; job_id=job_53865_628be8 table=fact_orders ts=2026-04-17T22:18:43Z
+334.23,0,failed,permission,permission denied for schema analytics while executing INSERT into crm.leads; user=svc_etl
+358.3,0,error,dbt_error,dbt run failed on model crm_leads: Compilation Error near line 112; invocation_id=job_87329_7e6c2b
+323.23,0,success,none,"dbt model raw_orders finished: PASS, freshness within SLA, invocation_id=job_88912_c103b0"
+227.19,6,warning,none,Glue DAG customer_dim_build completed successfully for table dim_user; rows=280128 duration=227.19s job_id=job_45694_b26f36 ts=2026-04-20T06:42:30Z
+201.23,0,success,none,"dbt model fact_orders finished: PASS, freshness within SLA, invocation_id=job_89050_bd394d"
+469.19,0,success,none,task=customer_dim_build.load target=analytics.session_rollup status=OK run_id=job_62489_5a176a committed partitions=13 at 2026-04-03T07:30:26Z
+2765.53,4,degraded,schema_mismatch,Spark AnalysisException: Cannot resolve column 'event_ts' in input schema for pipeline=billing_export_load table=raw.orders
+276.24,3,failed,data_quality,DQ rule violation in customer_dim_build: negative amount detected in raw.customers; bad_rows=8110 | attempt=4 hostname=worker-10 memory_mb=21361
+91.85,5,success,dbt_error,dbt test failed: accepted_values on raw.customers.status returned 200 failures
+69.33,0,success,none,task=clickstream_spark_job.load target=billing.invoices status=OK run_id=job_98710_56a333 committed partitions=9 at 2026-04-20T08:23:31Z
+564.36,1,success,none,task=billing_export_load.load target=fact_orders status=OK run_id=job_43344_74adff committed partitions=19 at 2026-04-17T15:49:31Z
+562.53,2,success,none,task=zipcode_metrics_refresh.load target=dim_user status=OK run_id=job_72862_e0ac4f committed partitions=39 at 2026-04-28T00:18:02Z
+570.48,0,success,none,"dbt model mart_revenue_daily finished: PASS, freshness within SLA, invocation_id=job_90022_6ee14d"
+549.5,0,warning,none,task=fraud_features_etl.load target=stg_events.clickstream status=OK run_id=job_68724_4a978b committed partitions=28 at 2026-04-13T17:29:31Z
+5798.51,2,warning,permission,AccessDeniedException: role etl_runner cannot write to fact_orders; job_id=job_52947_3ede52 request_id=efe86d3f
+576.0,2,success,none,Prefect DAG daily_orders_ingest completed successfully for table dim_user; rows=723302 duration=576.0s job_id=job_41551_dde0bb ts=2026-04-28T17:51:31Z
+12.76,0,success,none,Glue DAG payment_recon completed successfully for table raw.customers; rows=874157 duration=12.76s job_id=job_81994_e394fc ts=2026-04-20T12:08:27Z
+363.15,0,success,none,task=billing_export_load.load target=crm.leads status=OK run_id=job_42060_fd9167 committed partitions=13 at 2026-04-18T02:37:09Z
+265.83,2,warning,none,task=daily_orders_ingest.load target=warehouse.shipments status=OK run_id=job_90511_4f5184 committed partitions=17 at 2026-04-18T22:02:38Z
+242.74,0,success,none,"dbt model inventory_snapshot finished: PASS, freshness within SLA, invocation_id=job_44752_5b8f2c"
+2988.93,1,warning,data_quality,"Great Expectations checkpoint failed for dim_user: null_rate=0.32, duplicate_keys=11225 job_id=job_41741_7ebc2f"
+1926.35,0,success,none,"dbt model warehouse_shipments finished: PASS, freshness within SLA, invocation_id=job_86665_d7736d"
+555.14,0,success,none,task=billing_export_load.load target=analytics.session_rollup status=OK run_id=job_73813_a078dc committed partitions=26 at 2026-04-09T16:48:17Z
+17.11,0,success,none,Glue DAG payment_recon completed successfully for table warehouse.shipments; rows=2018289 duration=17.11s job_id=job_65418_f79d1f ts=2026-04-28T00:37:53Z
+7.35,1,success,none,-
+473.11,0,success,none,task=inventory_sync.load target=stg_events.clickstream status=OK run_id=job_80421_9f4c53 committed partitions=31 at 2026-04-22T14:47:32Z
+323.43,0,success,upstream_dependency,HTTP 503 from upstream service during extract for analytics.session_rollup; circuit breaker open; retry=0
+349.58,0,success,none,task=daily_orders_ingest.load target=warehouse.shipments status=OK run_id=job_17272_c5b2a6 committed partitions=13 at 2026-04-18T02:22:03Z
+135.11,5,failed,dbt_error,Database Error in model mart_revenue_daily: relation source_orders does not exist | attempt=6 hostname=worker-15 memory_mb=17971
+216.69,3,degraded,data_quality,DQ rule violation in crm_delta_merge: negative amount detected in dim_user; bad_rows=2317
+4683.88,0,success,timeout,SLA miss: upstream batch still running after 4683.88s for fraud_features_etl; marked timeout job_id=job_27355_210420
+173.53,1,success,none,"dbt model warehouse_shipments finished: PASS, freshness within SLA, invocation_id=job_10508_71c586"
+564.48,0,success,none,Spark DAG customer_dim_build completed successfully for table dim_user; rows=2146387 duration=564.48s job_id=job_53866_4d91cf ts=2026-04-23T01:37:38Z
+370.09,0,success,none,Airflow DAG zipcode_metrics_refresh completed successfully for table warehouse.shipments; rows=2451330 duration=370.09s job_id=job_43708_82dbec ts=2026-04-21T18:18:06Z
+3333.97,2,degraded,none,task=customer_dim_build.load target=stg_events.clickstream status=OK run_id=job_61033_1bfd1b committed partitions=38 at 2026-04-02T15:10:16Z
+1369.05,6,failed,permission,AccessDeniedException: role etl_runner cannot write to crm.leads; job_id=job_42229_7604eb request_id=632abdf8
+451.58,2,success,upstream_dependency,Upstream dependency vendor_sftp delayed; skipping dbt_marts_run for billing.invoices; job_id=job_77773_b1f157
+313.32,0,success,none,task=dbt_marts_run.load target=billing.invoices status=OK run_id=job_65365_a8fc0c committed partitions=40 at 2026-04-14T23:16:13Z
+1589.26,2,failed,missing_file,Input path not found s3://lake/zipcode_metrics_refresh/dt=2026-04-15/part-000.snappy.parquet; job_id=job_45984_3d537a
+6.01,1,success,none,Dagster DAG customer_dim_build completed successfully for table mart.revenue_daily; rows=33367 duration=6.01s job_id=job_62861_dbcdf7 ts=2026-04-20T15:32:17Z
+331.75,1,success,none,dbt DAG zipcode_metrics_refresh completed successfully for table mart.revenue_daily; rows=2180698 duration=331.75s job_id=job_72861_ad8501 ts=2026-04-18T01:46:38Z | attempt=2 hostname=worker-11 memory_mb=7693
+5.84,0,success,none,"dbt model fact_orders finished: PASS, freshness within SLA, invocation_id=job_42118_6538ae"
+294.45,2,failed,permission,AccessDeniedException: role etl_runner cannot write to analytics.session_rollup; job_id=job_57766_a7fb67 request_id=f4c0b14b
+16.48,1,success,none,Spark DAG crm_delta_merge completed successfully for table raw.orders; rows=2117668 duration=16.48s job_id=job_20772_41471d ts=2026-04-19T20:44:07Z
+471.66,0,success,none,task=crm_delta_merge.load target=crm.leads status=OK run_id=job_67668_1ed41b committed partitions=3 at 2026-04-12T13:48:27Z
+9.15,3,warning,none,Glue DAG crm_delta_merge completed successfully for table raw.orders; rows=2490415 duration=9.15s job_id=job_41587_d1c723 ts=2026-04-04T12:35:21Z
+116.18,4,success,none,task=fraud_features_etl.load target=inventory_snapshot status=OK run_id=job_62597_c07fba committed partitions=20 at 2026-04-08T12:28:26Z
+364.72,2,success,none,Airflow DAG fraud_features_etl completed successfully for table dim_user; rows=2226848 duration=364.72s job_id=job_95671_18ecb6 ts=2026-04-02T05:39:26Z
+587.76,1,success,none,task=clickstream_spark_job.load target=inventory_snapshot status=OK run_id=job_26316_e6a482 committed partitions=34 at 2026-04-23T11:37:36Z | attempt=2 hostname=worker-3 memory_mb=15589
+1428.02,2,success,none,"dbt model mart_revenue_daily finished: PASS, freshness within SLA, invocation_id=job_74078_0f3560"
+155.49,2,success,none,Dagster DAG fraud_features_etl completed successfully for table dim_user; rows=2239748 duration=155.49s job_id=job_63414_d47df4 ts=2026-04-02T16:32:46Z | attempt=3 hostname=worker-7 memory_mb=2056
+554.89,0,success,data_quality,"Great Expectations checkpoint failed for warehouse.shipments: null_rate=0.55, duplicate_keys=14971 job_id=job_67885_ff53e8"
+2012.63,2,degraded,schema_mismatch,Schema validation failed for mart.revenue_daily: expected column customer_id INT but found STRING; job_id=job_76398_4c3ae6 ts=2026-04-17T14:12:42Z
+549.31,4,error,timeout,Glue task inventory_sync exceeded execution_timeout after 549.31s; last heartbeat lost; job_id=job_44616_23dbfb table=fact_orders ts=2026-04-09T13:44:45Z
+330.83,1,success,none,Prefect DAG crm_delta_merge completed successfully for table stg_events.clickstream; rows=1172213 duration=330.83s job_id=job_66208_179d3b ts=2026-04-25T03:37:50Z
+7.74,2,success,data_quality,DQ rule violation in crm_delta_merge: negative amount detected in mart.revenue_daily; bad_rows=6181
+77.13,1,success,missing_file,Input path not found s3://lake/billing_export_load/dt=2026-04-27/part-000.snappy.parquet; job_id=job_39146_a80b9a
+6189.55,3,success,upstream_dependency,HTTP 503 from upstream service during extract for analytics.session_rollup; circuit breaker open; retry=3
+268.89,0,failed,schema_mismatch,Spark AnalysisException: Cannot resolve column 'event_ts' in input schema for pipeline=payment_recon table=dim_user
+1024.05,6,failed,upstream_dependency,HTTP 503 from upstream service during extract for warehouse.shipments; circuit breaker open; retry=6 | attempt=7 hostname=worker-7 memory_mb=12941
+367.7,0,success,upstream_dependency,External dependency not ready: watermark behind by 344 minutes for pipeline=customer_dim_build
+282.64,2,success,none,Airflow DAG daily_orders_ingest completed successfully for table fact_orders; rows=2462649 duration=282.64s job_id=job_60826_b834af ts=2026-04-10T11:49:05Z
+169.46,2,success,none,task=daily_orders_ingest.load target=raw.customers status=OK run_id=job_81151_4b7e8f committed partitions=47 at 2026-04-18T01:34:20Z
+2.51,0,success,data_quality,"row_count anomaly for crm.leads: expected 100k-130k, observed 4970; quarantined batch"
+324.13,0,success,none,task=daily_orders_ingest.load target=fact_orders status=OK run_id=job_59670_655731 committed partitions=5 at 2026-04-24T21:45:10Z
+305.75,1,success,none,Airflow DAG crm_delta_merge completed successfully for table warehouse.shipments; rows=1499922 duration=305.75s job_id=job_97828_c40b2f ts=2026-04-02T15:56:23Z
+203.96,0,failed,upstream_dependency,HTTP 503 from upstream service during extract for fact_orders; circuit breaker open; retry=0 | attempt=1 hostname=worker-17 memory_mb=11772
+505.42,1,failed,data_quality,DQ rule violation in crm_delta_merge: negative amount detected in billing.invoices; bad_rows=2346
+276.28,0,success,none,task=payment_recon.load target=analytics.session_rollup status=OK run_id=job_39974_c768e2 committed partitions=31 at 2026-04-05T06:08:42Z
+136.63,1,warning,none,task=billing_export_load.load target=dim_user status=OK run_id=job_85533_14faf5 committed partitions=8 at 2026-04-16T21:01:25Z | attempt=2 hostname=worker-2 memory_mb=6370
+398.81,0,success,none,task=crm_delta_merge.load target=warehouse.shipments status=OK run_id=job_49001_e38696 committed partitions=32 at 2026-04-09T02:25:58Z
+982.75,4,failed,timeout,SLA miss: upstream batch still running after 982.75s for daily_orders_ingest; marked timeout job_id=job_80065_2e8b75
+3278.75,0,failed,timeout,Spark task fraud_features_etl exceeded execution_timeout after 3278.75s; last heartbeat lost; job_id=job_75557_6d2ce9 table=warehouse.shipments ts=2026-04-20T23:05:34Z
+437.77,6,warning,none,"dbt model inventory_snapshot finished: PASS, freshness within SLA, invocation_id=job_85412_b5e71f"
+6277.83,6,failed,timeout,Spark task payment_recon exceeded execution_timeout after 6277.83s; last heartbeat lost; job_id=job_83569_233933 table=mart.revenue_daily ts=2026-04-27T08:40:24Z
+130.57,2,success,none,task=zipcode_metrics_refresh.load target=mart.revenue_daily status=OK run_id=job_78012_4d24b8 committed partitions=22 at 2026-04-20T13:42:14Z
+436.78,1,success,none,task=zipcode_metrics_refresh.load target=raw.orders status=OK run_id=job_64912_526d3d committed partitions=19 at 2026-04-16T08:18:11Z
+2.4,1,failed,data_quality,"Great Expectations checkpoint failed for inventory_snapshot: null_rate=0.37, duplicate_keys=437 job_id=job_24896_b901b7"
+156.78,2,success,none,task=inventory_sync.load target=analytics.session_rollup status=OK run_id=job_64690_f66efd committed partitions=23 at 2026-04-23T17:31:24Z
+335.49,2,success,timeout,Spark task dbt_marts_run exceeded execution_timeout after 335.49s; last heartbeat lost; job_id=job_29090_74dbc4 table=analytics.session_rollup ts=2026-04-16T09:04:51Z
+129.92,4,success,none,"dbt model analytics_session_rollup finished: PASS, freshness within SLA, invocation_id=job_87002_6d23ec | attempt=5 hostname=worker-8 memory_mb=8581"
+14.8,1,failed,permission,AccessDeniedException: role etl_runner cannot write to raw.customers; job_id=job_48419_7cd7e1 request_id=3a69dd85
+517.63,0,success,none,"dbt model crm_leads finished: PASS, freshness within SLA, invocation_id=job_16858_bfa796"
+3257.78,5,error,permission,403 Forbidden from object store during clickstream_spark_job; check IAM policy for table=dim_user
+518.64,3,failed,schema_mismatch,"dbt contract error in model billing_invoices: missing column updated_at, extra column legacy_code"
+552.1,2,warning,none,task=zipcode_metrics_refresh.load target=warehouse.shipments status=OK run_id=job_24326_1f822c committed partitions=47 at 2026-04-10T15:12:15Z
+429.02,1,success,none,Prefect DAG fraud_features_etl completed successfully for table raw.customers; rows=147654 duration=429.02s job_id=job_56297_9a4175 ts=2026-04-20T01:39:56Z | attempt=2 hostname=worker-5 memory_mb=23925
+276.75,1,success,none,"dbt model inventory_snapshot finished: PASS, freshness within SLA, invocation_id=job_65046_968af5"
+35.66,0,success,none,Prefect DAG fraud_features_etl completed successfully for table billing.invoices; rows=2061259 duration=35.66s job_id=job_64769_7d02dd ts=2026-04-03T20:25:55Z
+577.38,0,success,N/A,task=clickstream_spark_job.load target=stg_events.clickstream status=OK run_id=job_72497_cb0bcf committed partitions=25 at 2026-04-08T00:40:15Z
+2754.19,2,failed,timeout,Spark executor heartbeat timeout while writing dim_user; stage=29 retry=2; java.net.SocketTimeoutException: Read timed out | attempt=3 hostname=worker-7 memory_mb=944
+2.11,0,failed,dbt_error,Database Error in model stg_payments: relation source_customers does not exist | attempt=1 hostname=worker-20 memory_mb=12884
+121.3,4,faild,missing_file,Input path not found s3://lake/daily_orders_ingest/dt=2026-04-15/part-000.snappy.parquet; job_id=job_60101_b210bc
+186.94,0,success,none,task=zipcode_metrics_refresh.load target=analytics.session_rollup status=OK run_id=job_86507_03214b committed partitions=9 at 2026-04-26T07:03:08Z

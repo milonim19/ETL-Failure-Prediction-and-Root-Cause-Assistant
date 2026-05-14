@@ -1,0 +1,14 @@
+{
+  "binary_val_fail_rate_truth": 0.44,
+  "binary_val_fail_rate_pred": 0.415,
+  "multiclass_keep": [
+    "data_quality",
+    "timeout",
+    "upstream_dependency",
+    "schema_mismatch",
+    "permission",
+    "dbt_error",
+    "missing_file",
+    "unknown"
+  ]
+}

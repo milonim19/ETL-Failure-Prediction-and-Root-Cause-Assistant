@@ -1,0 +1,338 @@
+[
+  {
+    "id": "batch_170acb1cf2",
+    "timestamp": "2026-05-14T23:26:08.122606Z",
+    "probability": 0.665611516314784,
+    "status": "FAIL",
+    "failure_type": "dbt_error",
+    "shap_values": null,
+    "metrics": {
+      "duration": 50.23115163147793,
+      "retries": 0.9961612284069098,
+      "rows": 521,
+      "kind": "batch_file",
+      "batch_success_count": 104,
+      "batch_failure_count": 417,
+      "average_failure_probability_rows": 0.7964000000000042
+    },
+    "message": "Batch: 521 rows (104 success, 417 fail)",
+    "model": "batch_summary_v1"
+  },
+  {
+    "id": "batch_fa88385bea",
+    "timestamp": "2026-05-14T23:23:46.635421Z",
+    "probability": 0.665611516314784,
+    "status": "FAIL",
+    "failure_type": "dbt_error",
+    "shap_values": null,
+    "metrics": {
+      "duration": 50.23115163147793,
+      "retries": 0.9961612284069098,
+      "rows": 521,
+      "kind": "batch_file",
+      "batch_success_count": 104,
+      "batch_failure_count": 417,
+      "average_failure_probability_rows": 0.7964000000000042
+    },
+    "message": "Batch: 521 rows (104 success, 417 fail)",
+    "model": "batch_summary_v1"
+  },
+  {
+    "id": "batch_82f372f81a",
+    "timestamp": "2026-05-01T00:11:12.022727Z",
+    "probability": 0.665611516314784,
+    "status": "FAIL",
+    "failure_type": "dbt_error",
+    "shap_values": null,
+    "metrics": {
+      "duration": 50.23115163147793,
+      "retries": 0.9961612284069098,
+      "rows": 521,
+      "kind": "batch_file",
+      "batch_success_count": 104,
+      "batch_failure_count": 417,
+      "average_failure_probability_rows": 0.7964000000000042
+    },
+    "message": "Batch: 521 rows (104 success, 417 fail)",
+    "model": "batch_summary_v1"
+  },
+  {
+    "id": "batch_e624ef0738",
+    "timestamp": "2026-05-01T00:10:16.039967Z",
+    "probability": 0.5310687041677485,
+    "status": "FAIL",
+    "failure_type": "data_quality",
+    "shap_values": null,
+    "metrics": {
+      "duration": 633.4008000000001,
+      "retries": 1.3,
+      "rows": 100,
+      "kind": "batch_file",
+      "batch_success_count": 41,
+      "batch_failure_count": 59,
+      "average_failure_probability_rows": 0.796399999999999
+    },
+    "message": "Batch: 100 rows (41 success, 59 fail)",
+    "model": "batch_summary_v1"
+  },
+  {
+    "id": "batch_e94bf78582",
+    "timestamp": "2026-04-30T22:06:59.575453Z",
+    "probability": 0.665611516314784,
+    "status": "FAIL",
+    "failure_type": "dbt_error",
+    "shap_values": null,
+    "metrics": {
+      "duration": 50.23115163147793,
+      "retries": 0.9961612284069098,
+      "rows": 521,
+      "kind": "batch_file",
+      "batch_success_count": 104,
+      "batch_failure_count": 417,
+      "average_failure_probability_rows": 0.7964000000000042
+    },
+    "message": "Batch: 521 rows (104 success, 417 fail)",
+    "model": "batch_summary_v1"
+  },
+  {
+    "id": "batch_d84e705e6f",
+    "timestamp": "2026-04-30T22:06:41.985525Z",
+    "probability": 0.38759613878268334,
+    "status": "SUCCESS",
+    "failure_type": "permission",
+    "shap_values": null,
+    "metrics": {
+      "duration": 775.3411,
+      "retries": 1.1,
+      "rows": 100,
+      "kind": "batch_file",
+      "batch_success_count": 63,
+      "batch_failure_count": 37,
+      "average_failure_probability_rows": 0.7909925659636874
+    },
+    "message": "Batch: 100 rows (63 success, 37 fail)",
+    "model": "batch_summary_v1"
+  },
+  {
+    "id": "batch_c5cd83a4a7",
+    "timestamp": "2026-04-30T22:05:58.669393Z",
+    "probability": 0.38759613878268334,
+    "status": "SUCCESS",
+    "failure_type": "permission",
+    "shap_values": null,
+    "metrics": {
+      "duration": 775.3411,
+      "retries": 1.1,
+      "rows": 100,
+      "kind": "batch_file",
+      "batch_success_count": 63,
+      "batch_failure_count": 37,
+      "average_failure_probability_rows": 0.7909925659636874
+    },
+    "message": "Batch: 100 rows (63 success, 37 fail)",
+    "model": "batch_summary_v1"
+  },
+  {
+    "id": "batch_27cc97e333",
+    "timestamp": "2026-04-30T20:16:52.817788Z",
+    "probability": 0.665611516314784,
+    "status": "FAIL",
+    "failure_type": "dbt_error",
+    "shap_values": null,
+    "metrics": {
+      "duration": 50.23115163147793,
+      "retries": 0.9961612284069098,
+      "rows": 521,
+      "kind": "batch_file",
+      "batch_success_count": 104,
+      "batch_failure_count": 417,
+      "average_failure_probability_rows": 0.7964000000000042
+    },
+    "message": "Batch: 521 rows (104 success, 417 fail)",
+    "model": "batch_summary_v1"
+  },
+  {
+    "id": "batch_79930a45ed",
+    "timestamp": "2026-04-30T02:12:50.757816Z",
+    "probability": 0.38759613878268334,
+    "status": "SUCCESS",
+    "failure_type": "permission",
+    "shap_values": null,
+    "metrics": {
+      "duration": 775.3411,
+      "retries": 1.1,
+      "rows": 100,
+      "kind": "batch_file",
+      "batch_success_count": 63,
+      "batch_failure_count": 37,
+      "average_failure_probability_rows": 0.7909925659636874
+    },
+    "message": "Batch: 100 rows (63 success, 37 fail)",
+    "model": "batch_summary_v1"
+  },
+  {
+    "id": "batch_275dbae828",
+    "timestamp": "2026-04-30T02:11:32.458887Z",
+    "probability": 0.38759613878268334,
+    "status": "SUCCESS",
+    "failure_type": "permission",
+    "shap_values": null,
+    "metrics": {
+      "duration": 775.3411,
+      "retries": 1.1,
+      "rows": 100,
+      "kind": "batch_file",
+      "batch_success_count": 63,
+      "batch_failure_count": 37,
+      "average_failure_probability_rows": 0.7909925659636874
+    },
+    "message": "Batch: 100 rows (63 success, 37 fail)",
+    "model": "batch_summary_v1"
+  },
+  {
+    "id": "batch_7866d24480",
+    "timestamp": "2026-04-30T02:10:06.807436Z",
+    "probability": 0.665611516314784,
+    "status": "FAIL",
+    "failure_type": "dbt_error",
+    "shap_values": null,
+    "metrics": {
+      "duration": 50.23115163147793,
+      "retries": 0.9961612284069098,
+      "rows": 521,
+      "kind": "batch_file",
+      "batch_success_count": 104,
+      "batch_failure_count": 417,
+      "average_failure_probability_rows": 0.7964000000000042
+    },
+    "message": "Batch: 521 rows (104 success, 417 fail)",
+    "model": "batch_summary_v1"
+  },
+  {
+    "id": "batch_a9bd8f4a8c",
+    "timestamp": "2026-04-30T00:27:13.663628Z",
+    "probability": 0.4229359981541933,
+    "status": "SUCCESS",
+    "failure_type": "data_quality",
+    "shap_values": null,
+    "metrics": {
+      "duration": 826.9916700000008,
+      "retries": 1.504,
+      "rows": 1000,
+      "kind": "batch_file",
+      "batch_success_count": 572,
+      "batch_failure_count": 428,
+      "average_failure_probability_rows": 0.7903431296343619
+    },
+    "message": "Batch: 1000 rows (572 success, 428 fail)",
+    "model": "batch_summary_v1"
+  },
+  {
+    "id": "batch_fde4a006f3",
+    "timestamp": "2026-04-30T00:25:28.669571Z",
+    "probability": 0.665611516314784,
+    "status": "FAIL",
+    "failure_type": "dbt_error",
+    "shap_values": null,
+    "metrics": {
+      "duration": 50.23115163147793,
+      "retries": 0.9961612284069098,
+      "rows": 521,
+      "kind": "batch_file",
+      "batch_success_count": 104,
+      "batch_failure_count": 417,
+      "average_failure_probability_rows": 0.7964000000000042
+    },
+    "message": "Batch: 521 rows (104 success, 417 fail)",
+    "model": "batch_summary_v1"
+  },
+  {
+    "id": "batch_b14238a683",
+    "timestamp": "2026-04-30T00:21:53.209897Z",
+    "probability": 0.665611516314784,
+    "status": "FAIL",
+    "failure_type": "dbt_error",
+    "shap_values": null,
+    "metrics": {
+      "duration": 50.23115163147793,
+      "retries": 0.9961612284069098,
+      "rows": 521,
+      "kind": "batch_file",
+      "batch_success_count": 104,
+      "batch_failure_count": 417,
+      "average_failure_probability_rows": 0.7964000000000042
+    },
+    "message": "Batch: 521 rows (104 success, 417 fail)",
+    "model": "batch_summary_v1"
+  },
+  {
+    "id": "batch_c0415d6b1a",
+    "timestamp": "2026-04-30T00:17:36.438056Z",
+    "probability": 0.665611516314784,
+    "status": "FAIL",
+    "failure_type": "dbt_error",
+    "shap_values": null,
+    "metrics": {
+      "duration": 50.23115163147793,
+      "retries": 0.9961612284069098,
+      "rows": 521,
+      "kind": "batch_file",
+      "batch_success_count": 104,
+      "batch_failure_count": 417,
+      "average_failure_probability_rows": 0.7964000000000042
+    },
+    "message": "Batch: 521 rows (104 success, 417 fail)",
+    "model": "batch_summary_v1"
+  },
+  {
+    "id": "batch_a8ab2b2d29",
+    "timestamp": "2026-04-30T00:17:10.576904Z",
+    "probability": 0.665611516314784,
+    "status": "FAIL",
+    "failure_type": "dbt_error",
+    "shap_values": null,
+    "metrics": {
+      "duration": 50.23115163147793,
+      "retries": 0.9961612284069098,
+      "rows": 521,
+      "kind": "batch_file",
+      "batch_success_count": 104,
+      "batch_failure_count": 417,
+      "average_failure_probability_rows": 0.7964000000000042
+    },
+    "message": "Batch: 521 rows (104 success, 417 fail)",
+    "model": "batch_summary_v1"
+  },
+  {
+    "id": "batch_demo02",
+    "timestamp": "2026-04-30T00:13:46.475426Z",
+    "probability": 0.33,
+    "status": "SUCCESS",
+    "failure_type": null,
+    "shap_values": null,
+    "metrics": {
+      "duration": 12.5,
+      "retries": 0,
+      "rows": 100,
+      "kind": "batch_file",
+      "batch_success_count": 90,
+      "batch_failure_count": 10
+    },
+    "message": "Batch: 100 rows (90 success, 10 fail)",
+    "model": "batch_summary_v1"
+  },
+  {
+    "id": "run_demo01",
+    "timestamp": "2026-04-30T00:13:46.474533Z",
+    "probability": 0.71,
+    "status": "FAIL",
+    "failure_type": "timeout",
+    "shap_values": null,
+    "metrics": {
+      "duration": 45.0,
+      "retries": 2
+    },
+    "message": "Single predict demo",
+    "model": "combined_v1"
+  }
+]

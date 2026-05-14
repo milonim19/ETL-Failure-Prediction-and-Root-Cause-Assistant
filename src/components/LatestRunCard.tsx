@@ -23,10 +23,19 @@ const formatDuration = (seconds?: number) => {
   return `${m}m ${s}s`;
 };
 
+const formatRetries = (value: unknown): string => {
+  const n = typeof value === 'number' ? value : Number(value);
+  if (!Number.isFinite(n)) return '—';
+  if (Number.isInteger(n)) return String(n);
+  return n.toFixed(2).replace(/\.?0+$/, '');
+};
+
 export default function LatestRunCard({ run, loading, error, onRetry }: Props) {
   const status = run?.status ?? null;
   const isFail = status === 'FAIL';
   const isSuccess = status === 'SUCCESS';
+  const isBatchAggregate =
+    run?.model === 'batch_summary_v1' || run?.metrics?.kind === 'batch_file';
 
   return (
     <div className="card-base">
@@ -34,6 +43,9 @@ export default function LatestRunCard({ run, loading, error, onRetry }: Props) {
         <div>
           <p className="text-xs font-bold text-zinc-400 uppercase tracking-widest">Latest Run</p>
           <h3 className="text-lg font-semibold text-zinc-900 mt-1">Most recent pipeline outcome</h3>
+          {isBatchAggregate ? (
+            <p className="text-xs font-medium text-amber-700 mt-1">Batch file summary · averages below</p>
+          ) : null}
         </div>
         {status ? (
           <span
@@ -129,7 +141,7 @@ export default function LatestRunCard({ run, loading, error, onRetry }: Props) {
             <div className="p-3 rounded-xl bg-zinc-50/50 border border-zinc-100">
               <p className="text-[10px] text-zinc-400 font-bold uppercase tracking-wider">Retries</p>
               <p className="text-xs font-semibold text-zinc-900 mt-1">
-                {typeof run.metrics?.retries === 'number' ? run.metrics.retries : '—'}
+                {formatRetries(run.metrics?.retries)}
               </p>
             </div>
           </div>

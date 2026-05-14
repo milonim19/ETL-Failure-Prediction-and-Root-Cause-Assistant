@@ -49,7 +49,7 @@ The dataset is written to:
 
 **App / UI**
 - Streamlit (simple interactive demo for uploads + predictions)
-- The repo also includes a frontend scaffold (Vite + TypeScript + Tailwind) if you want a more custom UI.
+- React + TypeScript + Vite + Tailwind (custom UI wired to the FastAPI backend)
 
 
 ---------------------------
@@ -62,8 +62,34 @@ The dataset is written to:
   Generated dataset CSV used for training/evaluation
 - `build_dataset.py`  
   Builds/updates `etl_dataset.csv` from raw inputs (and optional synthetic samples)
-- `ml/` or `src/`  
-  Model training, evaluation, and app code (varies by branch/folder organization)
+- `backend_api/`  
+  FastAPI service for `/predict`, batch summaries, and run history
+- `ml/`  
+  Training, evaluation, inference, SHAP helpers, and serialized models under `ml/models/`
+- `src/`  
+  Frontend application code
+- `requirements.txt`  
+  Pinned Python dependencies for reproducible installs
+
+
+---------------------------
+
+## Backend API (FastAPI)
+
+1. Create a Python virtual environment and install dependencies:
+   - `pip install -r requirements.txt` (repo root) or `pip install -r backend_api/requirements.txt` (minimal direct deps)
+2. Ensure model files exist in `ml/models` (or set `MODEL_DIR`):
+   - `etl_failure_model.pkl`
+   - `etl_failure_type_model.pkl`
+3. Start the API:
+   - `uvicorn backend_api.main:app --reload --host 0.0.0.0 --port 8000`
+4. For the Vite app, set `VITE_API_BASE_URL` to `http://localhost:8000` (see `.env.example` in the repo root pattern used by the frontend).
+
+**HTTP endpoints (current)**  
+- `POST /predict`  
+- `POST /predict/batch`  
+- `GET /runs?limit=50`  
+- `GET /health`
 
 
 ---------------------------
@@ -73,3 +99,15 @@ The dataset is written to:
 ```bash
 git clone https://github.com/milonim19/ETL-Failure-Prediction-and-Root-Cause-Assistant.git
 cd ETL-Failure-Prediction-and-Root-Cause-Assistant
+```
+
+### 2) Run the React UI (Vite)
+
+```bash
+npm install
+npm run dev
+```
+
+### 3) Run the FastAPI backend
+
+Follow **Backend API (FastAPI)** above so the UI can reach the API on port 8000.

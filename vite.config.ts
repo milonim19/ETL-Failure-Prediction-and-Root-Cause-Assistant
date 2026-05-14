@@ -13,6 +13,11 @@ export default defineConfig(() => {
     },
     server: {
       hmr: process.env.DISABLE_HMR !== 'true',
+      watch: {
+        // Backend writes here on every prediction; ignore so it doesn't
+        // trigger a Vite page reload that wipes Analysis page state.
+        ignored: ['**/backend_api/data/**', '**/.venv/**', '**/__pycache__/**'],
+      },
     },
   };
 });

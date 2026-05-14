@@ -1,0 +1,201 @@
+duration,retry_count,status,error_type,message
+1053.49,2,failed,missing_file,FileNotFoundError: landing file for crm.leads was not present by cutoff; sensor waited 17m
+9358.72,1,failed,schema_mismatch,Schema validation failed for analytics.session_rollup: expected column customer_id INT but found STRING; job_id=job_78847_ba88c3 ts=2026-04-20T08:21:43Z
+1688.19,1,error,upstream_dependency,HTTP 503 from upstream service during extract for raw.customers; circuit breaker open; retry=1 | new provider response='BACKPRESSURE_LIMIT_REACHED' trace_id=f83a63a7a628
+707.44,1,degraded,data_quality,DQ rule violation in crm_delta_merge: negative amount detected in raw.customers; bad_rows=7968
+0.7,3,degraded,none,"dbt model fact_orders finished: PASS, freshness within SLA, invocation_id=job_46442_ab09b4"
+1.19,1,success,data_quality,"Great Expectations checkpoint failed for stg_events.clickstream: null_rate=0.21, duplicate_keys=12665 job_id=job_50778_3f19e2"
+4982.75,1,success,none,task=fraud_features_etl.load target=analytics.session_rollup status=OK run_id=job_25956_89639c committed partitions=10 at 2026-04-18T06:37:43Z
+6253.69,2,error,upstream_dependency,Upstream dependency billing_api delayed; skipping customer_dim_build for stg.payments; job_id=job_25916_e5580d | new provider response='BACKPRESSURE_LIMIT_REACHED' trace_id=275de3984807
+4809.25,2,success,none,"dbt model raw_orders finished: PASS, freshness within SLA, invocation_id=job_20167_fd3887"
+1142.77,4,success,none,unknown
+3.4,7,warning,none,"dbt model warehouse_shipments finished: PASS, freshness within SLA, invocation_id=job_72661_70fd98"
+4641.85,8,success,none,"dbt model mart_revenue_daily finished: PASS, freshness within SLA, invocation_id=job_60384_c0656d"
+5764.53,3,success,schema_mismatch,Schema validation failed for dim_user: expected column customer_id INT but found STRING; job_id=job_29553_3d7998 ts=2026-04-21T14:38:52Z
+10223.01,4,error,schema_mismatch,"dbt contract error in model warehouse_shipments: missing column updated_at, extra column legacy_code"
+6011.99,2,warning,dbt_error,-
+2968.37,0,success,upstream_dependency,Upstream dependency crm_api delayed; skipping dbt_marts_run for billing.invoices; job_id=job_80148_3c3a5b | new provider response='BACKPRESSURE_LIMIT_REACHED' trace_id=ce45ae7c6fd8
+7133.25,7,success,none,"dbt model inventory_snapshot finished: PASS, freshness within SLA, invocation_id=job_79167_0e4f3d | attempt=8 hostname=worker-13 memory_mb=8679"
+508.97,2,timeout,upstream_dependency,Upstream dependency kafka_orders delayed; skipping customer_dim_build for stg.payments; job_id=job_71827_08d4f7 | new provider response='BACKPRESSURE_LIMIT_REACHED' trace_id=af6c169c088c | attempt=3 hostname=worker-20 memory_mb=15231
+2664.9,3,success,none,task=clickstream_spark_job.load target=fact_orders status=OK run_id=job_61846_d9fcfb committed partitions=23 at 2026-04-06T22:44:41Z
+316.1,2,success,none,"dbt model stg_payments finished: PASS, freshness within SLA, invocation_id=job_15018_f79e79"
+1649.78,2,success,none,Glue DAG fraud_features_etl completed successfully for table fact_orders; rows=1066436 duration=1649.78s job_id=job_98612_c72216 ts=2026-04-08T07:30:45Z
+748.99,3,error,upstream_dependency,HTTP 503 from upstream service during extract for fact_orders; circuit breaker open; retry=3 | new provider response='BACKPRESSURE_LIMIT_REACHED' trace_id=6c66751674c3
+371.99,2,success,none,Glue DAG clickstream_spark_job completed successfully for table billing.invoices; rows=1136792 duration=371.99s job_id=job_94924_3c8694 ts=2026-04-10T08:33:23Z | attempt=3 hostname=worker-11 memory_mb=5727
+565.75,0,success,none,Spark DAG crm_delta_merge completed successfully for table raw.customers; rows=1504763 duration=565.75s job_id=job_79667_37c08e ts=2026-04-08T00:43:24Z
+1618.92,0,success,none,task=inventory_sync.load target=warehouse.shipments status=OK run_id=job_63315_ba1d25 committed partitions=7 at 2026-04-15T18:03:21Z
+1768.36,5,warning,schema_mismatch,"dbt contract error in model billing_invoices: missing column updated_at, extra column legacy_code"
+1330.29,6,success,none,"dbt model mart_revenue_daily finished: PASS, freshness within SLA, invocation_id=job_25313_2565ca"
+1068.79,0,success,none,"dbt model mart_revenue_daily finished: PASS, freshness within SLA, invocation_id=job_71264_c41d81"
+939.06,1,warning,none,"dbt model dim_user finished: PASS, freshness within SLA, invocation_id=job_40442_aa39b9"
+1069.34,0,success,none,"dbt model mart_revenue_daily finished: PASS, freshness within SLA, invocation_id=job_71264_c41d81"
+2.59,1,timeout,upstream_dependency,Upstream dependency kafka_orders delayed; skipping payment_recon for crm.leads; job_id=job_35001_e400c7 | new provider response='BACKPRESSURE_LIMIT_REACHED' trace_id=92e314e33182 | attempt=2 hostname=worker-5 memory_mb=22904
+3337.61,2,success,none,task=zipcode_metrics_refresh.load target=mart.revenue_daily status=OK run_id=job_17029_2553c4 committed partitions=5 at 2026-04-05T08:56:40Z
+2.17,1,error,none,"dbt model dim_user finished: PASS, freshness within SLA, invocation_id=job_71617_88e0e4"
+847.02,1,success,none,task=fraud_features_etl.load target=fact_orders status=OK run_id=job_56229_da0d2d committed partitions=22 at 2026-04-01T09:20:42Z
+2835.11,4,degraded,none,Prefect DAG dbt_marts_run completed successfully for table raw.orders; rows=1024314 duration=2835.11s job_id=job_63878_e8812a ts=2026-04-17T06:28:43Z
+1674.01,0,failed,missing_file,Airflow sensor customer_dim_build.wait_for_file failed: gs://bucket/raw/warehouse.shipments/2026-04-02.csv missing
+2650.78,6,success,none,"dbt model analytics_session_rollup finished: PASS, freshness within SLA, invocation_id=job_24742_26e36f"
+6062.14,5,failed,timeout,SLA miss: upstream batch still running after 6062.14s for daily_orders_ingest; marked timeout job_id=job_35364_14262a
+1545.47,1,success,data_quality,DQ rule violation in dbt_marts_run: negative amount detected in stg.payments; bad_rows=231
+7935.14,1,success,upstream_dependency,External dependency not ready: watermark behind by 58 minutes for pipeline=fraud_features_etl | new provider response='BACKPRESSURE_LIMIT_REACHED' trace_id=32877d71cf8a
+4.14,3,warning,missing_file,FileNotFoundError: landing file for fact_orders was not present by cutoff; sensor waited 12m
+7768.8,0,success,dbt_error,dbt test failed: accepted_values on billing.invoices.status returned 285 failures
+1689.56,2,success,none,Prefect DAG daily_orders_ingest completed successfully for table raw.orders; rows=1518924 duration=1689.56s job_id=job_71470_ca3622 ts=2026-04-04T18:04:19Z
+1236.56,3,success,none,Prefect DAG crm_delta_merge completed successfully for table mart.revenue_daily; rows=1771170 duration=1236.56s job_id=job_95714_d6ec94 ts=2026-04-11T23:18:06Z | attempt=4 hostname=worker-3 memory_mb=13765
+3778.5,6,warning,missing_file,FileNotFoundError: landing file for stg_events.clickstream was not present by cutoff; sensor waited 43m
+4587.54,0,success,none,Dagster DAG zipcode_metrics_refresh completed successfully for table mart.revenue_daily; rows=716951 duration=4587.54s job_id=job_14569_953734 ts=2026-04-07T12:17:04Z
+4597.62,4,success,none,"dbt model raw_customers finished: PASS, freshness within SLA, invocation_id=job_63786_b4a5c3"
+1587.64,1,success,N/A,task=zipcode_metrics_refresh.load target=dim_user status=OK run_id=job_96861_5b5ba5 committed partitions=35 at 2026-04-01T12:11:42Z
+1703.21,7,success,none,Spark DAG fraud_features_etl completed successfully for table inventory_snapshot; rows=1802708 duration=1703.21s job_id=job_99416_653278 ts=2026-04-26T06:33:44Z
+9718.74,6,success,none,"dbt model dim_user finished: PASS, freshness within SLA, invocation_id=job_53173_e47368"
+4586.04,0,error,none,Dagster DAG dbt_marts_run completed successfully for table stg.payments; rows=1465874 duration=4586.04s job_id=job_47531_fb9891 ts=2026-04-16T21:59:33Z
+7690.26,0,success,none,Glue DAG payment_recon completed successfully for table warehouse.shipments; rows=1845542 duration=7690.26s job_id=job_93317_6d0026 ts=2026-04-08T09:01:55Z
+4811.04,2,success,none,"dbt model raw_orders finished: PASS, freshness within SLA, invocation_id=job_20167_fd3887"
+949.19,0,success,none,Spark DAG zipcode_metrics_refresh completed successfully for table dim_user; rows=1300994 duration=949.19s job_id=job_61132_9db46e ts=2026-04-23T22:03:13Z
+6470.32,1,success,none,task=daily_orders_ingest.load target=stg.payments status=OK run_id=job_66700_d49fa8 committed partitions=29 at 2026-04-17T15:53:30Z
+702.96,7,success,none,task=daily_orders_ingest.load target=warehouse.shipments status=OK run_id=job_33854_08a356 committed partitions=41 at 2026-04-08T08:04:40Z
+1254.04,5,timeout,missing_file,Airflow sensor fraud_features_etl.wait_for_file failed: gs://bucket/raw/stg.payments/2026-04-01.csv missing | attempt=6 hostname=worker-4 memory_mb=3919
+1596.34,1,error,upstream_dependency,Upstream dependency vendor_sftp delayed; skipping crm_delta_merge for analytics.session_rollup; job_id=job_79159_ea1ef6 | new provider response='BACKPRESSURE_LIMIT_REACHED' trace_id=9b7408cb4f3d
+4.19,5,error,data_quality,"Great Expectations checkpoint failed for stg_events.clickstream: null_rate=0.36, duplicate_keys=18211 job_id=job_50997_344ba0"
+3829.97,2,timeout,data_quality,DQ rule violation in inventory_sync: negative amount detected in stg_events.clickstream; bad_rows=3580
+8955.91,2,error,dbt_error,Database Error in model crm_leads: relation source_customers does not exist
+411.46,1,success,none,Prefect DAG payment_recon completed successfully for table dim_user; rows=258881 duration=411.46s job_id=job_51018_fe17bb ts=2026-04-28T13:21:39Z
+1505.75,0,warning,none,"dbt model analytics_session_rollup finished: PASS, freshness within SLA, invocation_id=job_92663_b0f8ee"
+1688.15,1,error,upstream_dependency,HTTP 503 from upstream service during extract for raw.customers; circuit breaker open; retry=1 | new provider response='BACKPRESSURE_LIMIT_REACHED' trace_id=f83a63a7a628
+1650.07,0,timeout,upstream_dependency,HTTP 503 from upstream service during extract for raw.customers; circuit breaker open; retry=0 | new provider response='BACKPRESSURE_LIMIT_REACHED' trace_id=250e8a40db8a
+425.37,1,failed,timeout,Dagster task dbt_marts_run exceeded execution_timeout after 425.37s; last heartbeat lost; job_id=job_50018_9be134 table=raw.customers ts=2026-04-06T22:30:11Z | attempt=2 hostname=worker-19 memory_mb=4040
+1142.38,4,success,none,Glue DAG customer_dim_build completed successfully for table stg_events.clickstream; rows=225878 duration=1142.38s job_id=job_29871_084da1 ts=2026-04-14T22:47:35Z
+538.33,4,success,none,Spark DAG dbt_marts_run completed successfully for table stg_events.clickstream; rows=2177924 duration=538.33s job_id=job_87651_bd026a ts=2026-04-01T17:57:10Z | attempt=5 hostname=worker-13 memory_mb=7359
+1758.63,3,failed,timeout,SLA miss: upstream batch still running after 1758.63s for inventory_sync; marked timeout job_id=job_67605_8aaf2d
+991.82,0,success,none,task=inventory_sync.load target=raw.customers status=OK run_id=job_11166_c6ba1b committed partitions=18 at 2026-04-19T18:02:23Z
+2723.94,2,warning,none,task=daily_orders_ingest.load target=crm.leads status=OK run_id=job_74603_ab1578 committed partitions=44 at 2026-04-17T11:50:01Z
+4758.14,2,success,data_quality,-
+946.09,2,success,none,task=dbt_marts_run.load target=warehouse.shipments status=OK run_id=job_61497_8d2063 committed partitions=15 at 2026-04-25T03:12:58Z
+469.11,1,warning,timeout,Spark executor heartbeat timeout while writing stg_events.clickstream; stage=28 retry=1; java.net.SocketTimeoutException: Read timed out
+1059.84,1,success,none,Glue DAG crm_delta_merge completed successfully for table stg_events.clickstream; rows=1143829 duration=1059.84s job_id=job_21731_2a32d3 ts=2026-04-26T00:59:38Z
+1083.99,4,timeout,upstream_dependency,Upstream dependency vendor_sftp delayed; skipping dbt_marts_run for inventory_snapshot; job_id=job_26476_ccaf9c | new provider response='BACKPRESSURE_LIMIT_REACHED' trace_id=cf6507eb479f
+1505.29,4,success,none,task=clickstream_spark_job.load target=raw.orders status=OK run_id=job_79165_e555e2 committed partitions=30 at 2026-04-18T09:54:12Z
+426.82,4,success,none,"dbt model warehouse_shipments finished: PASS, freshness within SLA, invocation_id=job_56363_effe80"
+1398.42,3,error,timeout,Spark executor heartbeat timeout while writing warehouse.shipments; stage=16 retry=3; java.net.SocketTimeoutException: Read timed out
+5240.34,5,success,upstream_dependency,Upstream dependency kafka_orders delayed; skipping inventory_sync for stg_events.clickstream; job_id=job_55954_4f6ace | new provider response='BACKPRESSURE_LIMIT_REACHED' trace_id=4b1e13c585d6 | attempt=6 hostname=worker-5 memory_mb=14096
+1140.55,5,success,none,task=customer_dim_build.load target=warehouse.shipments status=OK run_id=job_71439_2b13e6 committed partitions=5 at 2026-04-22T18:59:45Z
+1500.37,0,error,upstream_dependency,Upstream dependency kafka_orders delayed; skipping crm_delta_merge for mart.revenue_daily; job_id=job_97885_111dd7 | new provider response='BACKPRESSURE_LIMIT_REACHED' trace_id=6ccfc0e7cf62
+4.75,4,failed,upstream_dependency,HTTP 503 from upstream service during extract for fact_orders; circuit breaker open; retry=4 | new provider response='BACKPRESSURE_LIMIT_REACHED' trace_id=cd614c607009
+9467.46,5,success,none,"dbt model warehouse_shipments finished: PASS, freshness within SLA, invocation_id=job_68591_f37fdc"
+756.7,2,success,none,"dbt model fact_orders finished: PASS, freshness within SLA, invocation_id=job_63719_12aa29"
+2846.69,1,failed,upstream_dependency,Upstream dependency billing_api delayed; skipping payment_recon for stg.payments; job_id=job_34366_8d2969 | new provider response='BACKPRESSURE_LIMIT_REACHED' trace_id=15f7702735ce | attempt=2 hostname=worker-23 memory_mb=1593
+429.81,2,success,none,task=payment_recon.load target=stg.payments status=OK run_id=job_70946_66ede2 committed partitions=46 at 2026-04-16T13:24:07Z
+524.17,6,success,none,"dbt model warehouse_shipments finished: PASS, freshness within SLA, invocation_id=job_78109_722247"
+586.63,5,failed,dbt_error,Database Error in model stg_events_clickstream: relation source_events does not exist
+1724.22,2,warning,data_quality,DQ rule violation in fraud_features_etl: negative amount detected in fact_orders; bad_rows=8838 | attempt=3 hostname=worker-7 memory_mb=23885
+1225.11,1,failed,upstream_dependency,Upstream dependency crm_api delayed; skipping fraud_features_etl for stg.payments; job_id=job_37968_5280a2 | new provider response='BACKPRESSURE_LIMIT_REACHED' trace_id=30b07990382c
+5477.05,4,success,none,"dbt model stg_payments finished: PASS, freshness within SLA, invocation_id=job_61920_a9788a"
+802.42,1,timeout,timeout,dbt task billing_export_load exceeded execution_timeout after 802.42s; last heartbeat lost; job_id=job_30015_27c6c5 table=inventory_snapshot ts=2026-04-12T20:36:24Z
+1004.9,2,failed,upstream_dependency,External dependency not ready: watermark behind by 124 minutes for pipeline=daily_orders_ingest | new provider response='BACKPRESSURE_LIMIT_REACHED' trace_id=929adeb004f3
+397.97,3,failed,upstream_dependency,HTTP 503 from upstream service during extract for raw.orders; circuit breaker open; retry=3 | new provider response='BACKPRESSURE_LIMIT_REACHED' trace_id=379475a64246
+5422.83,3,success,none,task=customer_dim_build.load target=inventory_snapshot status=OK run_id=job_48356_5e5cbc committed partitions=7 at 2026-04-25T23:55:05Z
+8762.79,2,success,upstream_dependency,HTTP 503 from upstream service during extract for crm.leads; circuit breaker open; retry=2 | new provider response='BACKPRESSURE_LIMIT_REACHED' trace_id=cd37ba8165d5
+340.44,3,failed,upstream_dependency,External dependency not ready: watermark behind by 23 minutes for pipeline=dbt_marts_run | new provider response='BACKPRESSURE_LIMIT_REACHED' trace_id=17457cd144c3
+1601.67,2,sucess,missing_file,Input path not found s3://lake/billing_export_load/dt=2026-04-19/part-000.snappy.parquet; job_id=job_10090_efe069
+1482.98,3,warning,upstream_dependency,Upstream dependency billing_api delayed; skipping customer_dim_build for warehouse.shipments; job_id=job_83797_d28522 | new provider response='BACKPRESSURE_LIMIT_REACHED' trace_id=4ae23b3ac09e
+2842.32,2,success,none,task=daily_orders_ingest.load target=raw.customers status=OK run_id=job_34164_aa58d6 committed partitions=35 at 2026-04-26T12:52:55Z
+3002.1,6,success,none,task=fraud_features_etl.load target=fact_orders status=OK run_id=job_20680_5f9419 committed partitions=35 at 2026-04-26T17:55:47Z
+1.12,2,success,none,"dbt model stg_payments finished: PASS, freshness within SLA, invocation_id=job_83732_7a9941"
+6060.56,4,success,none,Prefect DAG daily_orders_ingest completed successfully for table warehouse.shipments; rows=1554481 duration=6060.56s job_id=job_40087_d43de1 ts=2026-04-13T21:33:02Z
+6356.28,6,success,none,"dbt model stg_events_clickstream finished: PASS, freshness within SLA, invocation_id=job_52538_c5c108"
+906.84,2,success,timeout,SLA miss: upstream batch still running after 906.84s for inventory_sync; marked timeout job_id=job_55059_f17fd2
+1145.88,1,success,none,"dbt model crm_leads finished: PASS, freshness within SLA, invocation_id=job_62945_1e932b"
+1297.73,3,success,none,Spark DAG zipcode_metrics_refresh completed successfully for table mart.revenue_daily; rows=751454 duration=1297.73s job_id=job_69546_82259e ts=2026-04-21T16:07:53Z | attempt=4 hostname=worker-10 memory_mb=16744
+3528.91,6,error,upstream_dependency,External dependency not ready: watermark behind by 300 minutes for pipeline=billing_export_load | new provider response='BACKPRESSURE_LIMIT_REACHED' trace_id=ffeddfdc2a4a
+5828.46,5,success,none,dbt DAG daily_orders_ingest completed successfully for table mart.revenue_daily; rows=865288 duration=5828.46s job_id=job_18245_d68a3c ts=2026-04-27T18:06:14Z
+1733.68,0,success,none,Prefect DAG daily_orders_ingest completed successfully for table stg.payments; rows=367738 duration=1733.68s job_id=job_57183_798e40 ts=2026-04-08T12:01:53Z
+6601.17,1,success,none,Prefect DAG dbt_marts_run completed successfully for table raw.customers; rows=2257657 duration=6601.17s job_id=job_93974_3a51e2 ts=2026-04-09T01:07:39Z
+11354.37,6,degraded,timeout,Spark executor heartbeat timeout while writing billing.invoices; stage=55 retry=6; java.net.SocketTimeoutException: Read timed out
+1725.53,0,error,upstream_dependency,Upstream dependency crm_api delayed; skipping crm_delta_merge for warehouse.shipments; job_id=job_29542_29d448 | new provider response='BACKPRESSURE_LIMIT_REACHED' trace_id=a04898270220
+1009.22,1,timedout,data_quality,"row_count anomaly for fact_orders: expected 100k-130k, observed 6802; quarantined batch"
+4.15,3,warning,missing_file,
+1361.74,1,error,upstream_dependency,HTTP 503 from upstream service during extract for stg_events.clickstream; circuit breaker open; retry=1 | new provider response='BACKPRESSURE_LIMIT_REACHED' trace_id=70e9f7af4b62 | attempt=2 hostname=worker-1 memory_mb=2009
+4730.78,1,success,none,task=billing_export_load.load target=billing.invoices status=OK run_id=job_19020_33cb78 committed partitions=33 at 2026-04-17T18:26:39Z
+476.29,0,success,none,task=zipcode_metrics_refresh.load target=stg_events.clickstream status=OK run_id=job_44608_f9d666 committed partitions=44 at 2026-04-15T00:30:06Z
+3971.97,0,success,none,"dbt model inventory_snapshot finished: PASS, freshness within SLA, invocation_id=job_28251_2374a4"
+1.61,4,success,none,task=zipcode_metrics_refresh.load target=analytics.session_rollup status=OK run_id=job_84700_24e3ac committed partitions=43 at 2026-04-25T01:20:08Z
+763.93,5,failed,upstream_dependency,HTTP 503 from upstream service during extract for fact_orders; circuit breaker open; retry=5 | new provider response='BACKPRESSURE_LIMIT_REACHED' trace_id=f38ac13c25cf
+9851.93,3,success,none,task=zipcode_metrics_refresh.load target=dim_user status=OK run_id=job_31878_1972d1 committed partitions=7 at 2026-04-08T18:11:28Z
+2282.21,1,failed,missing_file,FileNotFoundError: landing file for crm.leads was not present by cutoff; sensor waited 24m | attempt=2 hostname=worker-1 memory_mb=1598
+598.21,7,timedout,timeout,N/A
+6257.8,3,success,none,"dbt model raw_orders finished: PASS, freshness within SLA, invocation_id=job_96333_4c8ac7"
+845.75,4,warning,upstream_dependency,External dependency not ready: watermark behind by 79 minutes for pipeline=zipcode_metrics_refresh | new provider response='BACKPRESSURE_LIMIT_REACHED' trace_id=b658c766357d
+6390.26,0,failed,none,task=billing_export_load.load target=crm.leads status=OK run_id=job_54607_70930b committed partitions=27 at 2026-04-18T19:30:59Z
+7161.44,2,degraded,upstream_dependency,External dependency not ready: watermark behind by 217 minutes for pipeline=crm_delta_merge | new provider response='BACKPRESSURE_LIMIT_REACHED' trace_id=22d1d6462ff8
+3285.41,2,success,none,Prefect DAG inventory_sync completed successfully for table mart.revenue_daily; rows=1529091 duration=3285.41s job_id=job_14728_bbd703 ts=2026-04-05T09:13:05Z
+10909.69,2,failed,upstream_dependency,Upstream dependency kafka_orders delayed; skipping inventory_sync for raw.orders; job_id=job_79742_d16c78 | new provider response='BACKPRESSURE_LIMIT_REACHED' trace_id=a71c46698746
+565.02,8,warning,timeout,Spark executor heartbeat timeout while writing mart.revenue_daily; stage=71 retry=8; java.net.SocketTimeoutException: Read timed out
+6938.87,6,degraded,none,Dagster DAG zipcode_metrics_refresh completed successfully for table stg_events.clickstream; rows=225254 duration=6938.87s job_id=job_72198_237ea5 ts=2026-04-11T21:39:00Z
+992.23,2,success,none,Dagster DAG clickstream_spark_job completed successfully for table inventory_snapshot; rows=1105638 duration=992.23s job_id=job_35731_d501c6 ts=2026-04-28T00:47:27Z
+1389.3,5,success,none,task=inventory_sync.load target=inventory_snapshot status=OK run_id=job_71662_ab8492 committed partitions=44 at 2026-04-03T23:10:28Z
+11564.29,1,error,dbt_error,dbt run failed on model fact_orders: Compilation Error near line 10; invocation_id=job_11177_95322b
+11066.55,1,success,none,"dbt model billing_invoices finished: PASS, freshness within SLA, invocation_id=job_37927_5d19df"
+3558.36,3,error,none,task=dbt_marts_run.load target=mart.revenue_daily status=OK run_id=job_15458_804a21 committed partitions=14 at 2026-04-22T20:50:43Z
+1721.37,3,success,none,"dbt model fact_orders finished: PASS, freshness within SLA, invocation_id=job_38697_789534"
+1682.08,0,success,none,"dbt model mart_revenue_daily finished: PASS, freshness within SLA, invocation_id=job_20274_f51c2f"
+1517.02,6,error,upstream_dependency,External dependency not ready: watermark behind by 87 minutes for pipeline=dbt_marts_run | new provider response='BACKPRESSURE_LIMIT_REACHED' trace_id=32f9f10a88b2
+6030.59,3,success,none,"dbt model raw_customers finished: PASS, freshness within SLA, invocation_id=job_87561_0e7819"
+504.35,1,success,none,"dbt model fact_orders finished: PASS, freshness within SLA, invocation_id=job_41106_489c85"
+1700.66,1,error,timeout,Spark task payment_recon exceeded execution_timeout after 1700.66s; last heartbeat lost; job_id=job_47207_0d5ff9 table=crm.leads ts=2026-04-04T04:35:40Z
+697.73,3,success,data_quality,DQ rule violation in billing_export_load: negative amount detected in raw.customers; bad_rows=5629
+1319.31,1,success,none,task=customer_dim_build.load target=stg_events.clickstream status=OK run_id=job_58210_531eb7 committed partitions=32 at 2026-04-23T22:51:02Z
+2899.1,4,failed,permission,AccessDeniedException: role etl_runner cannot write to analytics.session_rollup; job_id=job_64344_ed1727 request_id=fdfddf92
+634.6,2,error,permission,AccessDeniedException: role etl_runner cannot write to raw.orders; job_id=job_41794_633d2a request_id=8498129b | attempt=3 hostname=worker-12 memory_mb=7216
+5621.12,6,failed,timeout,Spark executor heartbeat timeout while writing fact_orders; stage=24 retry=6; java.net.SocketTimeoutException: Read timed out
+1171.63,1,failed,none,task=clickstream_spark_job.load target=inventory_snapshot status=OK run_id=job_21492_3bfb9c committed partitions=2 at 2026-04-27T07:29:40Z
+882.26,2,error,dbt_error,dbt run failed on model raw_customers: Compilation Error near line 39; invocation_id=job_60334_2c0ba8
+4981.41,1,success,none,task=fraud_features_etl.load target=analytics.session_rollup status=OK run_id=job_25956_89639c committed partitions=10 at 2026-04-18T06:37:43Z
+1037.91,1,success,none,task=inventory_sync.load target=billing.invoices status=OK run_id=job_75725_c014ec committed partitions=44 at 2026-04-09T12:00:14Z
+1202.48,1,success,none,task=clickstream_spark_job.load target=fact_orders status=OK run_id=job_71196_528ca1 committed partitions=23 at 2026-04-14T03:54:33Z
+8868.49,6,failed,missing_file,FileNotFoundError: landing file for raw.orders was not present by cutoff; sensor waited 39m
+1121.95,0,timeout,upstream_dependency,External dependency not ready: watermark behind by 205 minutes for pipeline=fraud_features_etl | new provider response='BACKPRESSURE_LIMIT_REACHED' trace_id=2b26146a1f1a
+11048.51,1,failed,timeout,SLA miss: upstream batch still running after 11048.51s for clickstream_spark_job; marked timeout job_id=job_50909_9c6573
+2036.13,1,degraded,upstream_dependency,Upstream dependency kafka_orders delayed; skipping payment_recon for crm.leads; job_id=job_46962_03f5d8 | new provider response='BACKPRESSURE_LIMIT_REACHED' trace_id=fac03744bb10
+1637.47,4,error,missing_file,Input path not found s3://lake/crm_delta_merge/dt=2026-04-01/part-000.snappy.parquet; job_id=job_51167_f6a811
+1505.19,4,failed,dbt_error,dbt run failed on model stg_events_clickstream: Compilation Error near line 51; invocation_id=job_58572_aca60f | attempt=5 hostname=worker-9 memory_mb=6300
+4897.1,0,warning,schema_mismatch,Schema validation failed for raw.orders: expected column customer_id INT but found STRING; job_id=job_95517_d9e1be ts=2026-04-11T11:05:48Z
+2.91,2,warning,data_quality,"row_count anomaly for mart.revenue_daily: expected 100k-130k, observed 2014; quarantined batch"
+1570.27,1,degraded,schema_mismatch,Spark AnalysisException: Cannot resolve column 'event_ts' in input schema for pipeline=customer_dim_build table=billing.invoices
+341.89,3,failed,upstream_dependency,External dependency not ready: watermark behind by 23 minutes for pipeline=dbt_marts_run | new provider response='BACKPRESSURE_LIMIT_REACHED' trace_id=17457cd144c3
+4230.9,3,error,timeout,SLA miss: upstream batch still running after 4230.9s for billing_export_load; marked timeout job_id=job_26865_e160ad | attempt=4 hostname=worker-9 memory_mb=19247
+909.32,0,timeout,data_quality,"row_count anomaly for raw.orders: expected 100k-130k, observed 22860; quarantined batch"
+1253.61,7,success,none,Prefect DAG billing_export_load completed successfully for table dim_user; rows=1485287 duration=1253.61s job_id=job_83784_e00398 ts=2026-04-19T06:05:20Z | attempt=8 hostname=worker-12 memory_mb=3980
+480.97,0,degraded,upstream_dependency,External dependency not ready: watermark behind by 217 minutes for pipeline=crm_delta_merge | new provider response='BACKPRESSURE_LIMIT_REACHED' trace_id=5151b1d7322e
+1.99,1,error,timeout,SLA miss: upstream batch still running after 1.99s for zipcode_metrics_refresh; marked timeout job_id=job_29490_0a0fc0
+648.21,1,error,missing_file,Airflow sensor payment_recon.wait_for_file failed: gs://bucket/raw/dim_user/2026-04-20.csv missing
+1066.02,1,failed,data_quality,"Great Expectations checkpoint failed for raw.orders: null_rate=0.57, duplicate_keys=16238 job_id=job_95330_98b031"
+4472.75,0,failed,dbt_error,dbt test failed: accepted_values on crm.leads.status returned 107 failures
+708.41,4,success,none,unknown
+472.1,7,success,none,Airflow DAG fraud_features_etl completed successfully for table raw.customers; rows=476654 duration=472.1s job_id=job_76182_30f372 ts=2026-04-21T22:23:23Z
+9177.77,5,success,none,"dbt model analytics_session_rollup finished: PASS, freshness within SLA, invocation_id=job_34559_d7b7fb"
+874.54,0,degraded,data_quality,DQ rule violation in inventory_sync: negative amount detected in crm.leads; bad_rows=5857
+401.06,2,success,none,"dbt model crm_leads finished: PASS, freshness within SLA, invocation_id=job_43173_1649fe"
+958.87,3,success,none,task=inventory_sync.load target=analytics.session_rollup status=OK run_id=job_72055_01a34b committed partitions=48 at 2026-04-19T02:10:04Z
+1069.84,1,success,none,Dagster DAG billing_export_load completed successfully for table warehouse.shipments; rows=1728921 duration=1069.84s job_id=job_86163_260b02 ts=2026-04-04T10:21:31Z
+845.98,1,success,none,dbt DAG fraud_features_etl completed successfully for table raw.customers; rows=1617341 duration=845.98s job_id=job_70732_0776b4 ts=2026-04-26T21:50:24Z
+2975.73,1,success,none,dbt DAG payment_recon completed successfully for table billing.invoices; rows=618955 duration=2975.73s job_id=job_47987_e0cdf3 ts=2026-04-09T00:27:01Z
+2.31,1,warning,upstream_dependency,Upstream dependency vendor_sftp delayed; skipping payment_recon for mart.revenue_daily; job_id=job_35939_955554 | new provider response='BACKPRESSURE_LIMIT_REACHED' trace_id=c0e3e14b0437
+3.92,5,degraded,upstream_dependency,Upstream dependency vendor_sftp delayed; skipping zipcode_metrics_refresh for raw.orders; job_id=job_74624_e807ac | new provider response='BACKPRESSURE_LIMIT_REACHED' trace_id=019e13458c7b
+2985.46,3,failed,none,task=payment_recon.load target=billing.invoices status=OK run_id=job_85570_890738 committed partitions=30 at 2026-04-13T23:35:48Z
+1167.9,0,timeout,data_quality,DQ rule violation in clickstream_spark_job: negative amount detected in raw.customers; bad_rows=9152
+6724.54,1,success,none,Dagster DAG dbt_marts_run completed successfully for table crm.leads; rows=1555274 duration=6724.54s job_id=job_46631_96f2cc ts=2026-04-09T06:14:14Z
+1046.83,1,failed,dbt_error,-
+501.46,5,success,none,"dbt model inventory_snapshot finished: PASS, freshness within SLA, invocation_id=job_15182_3c533e"
+1172.02,1,failed,none,task=clickstream_spark_job.load target=inventory_snapshot status=OK run_id=job_21492_3bfb9c committed partitions=2 at 2026-04-27T07:29:40Z
+1120.71,1,degraded,schema_mismatch,"dbt contract error in model raw_customers: missing column updated_at, extra column legacy_code"
+2931.97,0,success,none,dbt DAG dbt_marts_run completed successfully for table raw.orders; rows=859622 duration=2931.97s job_id=job_94440_f4f88f ts=2026-04-16T09:18:49Z | attempt=1 hostname=worker-10 memory_mb=4133
+2.42,7,error,schema_mismatch,"dbt contract error in model stg_payments: missing column updated_at, extra column legacy_code"
+5074.95,0,failed,missing_file,Input path not found s3://lake/clickstream_spark_job/dt=2026-04-26/part-000.snappy.parquet; job_id=job_69830_f295ae
+1761.72,3,success,none,dbt DAG daily_orders_ingest completed successfully for table mart.revenue_daily; rows=1338055 duration=1761.72s job_id=job_92100_b836ef ts=2026-04-04T12:39:51Z
+677.49,6,failed,missing_file,Airflow sensor fraud_features_etl.wait_for_file failed: gs://bucket/raw/stg_events.clickstream/2026-04-01.csv missing
+1708.6,2,success,none,task=billing_export_load.load target=crm.leads status=OK run_id=job_71339_8c040d committed partitions=11 at 2026-04-17T19:08:15Z | attempt=3 hostname=worker-20 memory_mb=10681
+1303.0,2,error,upstream_dependency,External dependency not ready: watermark behind by 50 minutes for pipeline=dbt_marts_run | new provider response='BACKPRESSURE_LIMIT_REACHED' trace_id=b7813578387a
+789.45,4,success,timeout,SLA miss: upstream batch still running after 789.45s for dbt_marts_run; marked timeout job_id=job_48503_024c7b
+4501.14,3,error,upstream_dependency,HTTP 503 from upstream service during extract for stg.payments; circuit breaker open; retry=3 | new provider response='BACKPRESSURE_LIMIT_REACHED' trace_id=1da4ad95c1b7
+1525.32,0,success,none,dbt DAG dbt_marts_run completed successfully for table stg_events.clickstream; rows=1599506 duration=1525.32s job_id=job_70331_767cc6 ts=2026-04-24T05:37:38Z | attempt=1 hostname=worker-11 memory_mb=8960
