@@ -54,7 +54,7 @@ The dataset is written to:
 
 ---------------------------
 
-## Repository Structure (high level)
+## Repository Structure
 
 - `backend/data/raw/`  
   Raw log inputs (Airflow-style txt + dbt json)
